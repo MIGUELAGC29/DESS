@@ -4,43 +4,165 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <link rel="stylesheet" href="{% static './bootstrap/css/bootstrap.min.css' %}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;IE=8; IE=9; IE=11" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="{% static './temporal/imagenes/favicon.png' %}" />
+    <script src="{% static './temporal/js/jquery-1.11.2.min.js' %}"></script>
+    <script src="{% static './temporal/js/isotope.pkgd.min.js' %}"></script>
+    <link href="{% static './temporal/styles/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <script src="{% static './temporal/styles/bootstrap.min.js' %}"></script>
+
+    <!-- Mi estilo -->
+    <link href="{% static './temporal/styles/StyleMasterPage.css' %}" rel="Stylesheet" type="text/css" />
+    <link href="{% static './temporal/styles/StyleMenu.css' %}" rel="stylesheet" type="text/css"  />
   </head>
   <body>
-    <!-- <div class="modal-dialog modal-dialog-centered"> -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
-        Abrir modal para @fat
-      </button>
+    <div>
+      <nav class="navbar2 navbar-inverse sub-navbar navbar-fixed-top">
+          <div class="container">
+              <div class="navbar-header">
+                  <div class="d-inline-block ipnLogo-enlace">
+                      <img src="{% static './imagenes/pleca-gob.png' %}" alt=" Pleca de Gobierno " class="plecaGob gob" />
+                      <a href="https://www.ipn.mx" class="">
+                          <img src="{% static './imagenes/pleca-ipn.png' %}" alt=" Logo IPN " class="plecaGob" />
+                          <p class="d-inline-block tituloLogo">
+                              Instituto Politécnico Nacional
+                              <br />
+                              <span class="sm">"La Técnica al Servicio de la Patria"</span>
+                          </p>
+                      </a>
+                  </div>
+              </div>
+              <div class="collapse navbar-collapse" id="subenlaces" style="background: #eaeaea">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li itemprop="contactPoint" style="margin-top: 12px">
+                          <a href="https://www.ipn.mx/directorio.html" itemprop="url">DIRECTORIO</a>
+                      </li>
+                      <li itemprop="email" style="margin-top: 12px">
+                          <a href="https://www.ipn.mx/correo-electronico.html" itemprop="url">CORREO ELECTRÓNICO</a>
+                      </li>
+                      <li itemprop="event" style="margin-top: 12px">
+                          <a href="https://www.ipn.mx/calendario-academico.html" itemprop="url">CALENDARIO</a>
+                      </li>
+                      <li itemprop="email" style="margin-top: 12px">
+                          <a href="https://www.ipn.mx/buzon.html" itemprop="url">BUZÓN</a>
+                      </li>
+                  </ul>
+              </div>
+          </div> 
+      </nav>
+  </div>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Encuesta Tansversal</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="message-text" class="col-form-label">Ingresa tu CURP:</label>
-                  <input type="text" class="form-control" id="recipient-name">
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                Cerrar
-              </button>
-              <button type="button" class="btn btn-primary">
-                Enviar
-              </button>
-            </div>
-          </div>
+
+
+  <img id="imgprincipal" class="img-responsive col-md-12" style="padding-left: 0px; padding-right: 0px" src="imagenes/index.png" />
+
+    <div id="piePagina" class="row text-justify piePagina-texto">
+        <div class="col-sm-8 col-sm-offset-2 text-justify">
+                <h3 class="text-center piePagina-titulo"> INSTITUTO POLITÉCNICO NACIONAL </h3>
+                <p>
+                    D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N,
+                    Unidad Profesional Adolfo López Mateos, Zacatenco, Alcaldía Gustavo A.
+                    Madero, C.P. 07738, Ciudad de México, 2019. Conmutador: 55 57 29 60 00
+                    / 55 57 29 63 00.
+                </p>
+                <br />
+                <p>
+                    Esta página es una obra intelectual protegida por la Ley Federal del
+                    Derecho de Autor, puede ser reproducida con fines no lucrativos,
+                    siempre y cuando no se mutile, se cite la fuente completa y su
+                    dirección electrónica; su uso para otros fines, requiere autorización
+                    previa y por escrito de la Dirección General del Instituto.
+                </p>
+                <img id="imagen" class="EducacionplecaGob gob" src="{% static './temporal/imagenes/educacion2.png' %}" />
         </div>
-      </div>
-    <!-- </div> -->
+    </div>
 
-    <script type="text/javascript" src="{% static './jquery/jquery-3.6.0.min.js' %}" ></script>
-    <script type="text/javascript" src="{% static './bootstrap/js/bootstrap.min.js' %}" ></script>
+    <link rel="stylesheet" type="text/css" href="{% static './temporal/styles/StyleFooterGob.css' %}" />
+    <div class="fotGob">
+        <div class="filaGob">
+            <div class="gobtres">
+                <h5>Enlaces</h5>
+                <ul>
+                    <li>
+                        <a href="https://www.gob.mx/accesibilidad">Declaración de Accesibilidad</a>
+                    </li>
+                    <li>
+                        <a href="https://www.gob.mx/privacidad">Política de privacidad</a>
+                    </li>
+                    <li>
+                        <a href="https://www.gob.mx/terminos">Términos y Condiciones</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ordenjuridico.gob.mx" target="_blank">Marco Jurídico</a>
+                    </li>
+                    <li>
+                        <a href="http://portaltransparencia.gob.mx" target="_blank">Portal de Obligaciones de
+                            Transparencia</a>
+                    </li>
+                    <li>
+                        <a href="https://www.infomex.org.mx/gobiernofederal/home.action" target="_blank">Sistema
+                            Infomex</a>
+                    </li>
+                    <li>
+                        <a href="http://inicio.ifai.org.mx/SitePages/ifai.aspx" target="_blank">INAI</a>
+                    </li>
+                    <li><a href="https://www.gob.mx/sitemap">Mapa de sitio</a></li>
+                </ul>
+            </div>
+            <div class="gobtres">
+                <h5>¿Qué es gob.mx?</h5>
+                <p>
+                    Es el portal único de trámites, información y participación
+                    ciudadana.
+                    <a href="https://www.gob.mx/que-es-gobmx" class="gb-footer-link-underline">Leer más</a>
+                </p>
+                <ul>
+                    <li><a href="https://www.gob.mx/en/index">English</a></li>
+                    <li><a href="https://www.gob.mx/temas">Temas</a></li>
+                    <li>
+                        <a href="http://reformas.gob.mx" target="_blank">Reformas</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gobtres">
+                <h5>Contacto</h5>
+                <p>
+                    Mesa de ayuda: dudas e información<br />
+                    gobmx@funcionpublica.gob.mx
+                </p>
+                <p>
+                    <a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54"
+                        class="gb-footer-link-underline">Denuncia contra servidores públicos</a>
+                </p>
+            </div>
+        </div>
+        <div class="filaGob" style="height: 100px">
+            <div class="gobtres" style="width: 33%; display: block; height: 100%"></div>
+            <div class="gobtres" style="width: 33%; display: block; height: 100%">
+                <h5>Síguenos en</h5>
+                <ul class="list-inline">
+                    <li>
+                        <a class="social-icon share-info facebook" target="_blank" href="https://www.facebook.com/gobmx"
+                            aria-label="Facebook de presidencia"></a>
+                    </li>
+                    <li>
+                        <a class="social-icon share-info twitter" target="_blank" href="https://twitter.com/gobmx"
+                            aria-label="Twitter de presidencia"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerGob">
+            <div class="contGob">
+                <img class="gobmx-footer" src="https://framework-gb.cdn.gob.mx/assets/images/gobmxlogo-2.svg"
+                    alt="Página de inicio, Gobierno de México" width="126" height="39" />
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script type="text/javascript" src="{% static './jquery/jquery-3.6.0.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static './bootstrap/js/bootstrap.min.js' %}" ></script> -->
   </body>
 </html>
