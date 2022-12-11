@@ -2,13 +2,10 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
-a:link {
+a:link, a:visited {
     text-decoration:none
 }
-  
-a:visited {
-    text-decoration:none
-}
+
 
 .tituloLogo {
     font-size: 12px;

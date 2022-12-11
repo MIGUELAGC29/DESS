@@ -19,12 +19,25 @@
     
 }
 
-.holi {
-    background-color: #F6F6F6;
+.back-footer-color {
+    background-color: #EAEAEA;
 }
 
 .img-gob-footer {
     margin-left: 500px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+table tr td a, table tr td p{
+    font-size: 13px;
+}
+
+table tr td a{
+    color: black;
+}
+
+table tr td a:hover{
+    color: black;
+    text-decoration: underline black;
 }
