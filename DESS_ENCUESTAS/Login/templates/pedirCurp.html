@@ -33,7 +33,8 @@
                     </form>
 
               <script>
-                var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+                import { Modal } from 'bootstrap'
+                var myModal = new Modal(document.getElementById("exampleModal"), {});
                 document.onreadystatechange = function () {
                   myModal.show();
                 };
