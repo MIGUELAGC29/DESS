@@ -1,0 +1,11 @@
+input[name=nombres] {
+    pointer-events: none;
+ }
+
+ input[name=ap_paterno] {
+    pointer-events: none;
+ }
+
+ input[name=ap_materno] {
+    pointer-events: none;
+ }
