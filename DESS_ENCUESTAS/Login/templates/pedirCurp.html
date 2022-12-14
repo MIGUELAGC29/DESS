@@ -32,9 +32,8 @@
                 </div>
                     </form>
 
-              <script>
-                import { Modal } from 'bootstrap'
-                var myModal = new Modal(document.getElementById("exampleModal"), {});
+              <script type="module">
+                var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
                 document.onreadystatechange = function () {
                   myModal.show();
                 };
