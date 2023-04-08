@@ -1,0 +1,40 @@
+PREGUNTA_1 - "¿Estás titulado?"
+PREGUNTA_2 - "¿Por qué razón no te has titulado?"
+PREGUNTA_3 - "¿Qué estás estudiando actualmente?	"
+PREGUNTA_4 - "¿Tus estudios son de tiempo completo?"
+PREGUNTA_5 - "¿En qué institución educativa realizas tus estudios?"
+PREGUNTA_6 - "¿Actualmente te encuentras laborando?"
+PREGUNTA_7 - "¿Estás en búsqueda de empleo?"
+PREGUNTA_8 - "¿Cuál es el motivo, por el cual no te encuentras laborando?"
+PREGUNTA_9 - "¿Cuántos empleos has tenido desde que egresaste? Incluyendo el último"
+PREGUNTA_10 - "¿Cómo calificarías tu puesto de trabajo con respecto al inmediato anterior? (Considerando ambiente laboral, condiciones, ingresos y desempeño profesional)"
+PREGUNTA_11 - "¿Cuál fue el principal factor que te motivó a cambiar de trabajo?"
+PREGUNTA_12 - "¿En qué modalidad laboras o laboraste?"
+PREGUNTA_13 - "Sector económico de la empresa donde laboras(te):"
+PREGUNTA_14 - "Tamaño de la empresa en la que laboras(te):"
+PREGUNTA_15 - "El ramo económico al que pertenece la empresa es:"
+PREGUNTA_16 - "El último cargo que ocupaste o actualmente ocupas es:"
+PREGUNTA_17 - "¿Cuál es o fue tu tipo de contratación en la empresa que laboras(te)?"
+PREGUNTA_18 - ""
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
+PREGUNTA_
