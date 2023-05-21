@@ -22,7 +22,6 @@ def registroUsuario(request):
         if(request_renapo != None):
             try:
                 jsonData = request_renapo.json()
-                print(jsonData)
                 if(jsonData.get('@statusOper') == "NO EXITOSO"):
                     error = jsonData.get('@message')
                     return render(request, 'pedirCurp.html', {
@@ -89,7 +88,7 @@ def guardarUsuario(request):
         programa_academico = request.POST['programa_academico']
         
         
-        #print(nombres, apellido1, apellido2, curp, sexo, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, unidad_academica, programa_academico)
+        print(nombres, apellido1, apellido2, curp, sexo, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, unidad_academica, programa_academico)
         
         
         

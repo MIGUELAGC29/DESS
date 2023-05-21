@@ -284,11 +284,10 @@
           optionElige.value = '';
           optionElige.textContent = 'Elige...';
           selectElement2.appendChild(optionElige);
-      
+          
           // Recorrer el diccionario y crear los options
-          for (var key in resultado) {
-            if (resultado.hasOwnProperty(key)) {
-              var value = resultado[key][1];
+          Object.keys(resultado).forEach(function(key) {
+              var value = key;
               var text = resultado[key][0];
       
               // Crear el elemento option
@@ -298,8 +297,8 @@
       
               // Agregar el option al select
               selectElement2.appendChild(optionElement);
-            }
-          }
+          });
+      
       
           resultado = {};
           nuevoDiccionario = {};
