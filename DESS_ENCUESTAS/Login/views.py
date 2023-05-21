@@ -19,7 +19,6 @@ def registroUsuario(request):
         curp = request.POST['curp']
         json = "{" + "\"data\":{" + "\"curp\":" + "\"" + curp + "\"" + "} }"
         request_renapo = requests.post(url, auth = HTTPBasicAuth(user,password), data=json)
-        print(request_renapo)
         if(request_renapo != None):
             try:
                 jsonData = request_renapo.json()
@@ -35,8 +34,17 @@ def registroUsuario(request):
                     ap_paterno = jsonData.get('apellido1')
                     ap_materno = jsonData.get('apellido2')
                     
+                    
+                    
                     unidades_academicas = UnidadAcademica.objects.all()
                     programas_academicos = ProgramaAcademico.objects.all()
+
+                        
+                    
+                    
+                    
+                    
+                    
                     return render(request, 'registroUsuario.html', {
                         'curp': curp,
                         'nombres': nombres,
@@ -61,6 +69,7 @@ def registroUsuario(request):
             
             
 def guardarUsuario(request):
+    
     if request.method == "POST" or request.method == "GET":
         nombres = request.POST['nombres']
         apellido1 = request.POST['apellido1']
@@ -74,11 +83,13 @@ def guardarUsuario(request):
         pais = request.POST['pais']
         codigo_postal = request.POST['codigo_postal']
         entidad_federativa = request.POST['entidad_federativa']
+        nivel_academico = request.POST['nivel_academico']
         alcaldia_municipio = request.POST['alcaldia_municipio']
         unidad_academica = request.POST['unidad_academica']
+        programa_academico = request.POST['programa_academico']
         
         
-        print(nombres, apellido1, apellido2, curp, sexo, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, unidad_academica)
+        #print(nombres, apellido1, apellido2, curp, sexo, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, unidad_academica, programa_academico)
         
         
         
