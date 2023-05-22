@@ -198,9 +198,9 @@
       <label for="validationCustom13" class="form-label">Nivel Académico</label>
       <select class="form-select" id="validationCustom13" name="nivel_academico" required>
         <option selected disabled value="">Elige...</option>
-        <option value="Medio Superior">Medio Superior</option>
-        <option value="Superior">Superior</option>
-        <option value="Posgrado">Posgrado</option>
+        {% for na in niveles_academicos %}
+          <option value="{{ na.id_na }}">{{ na.nivel }}</option>
+        {% endfor %}
       </select>
       <div class="valid-feedback">
         ¡Bien!.
@@ -238,6 +238,73 @@
         Selecciona un Programa Academico válido.
       </div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var selectElement = document.getElementById('validationCustom13');
+        var selectElement2 = document.getElementById('validationCustom14');
+        
+        selectElement.addEventListener('change', function() {
+          var nivelAcademico = parseInt(selectElement.value);
+          //console.log(nivelAcademico);
+      
+          var unidadesAcademicas = {};
+          {% for ua in unidades_academicas %}
+          unidadesAcademicas["{{ ua.id_ua }}"] = ["{{ ua.nombre }}", "{{ ua.id_na }}"];
+          {% endfor %}
+          
+          var unidadesAcademicasLimpias = {};
+          for (var clave in unidadesAcademicas) {
+            if (unidadesAcademicas.hasOwnProperty(clave)) {
+              var valor = unidadesAcademicas[clave][1];
+              var ua = unidadesAcademicas[clave][0]
+              var numero = parseInt(valor.match(/\((\d+)\)/)[1]);
+              unidadesAcademicasLimpias[clave] = [ua , numero];
+            }
+          }
+          //console.log(unidadesAcademicasLimpias);
+
+          var unidadesAcademicasFiltradas = {};
+          for (var clave in unidadesAcademicasLimpias) {
+            if (unidadesAcademicasLimpias.hasOwnProperty(clave)) {
+              var valor = unidadesAcademicasLimpias[clave];
+              if (valor[1] === nivelAcademico) {
+                unidadesAcademicasFiltradas[clave] = valor;
+              }
+            }
+          }
+          //console.log(unidadesAcademicasFiltradas); 
+          
+          
+          // Eliminar las opciones existentes en el segundo select
+          selectElement2.innerHTML = '';
+      
+          // Agregar la opción "Elige..." al segundo select
+          var optionElige = document.createElement('option');
+          optionElige.value = '';
+          optionElige.textContent = 'Elige...';
+          selectElement2.appendChild(optionElige);
+          
+          // Recorrer el diccionario y crear los options
+          Object.keys(unidadesAcademicasFiltradas).forEach(function(key) {
+              var value = key;
+              var text = unidadesAcademicasFiltradas[key][0];
+      
+              // Crear el elemento option
+              var optionElement = document.createElement('option');
+              optionElement.value = value;
+              optionElement.textContent = text;
+      
+              // Agregar el option al select
+              selectElement2.appendChild(optionElement);
+          });
+      
+      
+          unidadesAcademicasFiltradas = {};
+          unidadesAcademicasLimpias = {};
+          unidadesAcademicas = {};
+        });
+      });
+    </script>
     
     <script>
       document.addEventListener('DOMContentLoaded', function() {
