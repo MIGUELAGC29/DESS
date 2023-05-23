@@ -1,0 +1,11 @@
+{% extends 'footerAndHeader.html' %}
+
+{% block body %}
+
+
+{% for cuestionario in cuestionarios %}
+    <p>{{ cuestionario.nombre }}</p>
+{% endfor %}
+    
+
+{% endblock body %}

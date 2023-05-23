@@ -228,7 +228,7 @@
 
     <div class="col-md-4">
       <label for="validationCustom15" class="form-label">Programa Academico</label>
-      <select class="form-select" id="miSelect" name="programa_academico" required>
+      <select class="form-select" id="validationCustom15" name="programa_academico" required>
         <option  value="">Elige...</option>
       </select>
       <div class="valid-feedback">
@@ -262,7 +262,6 @@
             }
           }
           //console.log(unidadesAcademicasLimpias);
-
           var unidadesAcademicasFiltradas = {};
           for (var clave in unidadesAcademicasLimpias) {
             if (unidadesAcademicasLimpias.hasOwnProperty(clave)) {
@@ -273,7 +272,6 @@
             }
           }
           //console.log(unidadesAcademicasFiltradas); 
-          
           
           // Eliminar las opciones existentes en el segundo select
           selectElement2.innerHTML = '';
@@ -309,40 +307,39 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var selectElement = document.getElementById('validationCustom14');
-        var selectElement2 = document.getElementById('miSelect');
+        var selectElement2 = document.getElementById('validationCustom15');
         
         selectElement.addEventListener('change', function() {
-          var varvar = parseInt(selectElement.value);
-          console.log(varvar);
-      
-          var datos = {};
+          var unidadAcademica = parseInt(selectElement.value);
+
+          //console.log(unidadAcademica);
+          var programasAcademicos = {};
           {% for pa in programas_academicos %}
-            datos["{{ pa.id_pa }}"] = ["{{ pa.nombre }}", "{{ pa.id_ua }}"];
+          programasAcademicos["{{ pa.id_pa }}"] = ["{{ pa.nombre }}", "{{ pa.id_ua }}"];
           {% endfor %}
       
-          var nuevoDiccionario = {};
-      
-          for (var clave in datos) {
-            if (datos.hasOwnProperty(clave)) {
-              var valor = datos[clave][1];
-              var pa = datos[clave][0]
+          var programasAcademicosLimpias = {};
+          for (var clave in programasAcademicos) {
+            if (programasAcademicos.hasOwnProperty(clave)) {
+              var valor = programasAcademicos[clave][1];
+              var pa = programasAcademicos[clave][0]
               var numero = parseInt(valor.match(/\((\d+)\)/)[1]);
-              nuevoDiccionario[clave] = [pa , numero];
+              programasAcademicosLimpias[clave] = [pa , numero];
             }
           }
       
           var resultado = {};
-      
-          for (var clave in nuevoDiccionario) {
-            if (nuevoDiccionario.hasOwnProperty(clave)) {
-              var valor = nuevoDiccionario[clave];
-              if (valor[1] === varvar) {
-                resultado[clave] = valor;
+          var programasAcademicosFiltrados = {};
+          for (var clave in programasAcademicosLimpias) {
+            if (programasAcademicosLimpias.hasOwnProperty(clave)) {
+              var valor = programasAcademicosLimpias[clave];
+              if (valor[1] === unidadAcademica) {
+                programasAcademicosFiltrados[clave] = valor;
               }
             }
           }
-          console.log(resultado); 
-      
+
+          //console.log(programasAcademicosFiltrados); 
           // Eliminar las opciones existentes en el segundo select
           selectElement2.innerHTML = '';
       
@@ -353,9 +350,9 @@
           selectElement2.appendChild(optionElige);
           
           // Recorrer el diccionario y crear los options
-          Object.keys(resultado).forEach(function(key) {
+          Object.keys(programasAcademicosFiltrados).forEach(function(key) {
               var value = key;
-              var text = resultado[key][0];
+              var text = programasAcademicosFiltrados[key][0];
       
               // Crear el elemento option
               var optionElement = document.createElement('option');
@@ -366,14 +363,11 @@
               selectElement2.appendChild(optionElement);
           });
       
-      
-          resultado = {};
-          nuevoDiccionario = {};
-          datos = {};
+          programasAcademicos = {};
+          programasAcademicosFiltrados = {};
+          programasAcademicosLimpias = {};
         });
       });
-      
-      
     </script>
     
     

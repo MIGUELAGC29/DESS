@@ -45,41 +45,46 @@ VALUES
 ('Técnico en vocales', 5),
 ('Técnico en tablets', 6),
 ('Técnico en celulares', 6),
-('Técnico en computadoras', 7)
-('Técnico en programación', 7)
-('Técnico en agricultura', 8)
-('Técnico en vegetales', 8)
-('Técnico en alimentos', 9)
-('Técnico en bebidas', 9)
-('Licenciado en mantenimiento', 10)
-('Licenciado en burbujas', 10)
-('Licenciado en videojuegos', 11)
-('Licenciado en entretenimiento', 11)
-('Licenciado en redes', 12)
-('Licenciado en hip-hop', 12)
-('Licenciado en rap', 13)
-('Licenciado en música', 13)
-('Licenciado en vocales', 14)
-('Licenciado en tablets', 14)
-('Licenciado en celulares', 15)
-('Licenciado en computadoras', 15)
-('Licenciado en programación', 16)
-('Licenciado en agricultura', 16)
-('Licenciado en vegetales', 17)
-('Licenciado en alimentos', 17)
-('Licenciado en museos', 18)
-('Licenciado en cuadros', 18)
-('Doctorado en mantenimiento', 19)
-('Doctorado en burbujas', 19)
-('Doctorado en videojuegos', 20)
-('Doctorado en entretenimiento', 20)
-('Doctorado en redes', 21)
-('Doctorado en mercadotecnia', 21)
-('Doctorado en hip-hop', 22)
-('Doctorado en rap', 22)
-('Doctorado en música', 23)
-('Doctorado en vocales', 23)
-('Doctorado en tablets', 24)
-('Doctorado en celulares', 24)
+('Técnico en computadoras', 7),
+('Técnico en programación', 7),
+('Técnico en agricultura', 8),
+('Técnico en vegetales', 8),
+('Técnico en alimentos', 9),
+('Técnico en bebidas', 9),
+('Licenciado en mantenimiento', 10),
+('Licenciado en burbujas', 10),
+('Licenciado en videojuegos', 11),
+('Licenciado en entretenimiento', 11),
+('Licenciado en redes', 12),
+('Licenciado en hip-hop', 12),
+('Licenciado en rap', 13),
+('Licenciado en música', 13),
+('Licenciado en vocales', 14),
+('Licenciado en tablets', 14),
+('Licenciado en celulares', 15),
+('Licenciado en computadoras', 15),
+('Licenciado en programación', 16),
+('Licenciado en agricultura', 16),
+('Licenciado en vegetales', 17),
+('Licenciado en alimentos', 17),
+('Licenciado en museos', 18),
+('Licenciado en cuadros', 18),
+('Doctorado en mantenimiento', 19),
+('Doctorado en burbujas', 19),
+('Doctorado en videojuegos', 20),
+('Doctorado en entretenimiento', 20),
+('Doctorado en redes', 21),
+('Doctorado en mercadotecnia', 21),
+('Doctorado en hip-hop', 22),
+('Doctorado en rap', 22);
+
+INSERT INTO CUESTIONARIO(NOMBRE, DESCRIPCION, ID_NA)
+VALUES
+('Cuestionario 1 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 1),
+('Cuestionario 2 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 1),
+('Cuestionario 3 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 1),
+('Cuestionario 1 nivel superior', 'Cuestionario prueba de nivel superior', 2),
+('Cuestionario 2 nivel superior', 'Cuestionario prueba de nivel superior', 2),
+('Cuestionario 3 nivel superior', 'Cuestionario prueba de nivel superior', 2);
 
 
