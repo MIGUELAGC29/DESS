@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 import requests
 from requests.auth import HTTPBasicAuth
-from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario
+from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario, Edad
 
 
 def peticionCurp(request):
@@ -36,6 +36,7 @@ def registroUsuario(request):
                     unidades_academicas = UnidadAcademica.objects.all()
                     programas_academicos = ProgramaAcademico.objects.all()
                     niveles_academicos = NivelAcademico.objects.all()
+                    edades = Edad.objects.all()
 
                     return render(request, 'registroUsuario.html', {
                         'curp': curp,
@@ -45,6 +46,7 @@ def registroUsuario(request):
                         'unidades_academicas': unidades_academicas,
                         'programas_academicos': programas_academicos,
                         'niveles_academicos': niveles_academicos,
+                        'edades': edades,
                         })
             except:
                 error = "SOLICITUD NO REALIZADA, INTENTELO MÁS TARDE"
@@ -67,7 +69,7 @@ def guardarUsuario(request):
         apellido1 = request.POST['apellido1']
         apellido2 = request.POST['apellido2']
         curp = request.POST['curp']
-        sexo = request.POST['sexo']
+        genero = request.POST['genero']
         edad = request.POST['edad']
         estado_civil = request.POST['estado_civil']
         email = request.POST['email']
