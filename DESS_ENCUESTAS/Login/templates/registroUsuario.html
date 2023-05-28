@@ -49,8 +49,8 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom04" class="form-label">Edad</label>
-      <select class="form-select" id="" name="edad" required>
+      <label for="validationCustom05" class="form-label">Edad</label>
+      <select class="form-select" id="validationCustom05" name="edad" required>
         <option selected disabled value="">Elige...</option>
         {% for rango in edades %}
           <option value="{{ rango.id_edad }}">{{ rango.rango }}</option>
@@ -65,8 +65,8 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom05" class="form-label">Genero</label>
-      <select class="form-select" id="validationCustom05" name="genero" required>
+      <label for="validationCustom06" class="form-label">Genero</label>
+      <select class="form-select" id="validationCustom06" name="genero" required>
         <option selected disabled value="">Elige...</option>
         <option value="Masculino">Masculino</option>
         <option value="Femenino">Femenino</option>
@@ -80,8 +80,8 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom06" class="form-label">Estado Civil</label>
-      <select class="form-select" id="validationCustom06" name="estado_civil" required>
+      <label for="validationCustom07" class="form-label">Estado Civil</label>
+      <select class="form-select" id="validationCustom07" name="estado_civil" required>
         <option selected disabled value="">Elige...</option>
         <option value="Soltero">Soltero</option>
         <option value="Casado">Casado</option>
@@ -95,8 +95,8 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom07" class="form-label">Email</label>
-      <input type="email" class="form-control" id="validationCustom07" name="email" required>
+      <label for="validationCustom08" class="form-label">Email</label>
+      <input type="email" class="form-control" id="validationCustom08" name="email" required>
       <div class="valid-feedback">
         ¡Bien!.
       </div>
@@ -106,8 +106,8 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom08" class="form-label">Teléfono</label>
-      <input type="tel" class="form-control" id="validationCustom08" name="telefono" pattern="[0-9]*" inputmode="numeric" required>
+      <label for="validationCustom09" class="form-label">Teléfono</label>
+      <input type="tel" class="form-control" id="validationCustom09" name="telefono" pattern="[0-9]*" inputmode="numeric" required>
       <div class="valid-feedback">
         ¡Bien!.
       </div>
@@ -116,13 +116,13 @@
       </div>
     </div>
 
-    <div class="col-md-3">
-      <label for="validationCustom09" class="form-label">País</label>
-      <select class="form-select" id="validationCustom09" name="pais" required>
+    <div class="col-md-6">
+      <label for="validationCustom10" class="form-label">País de Nacimiento</label>
+      <select class="form-select" id="validationCustom10" name="pais_nacimiento" required>
         <option selected disabled value="">Elige...</option>
-        <option value="México">México</option>
-        <option value="Argentina">Argentina</option>
-        <option value="Brasil">Brasil</option>
+        {% for pais in paises %}
+          <option value="{{ pais.id_pais }}">{{ pais.pais }}</option>
+        {% endfor %}
       </select>
       <div class="valid-feedback">
         ¡Bien!.
@@ -132,20 +132,25 @@
       </div>
     </div>
 
-    <div class="col-md-3">
-      <label for="validationCustom10" class="form-label">Código Postal</label>
-      <input type="tel" class="form-control" id="validationCustom10" name="codigo_postal" pattern="[0-9]*" inputmode="numeric" required>
+    <div class="col-md-6">
+      <label for="validationCustom11" class="form-label">País de Residencia</label>
+      <select class="form-select" id="validationCustom11" name="pais_residencia" required>
+        <option selected disabled value="">Elige...</option>
+        {% for pais in paises %}
+          <option value="{{ pais.id_pais }}">{{ pais.pais }}</option>
+        {% endfor %}
+      </select>
       <div class="valid-feedback">
         ¡Bien!.
       </div>
       <div class="invalid-feedback">
-        !Ej: 01234!.
+        Selecciona un país válido.
       </div>
     </div>
 
-    <div class="col-md-3">
-      <label for="validationCustom11" class="form-label">Entidad Federativa</label>
-      <select class="form-select" id="validationCustom11" name="entidad_federativa" required>
+    <div class="col-md-4">
+      <label for="validationCustom12" class="form-label">Entidad federativa, Ciudad o Provincia</label>
+      <select class="form-select" id="validationCustom12" name="entidad_federativa" required>
         <option selected disabled value="">Elige...</option>
         <option value="CDMX">CDMX</option>
         <option value="Estado de México">Estado de México</option>
@@ -159,9 +164,9 @@
       </div>
     </div>
 
-    <div class="col-md-3">
-      <label for="validationCustom12" class="form-label">Alcaldía o Municipio</label>
-      <select class="form-select" id="validationCustom12" name="alcaldia_municipio" required>
+    <div class="col-md-4">
+      <label for="validationCustom13" class="form-label">Alcaldía o Municipio</label>
+      <select class="form-select" id="validationCustom13" name="alcaldia_municipio" required>
         <option selected disabled value="">Elige...</option>
         <option value="Azcapotzalco">Azcapotzalco</option>
         <option value="Benito Juarez">Benito Juarez</option>
@@ -176,8 +181,37 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom13" class="form-label">Nivel Académico</label>
-      <select class="form-select" id="validationCustom13" name="nivel_academico" required>
+      <label for="validationCustom14" class="form-label">Código Postal</label>
+      <input type="tel" class="form-control" id="validationCustom14" name="codigo_postal" pattern="[0-9]*" inputmode="numeric" required>
+      <div class="valid-feedback">
+        ¡Bien!.
+      </div>
+      <div class="invalid-feedback">
+        !Ej: 01234!.
+      </div>
+    </div>
+
+    <script>
+      var selectElementpapi = document.getElementById('validationCustom11');
+      document.addEventListener('DOMContentLoaded', function() {
+        selectElementpapi.addEventListener('change', function() {
+          var pais = parseInt(selectElementpapi.value);
+          if (pais == 119){
+            console.log(pais);
+          } else {
+            console.log("Error")
+          }
+          
+        });
+      });
+    </script>
+    
+    
+    
+
+    <div class="col-md-4">
+      <label for="validationCustom15" class="form-label">Nivel Académico</label>
+      <select class="form-select" id="validationCustom15" name="nivel_academico" required>
         <option selected disabled value="">Elige...</option>
         {% for na in niveles_academicos %}
           <option value="{{ na.id_na }}">{{ na.nivel }}</option>
@@ -192,8 +226,8 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom14" class="form-label">Unidad Academica</label>
-      <select class="form-select" id="validationCustom14" name="unidad_academica" required>
+      <label for="validationCustom16" class="form-label">Unidad Academica</label>
+      <select class="form-select" id="validationCustom16" name="unidad_academica" required>
         <option selected disabled>Elige...</option>
         {% for ua in unidades_academicas %}
           <option value="{{ ua.id_ua }}">{{ ua.nombre }}</option>
@@ -208,8 +242,8 @@
     </div>
 
     <div class="col-md-4">
-      <label for="validationCustom15" class="form-label">Programa Academico</label>
-      <select class="form-select" id="validationCustom15" name="programa_academico" required>
+      <label for="validationCustom17" class="form-label">Programa Academico</label>
+      <select class="form-select" id="validationCustom17" name="programa_academico" required>
         <option  value="">Elige...</option>
       </select>
       <div class="valid-feedback">
@@ -219,10 +253,10 @@
         Selecciona un Programa Academico válido.
       </div>
     </div>
+
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var selectElement = document.getElementById('validationCustom13');
-        var selectElement2 = document.getElementById('validationCustom14');
+        var selectElement = document.getElementById('validationCustom15');
+        var selectElement2 = document.getElementById('validationCustom16');
         
         selectElement.addEventListener('change', function() {
           var nivelAcademico = parseInt(selectElement.value);
@@ -282,13 +316,12 @@
           unidadesAcademicasLimpias = {};
           unidadesAcademicas = {};
         });
-      });
     </script>
     
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        var selectElement = document.getElementById('validationCustom14');
-        var selectElement2 = document.getElementById('validationCustom15');
+        var selectElement = document.getElementById('validationCustom16');
+        var selectElement2 = document.getElementById('validationCustom17');
         
         selectElement.addEventListener('change', function() {
           var unidadAcademica = parseInt(selectElement.value);

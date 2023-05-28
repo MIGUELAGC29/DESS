@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 import requests
 from requests.auth import HTTPBasicAuth
-from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario, Edad
+from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario, Edad, Pais
 
 
 def peticionCurp(request):
@@ -37,6 +37,7 @@ def registroUsuario(request):
                     programas_academicos = ProgramaAcademico.objects.all()
                     niveles_academicos = NivelAcademico.objects.all()
                     edades = Edad.objects.all()
+                    paises = Pais.objects.all()
 
                     return render(request, 'registroUsuario.html', {
                         'curp': curp,
@@ -47,6 +48,7 @@ def registroUsuario(request):
                         'programas_academicos': programas_academicos,
                         'niveles_academicos': niveles_academicos,
                         'edades': edades,
+                        'paises': paises,
                         })
             except:
                 error = "SOLICITUD NO REALIZADA, INTENTELO MÁS TARDE"
@@ -81,8 +83,10 @@ def guardarUsuario(request):
         alcaldia_municipio = request.POST['alcaldia_municipio']
         unidad_academica = request.POST['unidad_academica']
         programa_academico = request.POST['programa_academico']
+        pais_nacimiento = request.POST['pais_nacimiento']
+        pais_residencia = request.POST['pais_residencia']
         
-        print(nombres, apellido1, apellido2, curp, sexo, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, nivel_academico, unidad_academica, programa_academico)
+        print(nombres, apellido1, apellido2, curp, genero, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, nivel_academico, unidad_academica, programa_academico)
         
         if nivel_academico == 1:
             cuestionarios = Cuestionario.objects.filter(id_na = nivel_academico)
