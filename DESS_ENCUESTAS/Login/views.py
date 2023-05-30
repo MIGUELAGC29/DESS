@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 import requests
 from requests.auth import HTTPBasicAuth
-from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario, Edad, Pais
+from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario, Edad, Pais, Ciudad, AlcaldiaMunicipio
 
 
 def peticionCurp(request):
@@ -38,6 +38,8 @@ def registroUsuario(request):
                     niveles_academicos = NivelAcademico.objects.all()
                     edades = Edad.objects.all()
                     paises = Pais.objects.all()
+                    ciudades = Ciudad.objects.all()
+                    alcaldias_municipios = Ciudad.objects.all()
 
                     return render(request, 'registroUsuario.html', {
                         'curp': curp,
@@ -49,6 +51,8 @@ def registroUsuario(request):
                         'niveles_academicos': niveles_academicos,
                         'edades': edades,
                         'paises': paises,
+                        'ciudades': ciudades,
+                        'alcaldias_municipios':alcaldias_municipios,
                         })
             except:
                 error = "SOLICITUD NO REALIZADA, INTENTELO MÁS TARDE"
@@ -71,22 +75,27 @@ def guardarUsuario(request):
         apellido1 = request.POST['apellido1']
         apellido2 = request.POST['apellido2']
         curp = request.POST['curp']
-        genero = request.POST['genero']
         edad = request.POST['edad']
+        genero = request.POST['genero']
         estado_civil = request.POST['estado_civil']
         email = request.POST['email']
         telefono = request.POST['telefono']
-        pais = request.POST['pais']
-        codigo_postal = request.POST['codigo_postal']
-        entidad_federativa = request.POST['entidad_federativa']
-        nivel_academico = int(request.POST.get('nivel_academico'))
-        alcaldia_municipio = request.POST['alcaldia_municipio']
-        unidad_academica = request.POST['unidad_academica']
-        programa_academico = request.POST['programa_academico']
         pais_nacimiento = request.POST['pais_nacimiento']
         pais_residencia = request.POST['pais_residencia']
+        entidad_federativa = request.POST['entidad_federativa']
+        alcaldia_municipio = request.POST.get('alcaldia_municipio', None)
+        codigo_postal = request.POST.get('codigo_postal', None)
         
-        print(nombres, apellido1, apellido2, curp, genero, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, nivel_academico, unidad_academica, programa_academico)
+        nivel_academico = int(request.POST.get('nivel_academico'))
+        
+        unidad_academica = request.POST['unidad_academica']
+        programa_academico = request.POST['programa_academico']
+        
+        
+        
+        
+        #print(nombres, apellido1, apellido2, curp, genero, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, nivel_academico, unidad_academica, programa_academico)
+        print(pais_nacimiento, pais_residencia, entidad_federativa, alcaldia_municipio, codigo_postal)
         
         if nivel_academico == 1:
             cuestionarios = Cuestionario.objects.filter(id_na = nivel_academico)

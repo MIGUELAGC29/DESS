@@ -147,15 +147,14 @@
         Selecciona un país válido.
       </div>
     </div>
-
-    <div class="col-md-4">
+    
+    <div id="contenedorEntidadFederativa" class="col-md-4">
       <label for="validationCustom12" class="form-label">Entidad federativa, Ciudad o Provincia</label>
-      <select class="form-select" id="validationCustom12" name="entidad_federativa" required>
-        <option selected disabled value="">Elige...</option>
-        <option value="CDMX">CDMX</option>
-        <option value="Estado de México">Estado de México</option>
-        <option value="Puebla">Puebla</option>
-      </select>
+      <div id="entidadFederativaContainer">
+        <select class="form-select" id="validationCustom12" name="entidad_federativa" required>
+          <option selected disabled value="">Elige...</option>
+        </select>
+      </div>
       <div class="valid-feedback">
         ¡Bien!.
       </div>
@@ -163,11 +162,11 @@
         Selecciona una Entidad Federativa válida.
       </div>
     </div>
-
+    
     <div class="col-md-4">
       <label for="validationCustom13" class="form-label">Alcaldía o Municipio</label>
       <select class="form-select" id="validationCustom13" name="alcaldia_municipio" required>
-        <option selected disabled value="">Elige...</option>
+        <option selected disabled value="None">Elige...</option>
         <option value="Azcapotzalco">Azcapotzalco</option>
         <option value="Benito Juarez">Benito Juarez</option>
         <option value="Coyoacan">Coyoacan</option>
@@ -179,32 +178,91 @@
         Selecciona una Alcaldía o Municipio válida.
       </div>
     </div>
-
+    
     <div class="col-md-4">
       <label for="validationCustom14" class="form-label">Código Postal</label>
-      <input type="tel" class="form-control" id="validationCustom14" name="codigo_postal" pattern="[0-9]*" inputmode="numeric" required>
+      <input type="tel" class="form-control" id="validationCustom14" name="codigo_postal" pattern="[0-9]*" inputmode="numeric" required value="None">
       <div class="valid-feedback">
         ¡Bien!.
       </div>
       <div class="invalid-feedback">
-        !Ej: 01234!.
+        ¡Ej: 01234!.
       </div>
     </div>
-
+    
     <script>
-      var selectElementpapi = document.getElementById('validationCustom11');
+      var paisResidencia = document.getElementById('validationCustom11');
+      var contenedorEntidadFederativa = document.getElementById('contenedorEntidadFederativa');
+      var alcaldiaMunicipioSelect = document.getElementById('validationCustom13');
+      var codigoPostalInput = document.getElementById('validationCustom14');
       document.addEventListener('DOMContentLoaded', function() {
-        selectElementpapi.addEventListener('change', function() {
-          var pais = parseInt(selectElementpapi.value);
-          if (pais == 119){
-            console.log(pais);
+        paisResidencia.addEventListener('change', function() {
+          var pais = parseInt(paisResidencia.value);
+          if (pais == 119) {
+            var ciudadesJs = [];
+            {% for ciudad in ciudades %}
+              ciudadesJs.push("{{ ciudad.ciudad }}");
+            {% endfor %}
+    
+            contenedorEntidadFederativa.innerHTML = '';
+    
+            var labelElement = document.createElement('label');
+            labelElement.htmlFor = 'validationCustom12';
+            labelElement.classList.add('form-label');
+            labelElement.textContent = 'Entidad federativa, Ciudad o Provincia';
+    
+            var selectElement = document.createElement('select');
+            selectElement.classList.add('form-select');
+            selectElement.id = 'validationCustom12';
+            selectElement.name = 'entidad_federativa';
+            selectElement.required = true;
+    
+            var defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = 'Elige...';
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            selectElement.appendChild(defaultOption);
+    
+            ciudadesJs.forEach(function(ciudad) {
+              var option = document.createElement('option');
+              option.value = ciudad;
+              option.textContent = ciudad;
+              selectElement.appendChild(option);
+            });
+    
+            contenedorEntidadFederativa.appendChild(labelElement);
+            contenedorEntidadFederativa.appendChild(selectElement);
+    
+            codigoPostalInput.removeAttribute('readonly');
+            alcaldiaMunicipioSelect.removeAttribute('disabled');
           } else {
-            console.log("Error")
+            contenedorEntidadFederativa.innerHTML = '';
+    
+            var labelElement = document.createElement('label');
+            labelElement.htmlFor = 'validationCustom12';
+            labelElement.classList.add('form-label');
+            labelElement.textContent = 'Entidad federativa, Ciudad o Provincia';
+    
+            var inputElement = document.createElement('input');
+            inputElement.type = 'text';
+            inputElement.classList.add('form-control');
+            inputElement.id = 'validationCustom12';
+            inputElement.name = 'entidad_federativa';
+            inputElement.required = true;
+    
+            contenedorEntidadFederativa.appendChild(labelElement);
+            contenedorEntidadFederativa.appendChild(inputElement);
+    
+            codigoPostalInput.setAttribute('readonly', 'readonly');
+            alcaldiaMunicipioSelect.setAttribute('disabled', 'disabled');
           }
-          
         });
       });
     </script>
+    
+    
+    
     
     
     
