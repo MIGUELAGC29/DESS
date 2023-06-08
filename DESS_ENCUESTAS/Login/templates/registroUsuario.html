@@ -165,9 +165,7 @@
     
     <div class="col-md-4">
       <label for="validationCustom13" class="form-label">Alcaldía o Municipio</label>
-      <select class="form-select" id="validationCustom13" name="alcaldia_municipio" required>
-        <option selected disabled value="None">Elige...</option>
-      </select>
+      <input type="tel" class="form-control" id="validationCustom13" name="alcaldia_municipio" required>
       <div class="valid-feedback">
         ¡Bien!.
       </div>
@@ -236,7 +234,7 @@
         contenedorEntidadFederativa.appendChild(selectElement);
 
         codigoPostalInput.value = '';
-        codigoPostalInput.removeAttribute('readonly');
+        codigoPostalInput.removeAttribute('disabled');
         alcaldiaMunicipioSelect.removeAttribute('disabled');
       } else {
         contenedorEntidadFederativa.innerHTML = '';
@@ -257,17 +255,11 @@
         contenedorEntidadFederativa.appendChild(inputElement);
 
         codigoPostalInput.value = '';
-        codigoPostalInput.setAttribute('readonly', 'readonly');
-        codigoPostalInput.setAttribute('placeholder', 'None');
+        codigoPostalInput.setAttribute('disabled', 'disabled');
+        //codigoPostalInput.setAttribute('placeholder', 'None');
+        alcaldiaMunicipioSelect.value = '';
         alcaldiaMunicipioSelect.setAttribute('disabled', 'disabled');
       }
-    });
-    
-    // Agregar evento de escucha al cambio de selección en el elemento select
-    console.log(entidadFederativaSelect);
-    entidadFederativaSelect.addEventListener('change', function() {
-      var selectedValue = entidadFederativaSelect.value;
-      console.log('Valor seleccionado:', selectedValue);
     });
   });
 </script>

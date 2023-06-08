@@ -96,6 +96,10 @@ def guardarUsuario(request):
         
         #print(nombres, apellido1, apellido2, curp, genero, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, nivel_academico, unidad_academica, programa_academico)
         print(pais_nacimiento, pais_residencia, entidad_federativa, alcaldia_municipio, codigo_postal)
+        if alcaldia_municipio is None or len(alcaldia_municipio) == 0:
+            print("La variable es una cadena vacía o nula.")
+        else:
+            print("La variable no es una cadena vacía.")
         
         if nivel_academico == 1:
             cuestionarios = Cuestionario.objects.filter(id_na = nivel_academico)
