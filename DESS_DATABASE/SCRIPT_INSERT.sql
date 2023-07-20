@@ -356,14 +356,50 @@ VALUES
 ('Zambia'),
 ('Zimbabue');
 
-INSERT INTO CUESTIONARIO(NOMBRE, DESCRIPCION, ID_NA)
+INSERT INTO CUESTIONARIO(NOMBRE, DESCRIPCION, IMAGEN, ID_NA)
 VALUES
-('Cuestionario 1 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 1),
-('Cuestionario 2 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 1),
-('Cuestionario 3 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 1),
-('Cuestionario 1 nivel superior', 'Cuestionario prueba de nivel superior', 2),
-('Cuestionario 2 nivel superior', 'Cuestionario prueba de nivel superior', 2),
-('Cuestionario 3 nivel superior', 'Cuestionario prueba de nivel superior', 2);
+('Cuestionario 1 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 'Encuesta_Transversal.png', 1),
+('Cuestionario 2 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 'Encuesta_Transversal.png', 1),
+('Cuestionario 3 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 'Encuesta_Transversal.png', 1),
+('Cuestionario 1 nivel superior', 'Cuestionario prueba de nivel superior', 'Encuesta_Transversal.png', 2),
+('Cuestionario 2 nivel superior', 'Cuestionario prueba de nivel superior', 'Trayectoria_Escolar_MS.png', 2),
+('Cuestionario 3 nivel superior', 'Cuestionario prueba de nivel superior', 'Trayectoria_Escolar_S.png', 2);
+
+
+INSERT INTO CIUDAD(CIUDAD) VALUES
+('Aguascalientes'),
+('Baja California'),
+('Baja California Sur'),
+('Campeche'),
+('Chiapas'),
+('Chihuahua'),
+('Coahuila'),
+('Colima'),
+('Durango'),
+('Guanajuato'),
+('Guerrero'),
+('Hidalgo'),
+('Jalisco'),
+('Estado de México'),
+('Michoacán'),
+('Morelos'),
+('Nayarit'),
+('Nuevo León'),
+('Oaxaca'),
+('Puebla'),
+('Querétaro'),
+('Quintana Roo'),
+('San Luis Potosí'),
+('Sinaloa'),
+('Sonora'),
+('Tabasco'),
+('Tamaulipas'),
+('Tlaxcala'),
+('Veracruz'),
+('Yucatán'),
+('Zacatecas');
+
+
 
 
 

@@ -85,17 +85,29 @@ def guardarUsuario(request):
         entidad_federativa = request.POST['entidad_federativa']
         alcaldia_municipio = request.POST.get('alcaldia_municipio', None)
         codigo_postal = request.POST.get('codigo_postal', None)
-        
         nivel_academico = int(request.POST.get('nivel_academico'))
-        
         unidad_academica = request.POST['unidad_academica']
         programa_academico = request.POST['programa_academico']
         
+        print(f"""Nombre: {nombres} \n 
+                Apellido Paterno: {apellido1} \n
+                Apellido Materno: {apellido2} \n
+                Curp: {curp} \n
+                Edad: {edad} \n
+                Genero: {genero} \n
+                Estado Civil: {estado_civil} \n
+                Email: {email} \n
+                Teléfono: {telefono} \n
+                País Nacimiento: {pais_nacimiento} \n
+                País Residencia: {pais_residencia} \n
+                Entidad Federativa: {entidad_federativa} \n
+                Alcaldía/Municipio: {alcaldia_municipio} \n
+                Código Postal: {codigo_postal} \n
+                Nivel Académico: {nivel_academico} \n
+                Unidad Académico: {unidad_academica} \n
+                Programa Académico: {programa_academico} \n""")
         
         
-        
-        #print(nombres, apellido1, apellido2, curp, genero, edad, estado_civil, email, telefono, pais, codigo_postal, entidad_federativa, alcaldia_municipio, nivel_academico, unidad_academica, programa_academico)
-        print(pais_nacimiento, pais_residencia, entidad_federativa, alcaldia_municipio, codigo_postal)
         if alcaldia_municipio is None or len(alcaldia_municipio) == 0:
             print("La variable es una cadena vacía o nula.")
         else:
