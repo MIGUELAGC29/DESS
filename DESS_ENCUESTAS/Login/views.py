@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 import requests
 from requests.auth import HTTPBasicAuth
-from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario, Edad, Pais, Ciudad, AlcaldiaMunicipio
+from Login.models import Usuario, UnidadAcademica, ProgramaAcademico, NivelAcademico, Cuestionario, Edad, Pais, Ciudad
 
 
 def peticionCurp(request):
@@ -107,6 +107,32 @@ def guardarUsuario(request):
                 Unidad Académico: {unidad_academica} \n
                 Programa Académico: {programa_academico} \n""")
         
+        nivel_academicoD = NivelAcademico.objects.get(id_na = nivel_academico)
+        unidad_academicaD = UnidadAcademica.objects.get(id_ua = unidad_academica)
+        programa_academicoD = ProgramaAcademico.objects.get(id_pa = programa_academico)
+        edadD = Edad.objects.get(id_edad = edad)
+        pais_nacimientoD = Pais.objects.get(id_pais = pais_nacimiento)
+        pais_residenciaD = Pais.objects.get(id_pais = pais_residencia)
+        
+        usuario = Usuario(nombre = nombres,
+                          apellido1 = apellido1,
+                          apellido2 = apellido2,
+                          curp = curp,
+                          genero = genero,
+                          estado_civil = estado_civil,
+                          email = email,
+                          telefono = telefono,
+                          codigo_postal = codigo_postal,
+                          ciudad = entidad_federativa,
+                          alcaldia_municipio = alcaldia_municipio,
+                          id_na = nivel_academicoD,                          
+                          id_ua = unidad_academicaD,
+                          id_pa = programa_academicoD,
+                          id_edad = edadD,
+                          id_pais_nacimiento = pais_nacimientoD,
+                          id_pais_residencia = pais_residenciaD)
+        
+        usuario.save()
         
         if alcaldia_municipio is None or len(alcaldia_municipio) == 0:
             print("La variable es una cadena vacía o nula.")
