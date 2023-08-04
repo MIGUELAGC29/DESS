@@ -373,6 +373,7 @@ INSERT INTO CIUDAD(CIUDAD) VALUES
 ('Campeche'),
 ('Chiapas'),
 ('Chihuahua'),
+('Ciudad de México (CDMX)')
 ('Coahuila'),
 ('Colima'),
 ('Durango'),

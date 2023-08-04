@@ -71,81 +71,34 @@ def registroUsuario(request):
             
 def guardarUsuario(request):
     if request.method == "POST" or request.method == "GET":
-        nombres = request.POST['nombres']
-        apellido1 = request.POST['apellido1']
-        apellido2 = request.POST['apellido2']
-        curp = request.POST['curp']
-        edad = request.POST['edad']
-        genero = request.POST['genero']
-        estado_civil = request.POST['estado_civil']
-        email = request.POST['email']
-        telefono = request.POST['telefono']
-        pais_nacimiento = request.POST['pais_nacimiento']
-        pais_residencia = request.POST['pais_residencia']
-        entidad_federativa = request.POST['entidad_federativa']
-        alcaldia_municipio = request.POST.get('alcaldia_municipio', None)
-        codigo_postal = request.POST.get('codigo_postal', None)
-        nivel_academico = int(request.POST.get('nivel_academico'))
-        unidad_academica = request.POST['unidad_academica']
-        programa_academico = request.POST['programa_academico']
         
-        print(f"""Nombre: {nombres} \n 
-                Apellido Paterno: {apellido1} \n
-                Apellido Materno: {apellido2} \n
-                Curp: {curp} \n
-                Edad: {edad} \n
-                Genero: {genero} \n
-                Estado Civil: {estado_civil} \n
-                Email: {email} \n
-                Teléfono: {telefono} \n
-                País Nacimiento: {pais_nacimiento} \n
-                País Residencia: {pais_residencia} \n
-                Entidad Federativa: {entidad_federativa} \n
-                Alcaldía/Municipio: {alcaldia_municipio} \n
-                Código Postal: {codigo_postal} \n
-                Nivel Académico: {nivel_academico} \n
-                Unidad Académico: {unidad_academica} \n
-                Programa Académico: {programa_academico} \n""")
-        
-        nivel_academicoD = NivelAcademico.objects.get(id_na = nivel_academico)
-        unidad_academicaD = UnidadAcademica.objects.get(id_ua = unidad_academica)
-        programa_academicoD = ProgramaAcademico.objects.get(id_pa = programa_academico)
-        edadD = Edad.objects.get(id_edad = edad)
-        pais_nacimientoD = Pais.objects.get(id_pais = pais_nacimiento)
-        pais_residenciaD = Pais.objects.get(id_pais = pais_residencia)
-        
-        usuario = Usuario(nombre = nombres,
-                          apellido1 = apellido1,
-                          apellido2 = apellido2,
-                          curp = curp,
-                          genero = genero,
-                          estado_civil = estado_civil,
-                          email = email,
-                          telefono = telefono,
-                          codigo_postal = codigo_postal,
-                          ciudad = entidad_federativa,
-                          alcaldia_municipio = alcaldia_municipio,
-                          id_na = nivel_academicoD,                          
-                          id_ua = unidad_academicaD,
-                          id_pa = programa_academicoD,
-                          id_edad = edadD,
-                          id_pais_nacimiento = pais_nacimientoD,
-                          id_pais_residencia = pais_residenciaD)
+        usuario = Usuario(nombre = request.POST['nombres'],
+                          apellido1 = request.POST['apellido1'],
+                          apellido2 = request.POST['apellido2'],
+                          curp = request.POST['curp'],
+                          genero = request.POST['genero'],
+                          estado_civil = request.POST['estado_civil'],
+                          email = request.POST['email'],
+                          telefono = request.POST['telefono'],
+                          codigo_postal = request.POST.get('codigo_postal', None),
+                          ciudad = request.POST['entidad_federativa'],
+                          alcaldia_municipio = request.POST.get('alcaldia_municipio', None),
+                          id_na = NivelAcademico.objects.get(id_na = int(request.POST.get('nivel_academico'))),                          
+                          id_ua = UnidadAcademica.objects.get(id_ua = request.POST['unidad_academica']),
+                          id_pa = ProgramaAcademico.objects.get(id_pa = request.POST['programa_academico']),
+                          id_edad = Edad.objects.get(id_edad = request.POST['edad']),
+                          id_pais_nacimiento = Pais.objects.get(id_pais = request.POST['pais_nacimiento']),
+                          id_pais_residencia = Pais.objects.get(id_pais = request.POST['pais_residencia']))
         
         usuario.save()
         
-        if alcaldia_municipio is None or len(alcaldia_municipio) == 0:
-            print("La variable es una cadena vacía o nula.")
-        else:
-            print("La variable no es una cadena vacía.")
-        
-        if nivel_academico == 1:
-            cuestionarios = Cuestionario.objects.filter(id_na = nivel_academico)
-            return render(request, 'seleccionCuestionarioMedioSuperior.html', {
+        if int(request.POST.get('nivel_academico')) == 1:
+            cuestionarios = Cuestionario.objects.filter(id_na = int(request.POST.get('nivel_academico')))
+            return render(request, 'Cuestionario/seleccionCuestionarioMedioSuperior.html', {
                 'cuestionarios': cuestionarios,
             })
-        elif nivel_academico == 2:
-            cuestionarios = Cuestionario.objects.filter(id_na = nivel_academico)
+        elif int(request.POST.get('nivel_academico')) == 2:
+            cuestionarios = Cuestionario.objects.filter(id_na = int(request.POST.get('nivel_academico')))
             return render(request, 'seleccionCuestionarioSuperior.html', {
                 'cuestionarios': cuestionarios,
             })

@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include 
 from Login import views
+from Cuestionario import views
 
 urlpatterns = [
     path('', include('Login.urls')),
+    path('cuestionario/', include('Cuestionario.urls')),
 ]
 
