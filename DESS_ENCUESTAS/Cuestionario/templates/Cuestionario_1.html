@@ -1,10 +1,162 @@
+{% extends 'footerAndHeader.html' %}
+
+{% block body %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Instrumento Transversal 2022 Nivel Superior</title>
 </head>
 <body>
-    <h5>{{ cuestionario_nombre }}</h5></body>
+    <form class="row g-3 needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">¿Actualmente te encuentras laborando?</label>
+        <br>
+          <div class="form-check-inline">
+            <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" value="Si" required>
+            <label class="form-check-label me-3" for="validationFormCheck2">Si</label>
+            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" value="No" required>
+            <label class="form-check-label" for="validationFormCheck3">No</label>
+            <div class="invalid-feedback">Selecciona una opción</div>
+          </div>
+
+
+
+
+
+
+
+
+          <!-- <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationCustom01" value="Si">
+            <label class="form-check-label" for="validationCustom01">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationCustom01" value="No">
+            <label class="form-check-label" for="validationCustom01">No</label>
+          </div>
+          <div class="valid-feedback" id="validationCustom01">
+            Bien!
+          </div>
+          <div class="invalid-feedback">
+            !Mal!.
+          </div> -->
+          
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div> -->
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>
+
+
+<script>
+    // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+    (function () {
+      'use strict'
+    // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+      var forms = document.querySelectorAll('.needs-validation')
+
+    // Bucle sobre ellos y evitar el envío
+      Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+  </script>
+{% endblock body %}

@@ -373,7 +373,7 @@ INSERT INTO CIUDAD(CIUDAD) VALUES
 ('Campeche'),
 ('Chiapas'),
 ('Chihuahua'),
-('Ciudad de México (CDMX)')
+('Ciudad de México (CDMX)'),
 ('Coahuila'),
 ('Colima'),
 ('Durango'),
@@ -400,6 +400,9 @@ INSERT INTO CIUDAD(CIUDAD) VALUES
 ('Yucatán'),
 ('Zacatecas');
 
+//models.py
+id_pais_nacimiento = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_NACIMIENTO', related_name='usuarios_nacimiento')
+id_pais_residencia = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_RESIDENCIA', related_name='usuarios_residencia')
 
 
 
