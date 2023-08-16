@@ -9,105 +9,255 @@
     <title>Instrumento Transversal 2022 Nivel Superior</title>
 </head>
 <body>
-    <form class="row g-3 needs-validation" novalidate>
+    <form action="{% url 'Finalizado' %}" method="POST" class="row g-3 needs-validation" novalidate>
         {% csrf_token %}
-        <div class="col-md-4">
-          <label for="validationCustom01" class="form-label">¿Actualmente te encuentras laborando?</label>
-        <br>
-          <div class="form-check-inline">
-            <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" value="Si" required>
-            <label class="form-check-label me-3" for="validationFormCheck2">Si</label>
-            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" value="No" required>
-            <label class="form-check-label" for="validationFormCheck3">No</label>
-            <div class="invalid-feedback">Selecciona una opción</div>
-          </div>
 
-
-
-
-
-
-
-
-          <!-- <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationCustom01" value="Si">
-            <label class="form-check-label" for="validationCustom01">Si</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationCustom01" value="No">
-            <label class="form-check-label" for="validationCustom01">No</label>
-          </div>
-          <div class="valid-feedback" id="validationCustom01">
-            Bien!
-          </div>
-          <div class="invalid-feedback">
-            !Mal!.
-          </div> -->
-          
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-        <!-- <div class="col-md-4">
-          <label for="validationCustom02" class="form-label">Last name</label>
-          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">Username</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-            <div class="invalid-feedback">
-              Please choose a username.
+          <div class="col-md-12">
+            <label for="validationCustom01" class="form-label">¿Actualmente te encuentras laborando?</label>
+            <br>
+            <div class="form-check-inline">
+              <input type="radio" class="form-check-input" id="validationFormCheck2" name="pregunta_1" value="Si" required>
+              <label class="form-check-label me-3" for="validationFormCheck2">Si</label>
+              <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_1" value="No" required>
+              <label class="form-check-label" for="validationFormCheck3">No</label>
+              <div class="invalid-feedback">Selecciona una opción</div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom03" class="form-label">City</label>
-          <input type="text" class="form-control" id="validationCustom03" required>
-          <div class="invalid-feedback">
-            Please provide a valid city.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">State</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Choose...</option>
-            <option>...</option>
-          </select>
-          <div class="invalid-feedback">
-            Please select a valid state.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="validationCustom05" required>
-          <div class="invalid-feedback">
-            Please provide a valid zip.
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
-              Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
+
+          <div class="row">
+            <div class="col-md-4">
+                <label for="validation_1" class="form-label">¿Cuál es la razón principal por la que no te encuentras laborando?</label>
+                <select class="form-select" id="validation_1" required onchange="showInputBox('validation_1', 'inputBoxContainer_1', 'otherReason_1')" name="pregunta_2">
+                  <option selected disabled value="">Elije un opción...</option>
+                  <option value="El mercado laboral está saturado">El mercado laboral está saturado</option>
+                  <option value="Falta de oferta laboral en mi área de estudio">Falta de oferta laboral en mi área de estudio</option>
+                  <option value="No estar titulado(a) falta de cedula profesional">No estar titulado(a) falta de cedula profesional</option>
+                  <option value="Cuestiones de salud">Cuestiones de salud</option>
+                  <option value="Otro">Otro</option>
+                </select>
+                <div class="valid-feedback">
+                    ¡Se ve bien!
+                </div>
+                <div class="invalid-feedback">
+                    Selecciona una opción.
+                </div>
             </div>
+            <div class="col-md-4" id="inputBoxContainer_1" style="display: none;">
+                <label for="otherReason_1" class="form-label">Por favor, especifica:</label>
+                <input type="text" class="form-control" id="otherReason_1" name="pregunta_2_otro">
+            </div>
+        </div>
+
+
+        <!-- <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">¿Cuál es la razón principal por la que no te encuentras laborando?</label>
+            <select class="form-select" id="validation" required onchange="showInputBox()" name="pregunta_2">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="El mercado laboral está saturado">El mercado laboral está saturado</option>
+                <option value="Falta de oferta laboral en mi área de estudio">Falta de oferta laboral en mi área de estudio</option>
+                <option value="No estar titulado(a) falta de cedula profesional">No estar titulado(a) falta de cedula profesional</option>
+                <option value="Cuestiones de salud">Cuestiones de salud</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+          </div>
+          <div class="col-md-4" id="inputBoxContainer" style="display: none;">
+            <label for="otherReason" class="form-label">Por favor, especifica:</label>
+            <input type="text" class="form-control" id="otherReason" name="pregunta_2_otro">
           </div>
         </div> -->
+        
+        <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">¿En qué porcentaje coincide tu trabajo con tus estudios de licenciatura?</label>
+            <select class="form-select" id="validation" required name="pregunta_3">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="0%">0%</option>
+                <option value="25%">25%</option>
+                <option value="50%">50%</option>
+                <option value="75%">75%</option>
+                <option value="100%">100%</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-12">
+            <label for="validationCustom04" class="form-label">¿Ha sido o fue tu único empleo? </label>
+            <br>
+            <div class="form-check-inline">
+              <input type="radio" class="form-check-input" id="validationFormCheck2" name="pregunta_4" value="Si" required>
+              <label class="form-check-label me-3" for="validationFormCheck2">Si</label>
+              <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_4" value="No" required>
+              <label class="form-check-label" for="validationFormCheck3">No</label>
+              <div class="invalid-feedback">Selecciona una opción</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">Señala el número de veces que has cambiado de trabajo, después del primer empleo que conseguiste al egresar:</label>
+            <select class="form-select" id="validation" required name="pregunta_5">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5 o más">5 o más</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">En cuanto a tu desarrollo profesional, al comparar tu puesto actual con el primero, consideras que:</label>
+            <select class="form-select" id="validation" required name="pregunta_6">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="Mejoró">Mejoró</option>
+                <option value="Empeoró">Empeoró</option>
+                <option value="Permaneció igual">Permaneció igual</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">En cuanto a tu nivel económico actual con respecto al primer empleo, consideras que:</label>
+            <select class="form-select" id="validation" required name="pregunta_7">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="Mejoró">Mejoró</option>
+                <option value="Empeoró">Empeoró</option>
+                <option value="Permaneció igual">Permaneció igual</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">¿Cuánto tiempo te llevó conseguir tu empleo o tu primer empleo? </label>
+            <select class="form-select" id="validation" required name="pregunta_8">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="Empleado antes de egresar">Empleado antes de egresar</option>
+                <option value="Menos de 6 meses de egresar">Menos de 6 meses de egresar</option>
+                <option value="De 6 meses a 1 año de egreso">De 6 meses a 1 año de egreso</option>
+                <option value="Más de 1 año de egreso">Más de 1 año de egreso</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">¿Principal dificultad para encontrar empleo o el primer empleo?</label>
+            <select class="form-select" id="validation" required name="pregunta_9">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="Falta de vacantes en mi área de estudio">Falta de vacantes en mi área de estudio</option>
+                <option value="Salario bajo/nulas o bajas prestaciones">Salario bajo/nulas o bajas prestaciones</option>
+                <option value="Horario">Horario</option>
+                <option value="No tenía experiencia">No tenía experiencia</option>
+                <option value="No conozco quien me recomiende">No conozco quien me recomiende</option>
+                <option value="Tener cédula ">Tener cédula </option>
+                <option value="Ninguna">Ninguna</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+              <label for="validation_2" class="form-label">¿Cuál fue el principal requisito para conseguir tu empleo?</label>
+              <select class="form-select" id="validation_2" required onchange="showInputBox('validation_2', 'inputBoxContainer_2', 'otherReason_2')" name="pregunta_10">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="Ser titulado">Ser titulado</option>
+                <option value="Aprobar los exámenes de selección">Aprobar los exámenes de selección</option>
+                <option value="Dominio de otro idioma">Dominio de otro idioma</option>
+                <option value="Manejo de tecnologías de la información y comunicación">Manejo de tecnologías de la información y comunicación</option>
+                <option value="Experiencia">Experiencia</option>
+                <option value="Pasar una entrevista formal">Pasar una entrevista formal</option>
+                <option value="Otro">Otro</option>
+              </select>
+              <div class="valid-feedback">
+                  ¡Se ve bien!
+              </div>
+              <div class="invalid-feedback">
+                  Selecciona una opción.
+              </div>
+          </div>
+          <div class="col-md-4" id="inputBoxContainer_2" style="display: none;">
+              <label for="otherReason_2" class="form-label">Por favor, especifica:</label>
+              <input type="text" class="form-control" id="otherReason_2" name="pregunta_10_otro">
+          </div>
+      </div>
+
+        <!-- <div class="row">
+          <div class="col-md-4">
+            <label for="validation" class="form-label">¿Cuál fue el principal requisito para conseguir tu empleo?</label>
+            <select class="form-select" id="validation" required onchange="showInputBox()" name="pregunta_10">
+                <option selected disabled value="">Elije un opción...</option>
+                <option value="Ser titulado">Ser titulado</option>
+                <option value="Aprobar los exámenes de selección">Aprobar los exámenes de selección</option>
+                <option value="Dominio de otro idioma">Dominio de otro idioma</option>
+                <option value="Manejo de tecnologías de la información y comunicación">Manejo de tecnologías de la información y comunicación</option>
+                <option value="Experiencia">Experiencia</option>
+                <option value="Pasar una entrevista formal">Pasar una entrevista formal</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <div class="valid-feedback">
+                ¡Se ve bien!
+            </div>
+            <div class="invalid-feedback">
+                Selecciona una opción.
+            </div>
+          </div>
+          <div class="col-md-4" id="inputBoxContainer" style="display: none;">
+            <label for="otherReason" class="form-label">Por favor, especifica:</label>
+            <input type="text" class="form-control" id="otherReason" name="pregunta_10_otro">
+          </div>
+        </div> -->
+      
+
+
+
+
+
+
+
+
         <div class="col-12">
           <button class="btn btn-primary" type="submit">Submit form</button>
         </div>
@@ -137,6 +287,22 @@
 
 </body>
 </html>
+
+<script>
+function showInputBox(validationId ,containerId, inputId) {
+    var selectElement = document.getElementById(validationId);
+    var inputBoxContainer = document.getElementById(containerId);
+    var otherReasonInput = document.getElementById(inputId);
+  
+    if (selectElement.value === "Otro") {
+        inputBoxContainer.style.display = "block";
+        otherReasonInput.required = true;
+    } else {
+        inputBoxContainer.style.display = "none";
+        otherReasonInput.required = false;
+    }
+}
+</script>
 
 
 <script>

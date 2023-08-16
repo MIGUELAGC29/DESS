@@ -4,4 +4,5 @@ from Cuestionario.views import *
 
 urlpatterns = [
     path('seleccionCuestionario/<str:cuestionario>', seleccionCuestionario, name="Seleccion_Cuestionario"),
+    path('finalizado/', finalizado, name = "Finalizado")
 ]
