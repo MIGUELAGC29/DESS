@@ -11,16 +11,16 @@ def finalizado(request):
     if request.method == "POST" or request.method == "GET":
         pregunta_1 = request.POST['pregunta_1']
         
-        if(request.POST['pregunta_2'] == "Otro"):
+        if(request.POST.get('pregunta_2', None) == "Otro"):
             pregunta_2 = request.POST['pregunta_2'] + ": " + request.POST['pregunta_2_otro']
         else:
-            pregunta_2 = request.POST['pregunta_2']
+            pregunta_2 = request.POST.get('pregunta_2', None)
             
         pregunta_3 = request.POST['pregunta_3']
         
         pregunta_4 = request.POST['pregunta_4']
         
-        pregunta_5 = request.POST['pregunta_5']
+        pregunta_5 = request.POST.get('pregunta_5', None)
         
         pregunta_6 = request.POST['pregunta_6']
         
@@ -88,7 +88,7 @@ def finalizado(request):
 
         pregunta_29 = request.POST['pregunta_29']
 
-        """pregunta_30 = request.POST['pregunta_30']
+        pregunta_30 = request.POST['pregunta_30']
 
         pregunta_31 = request.POST['pregunta_31']
 
@@ -104,7 +104,7 @@ def finalizado(request):
         
         pregunta_37 = request.POST['pregunta_37']
         
-        pregunta_38 = request.POST['pregunta_38']"""
+        pregunta_38 = request.POST['pregunta_38']
         
         
         
@@ -137,7 +137,7 @@ def finalizado(request):
         print(pregunta_27)
         print(pregunta_28)
         print(pregunta_29)
-        """print(pregunta_30)
+        print(pregunta_30)
         print(pregunta_31)
         print(pregunta_32)
         print(pregunta_33)
@@ -145,18 +145,6 @@ def finalizado(request):
         print(pregunta_35)
         print(pregunta_36)
         print(pregunta_37)
-        print(pregunta_38)"""
-
-
-
+        print(pregunta_38)
         
-
-        
-
-
-        
-    
-    
-    
-    
     return render(request, 'Finaliza.html')

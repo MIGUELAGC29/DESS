@@ -78,10 +78,10 @@
 
     <div class="row">
       <div class="col-md-12">
-        <label for="pregunta_6" class="form-label">¿Ha sido o fue tu único empleo? </label>
+        <label for="pregunta_4" class="form-label">¿Ha sido o fue tu único empleo? </label>
         <br>
         <div id="pregunta_4" class="form-check-inline">
-          <input type="radio" class="form-check-input" id="pregunta_4_Si" name="pregunta_4" value="Si" required>
+          <input type="radio" class="form-check-input" id="pregunta_4_si" name="pregunta_4" value="Si" required>
           <label class="form-check-label me-3" for="pregunta_4_si">Si</label>
           <input type="radio" class="form-check-input" id="pregunta_4_no" name="pregunta_4" value="No" required>
           <label class="form-check-label" for="pregunta_4_no">No</label>
@@ -470,13 +470,13 @@
     <div class="col-md-12">
       <label for="pregunta_21" class="form-label">¿Situación académica?</label>
       <br>
-      <div class="form-check-inline">
-        <input id="pregunta_21" type="radio" class="form-check-input" id="pregunta_21_si" name="pregunta_21"
+      <div id="pregunta_21" class="form-check-inline">
+        <input  type="radio" class="form-check-input" id="pregunta_21_titulado" name="pregunta_21"
           value="Titulado" required>
-        <label class="form-check-label me-3" for="pregunta_21_si">Titulado</label>
-        <input type="radio" class="form-check-input" id="pregunta_21_no" name="pregunta_21" value="No titulado"
+        <label class="form-check-label me-3" for="pregunta_21_titulado">Titulado</label>
+        <input type="radio" class="form-check-input" id="pregunta_21_no_titulado" name="pregunta_21" value="No titulado"
           required>
-        <label class="form-check-label" for="pregunta_21_no">No titulado</label>
+        <label class="form-check-label" for="pregunta_21_no_titulado">No titulado</label>
         <div class="invalid-feedback">Selecciona una opción</div>
       </div>
     </div>
@@ -876,64 +876,91 @@
       </table>
     </div>
 
-    <!--
-
     <div class="row">
-      <p>De los siguientes contenidos del plan de estudios de tu carrera. ¿Cuál ampliarías, mantendrías, o reducirías?</p>
+      <p>De los siguientes contenidos del plan de estudios de tu carrera. ¿Cuál ampliarías, mantendrías, o reducirías?
+      </p>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th>Contenido</th>
+            <th>Ampliar</th>
+            <th>Mantener</th>
+            <th>Redicir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label>Enseñanza teórica</label>
+            </td>
+            <div id="pregunta_36" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_36_ampliar" name="pregunta_36" value="Ampliar"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_36_mantener" name="pregunta_36"
+                  value="Mantener" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_36_reducir" name="pregunta_36" value="Reducir"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Enseñanza metodológica</label>
+            </td>
+            <div id="pregunta_36" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_37_ampliar" name="pregunta_37" value="Ampliar"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_37_mantener" name="pregunta_37"
+                  value="Mantener" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_37_reducir" name="pregunta_37" value="Reducir"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Prácticas: en empresa, laboratorio, campo, taller, clínica, etc.</label>
+            </td>
+            <div id="pregunta_36" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_38_ampliar" name="pregunta_38" value="Ampliar"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_38_mantener" name="pregunta_38"
+                  value="Mantener" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_38_reducir" name="pregunta_38" value="Reducir"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-    <div class="col-md-12">
-      <label for="validationCustom01" class="form-label">Enseñanza teórica</label>
-      <div class="form-check-inline">
-        <input type="radio" class="form-check-input" id="validationFormCheck2" name="pregunta_36" value="Ampliar" required>
-        <label class="form-check-label me-3" for="validationFormCheck2">Ampliar</label>
-        <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_36" value="Mantener" required>
-        <label class="form-check-label" for="validationFormCheck3">Mantener</label>
-        <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_36" value="Reducir" required>
-        <label class="form-check-label" for="validationFormCheck3">Reducir</label>
-        <div class="invalid-feedback">Selecciona una opción</div>
-      </div>
-    </div>
-
-    <div class="col-md-12">
-      <label for="validationCustom01" class="form-label">Enseñanza metodológica</label>
-      <div class="form-check-inline">
-        <input type="radio" class="form-check-input" id="validationFormCheck2" name="pregunta_37" value="Ampliar" required>
-        <label class="form-check-label me-3" for="validationFormCheck2">Ampliar</label>
-        <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_37" value="Mantener" required>
-        <label class="form-check-label" for="validationFormCheck3">Mantener</label>
-        <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_37" value="Reducir" required>
-        <label class="form-check-label" for="validationFormCheck3">Reducir</label>
-        <div class="invalid-feedback">Selecciona una opción</div>
-      </div>
-    </div>
-
-    <div class="col-md-12">
-      <label for="validationCustom01" class="form-label">Prácticas: en empresa, laboratorio, campo, taller, clínica, etc.</label>
-      <div class="form-check-inline">
-        <input type="radio" class="form-check-input" id="validationFormCheck2" name="pregunta_38" value="Ampliar" required>
-        <label class="form-check-label me-3" for="validationFormCheck2">Ampliar</label>
-        <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_38" value="Mantener" required>
-        <label class="form-check-label" for="validationFormCheck3">Mantener</label>
-        <input type="radio" class="form-check-input" id="validationFormCheck3" name="pregunta_38" value="Reducir" required>
-        <label class="form-check-label" for="validationFormCheck3">Reducir</label>
-        <div class="invalid-feedback">Selecciona una opción</div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-  -->
-
-
-
 
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Submit form</button>
+      <button class="btn btn-primary" type="submit">Terminar</button>
     </div>
   </form>
 
@@ -962,6 +989,76 @@
 </body>
 
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const pregunta1Si = document.getElementById('pregunta_1_si');
+    const pregunta1No = document.getElementById('pregunta_1_no');
+    const pregunta2Input = document.getElementById('pregunta_2');
+    const pregunta4Si = document.getElementById('pregunta_4_si');
+    const pregunta4No = document.getElementById('pregunta_4_no');
+    const pregunta5input = document.getElementById('pregunta_5');
+    const pregunta21Titulado = document.getElementById('pregunta_21_titulado');
+    const pregunta21NoTitulado = document.getElementById('pregunta_21_no_titulado');
+    const pregunta22Input = document.getElementById('pregunta_22');
+    const pregunta23Input = document.getElementById('pregunta_23');
+    const pregunta24Input = document.getElementById('pregunta_24');
+
+    pregunta1Si.addEventListener('change', function () {
+      if (pregunta1Si.checked) {
+        pregunta2Input.disabled = true;
+      } else {
+        pregunta2Input.disabled = false;
+      }
+    });
+
+    pregunta1No.addEventListener('change', function () {
+      if (pregunta1No.checked) {
+        pregunta2Input.disabled = false;
+      } else {
+        pregunta2Input.disabled = true;
+      }
+    });
+
+    pregunta4Si.addEventListener('change', function (){
+      if(pregunta4Si.checked){
+        pregunta5input.disabled = true;
+      } else{
+        pregunta5input.disabled = false;
+      }
+    });
+
+    pregunta4No.addEventListener('change', function (){
+      if(pregunta4No.checked){
+        pregunta5input.disabled = false;
+      } else{
+        pregunta5input.disabled = true;
+      }
+    });
+
+    pregunta21Titulado.addEventListener('change', function (){
+      if (pregunta21Titulado.checked) {
+        pregunta22Input.disabled = true;
+      } else {
+        pregunta22Input.disabled = false;
+      }
+    });
+
+    pregunta21NoTitulado.addEventListener('change', function (){
+      if (pregunta21NoTitulado.checked) {
+        pregunta23Input.disabled = true;
+        pregunta24Input.disabled = true;
+        pregunta22Input.disabled = false;
+      } else {
+        pregunta23Input.disabled = false;
+        pregunta24Input.disabled = false;
+        pregunta22Input.disabled = true;      
+      }
+    });
+
+  });
+</script>
+
 
 <script>
   function showInputBox(validationId, containerId, inputId) {
