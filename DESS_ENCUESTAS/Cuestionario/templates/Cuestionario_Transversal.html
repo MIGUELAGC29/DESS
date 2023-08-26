@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <form action="{% url 'Finalizado' %}" method="POST" class="row g-3 needs-validation" novalidate>
+  <form action="{% url 'Finalizado_Cuestionario_Transversal' id_usuario%}" method="POST" class="row g-3 needs-validation" novalidate>
     {% csrf_token %}
 
     <div class="col-md-12">
@@ -263,8 +263,7 @@
 
     <div class="row">
       <div class="col-md-6">
-        <label for="pregunta_12" class="form-label">Señala el principal medio a través del cual encontraste tu empleo
-          actual:</label>
+        <label for="pregunta_12" class="form-label">El puesto que ocupas actualmente es:</label>
         <select class="form-select" id="pregunta_12" required
           onchange="showInputBox('pregunta_12', 'pregunta_12_container', 'pregunta_12_otro')" name="pregunta_12">
           <option selected disabled value="">Elije un opción...</option>
@@ -402,7 +401,7 @@
 
     <div class="row">
       <div class="col-md-6">
-        <label for="pregunta_18" class="form-label">Actividad económica de la empresa:</label>
+        <label for="pregunta_18" class="form-label">¿Qué tipo de contratación tienes?</label>
         <select class="form-select" id="pregunta_18" required
           onchange="showInputBox('pregunta_18', 'pregunta_18_container', 'pregunta_18_otro')" name="pregunta_18">
           <option selected disabled value="">Elije un opción...</option>
@@ -447,7 +446,7 @@
 
     <div class="row">
       <div class="col-md-6">
-        <label for="pregunta_20" class="form-label">¿Cuál es su ingreso mensual neto? </label>
+        <label for="pregunta_20" class="form-label">¿Cuál es su ingreso mensual neto?</label>
         <select class="form-select" id="pregunta_20" required name="pregunta_20">
           <option selected disabled value="">Elije un opción...</option>
           <option value="Menos de $ 5,000.00">Menos de $ 5,000.00</option>
@@ -963,29 +962,6 @@
       <button class="btn btn-primary" type="submit">Terminar</button>
     </div>
   </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

@@ -91,16 +91,18 @@ def guardarUsuario(request):
                           id_pais_residencia = Pais.objects.get(id_pais = request.POST['pais_residencia']))
         
         usuario.save()
+        #print(usuario.id_usuario)
         
         if int(request.POST.get('nivel_academico')) == 1:
             cuestionarios = Cuestionario.objects.filter(id_na = int(request.POST.get('nivel_academico')))
             return render(request, 'Cuestionario/seleccionCuestionarioMedioSuperior.html', {
                 'cuestionarios': cuestionarios,
             })
-        elif int(request.POST.get('nivel_academico')) == 2:
+        elif int(request.POST.get('nivel_academico')) == 2:            
             cuestionarios = Cuestionario.objects.filter(id_na = int(request.POST.get('nivel_academico')))
             return render(request, 'seleccionCuestionarioSuperior.html', {
                 'cuestionarios': cuestionarios,
+                'id_usuario' : usuario.id_usuario,
             })
             
     return render

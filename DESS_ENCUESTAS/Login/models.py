@@ -39,6 +39,53 @@ class Cuestionario(models.Model):
         db_table = 'CUESTIONARIO'
 
 
+class CuestionarioTransversal(models.Model):
+    id_cuestionario_transversal = models.AutoField(db_column='ID_CUESTIONARIO_TRANSVERSAL', primary_key=True)  # Field name made lowercase.
+    id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='ID_USUARIO')  # Field name made lowercase.
+    pregunta_1 = models.CharField(db_column='PREGUNTA_1', max_length=200)  # Field name made lowercase.
+    pregunta_2 = models.CharField(db_column='PREGUNTA_2', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_3 = models.CharField(db_column='PREGUNTA_3', max_length=200)  # Field name made lowercase.
+    pregunta_4 = models.CharField(db_column='PREGUNTA_4', max_length=200)  # Field name made lowercase.
+    pregunta_5 = models.CharField(db_column='PREGUNTA_5', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_6 = models.CharField(db_column='PREGUNTA_6', max_length=200)  # Field name made lowercase.
+    pregunta_7 = models.CharField(db_column='PREGUNTA_7', max_length=200)  # Field name made lowercase.
+    pregunta_8 = models.CharField(db_column='PREGUNTA_8', max_length=200)  # Field name made lowercase.
+    pregunta_9 = models.CharField(db_column='PREGUNTA_9', max_length=200)  # Field name made lowercase.
+    pregunta_10 = models.CharField(db_column='PREGUNTA_10', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_11 = models.CharField(db_column='PREGUNTA_11', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_12 = models.CharField(db_column='PREGUNTA_12', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_13 = models.CharField(db_column='PREGUNTA_13', max_length=200)  # Field name made lowercase.
+    pregunta_14 = models.CharField(db_column='PREGUNTA_14', max_length=200)  # Field name made lowercase.
+    pregunta_15 = models.CharField(db_column='PREGUNTA_15', max_length=200)  # Field name made lowercase.
+    pregunta_16 = models.CharField(db_column='PREGUNTA_16', max_length=200)  # Field name made lowercase.
+    pregunta_17 = models.CharField(db_column='PREGUNTA_17', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_18 = models.CharField(db_column='PREGUNTA_18', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_19 = models.CharField(db_column='PREGUNTA_19', max_length=200)  # Field name made lowercase.
+    pregunta_20 = models.CharField(db_column='PREGUNTA_20', max_length=200)  # Field name made lowercase.
+    pregunta_21 = models.CharField(db_column='PREGUNTA_21', max_length=200)  # Field name made lowercase.
+    pregunta_22 = models.CharField(db_column='PREGUNTA_22', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_23 = models.CharField(db_column='PREGUNTA_23', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_24 = models.CharField(db_column='PREGUNTA_24', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    pregunta_25 = models.CharField(db_column='PREGUNTA_25', max_length=100)  # Field name made lowercase.
+    pregunta_26 = models.CharField(db_column='PREGUNTA_26', max_length=100)  # Field name made lowercase.
+    pregunta_27 = models.CharField(db_column='PREGUNTA_27', max_length=100)  # Field name made lowercase.
+    pregunta_28 = models.CharField(db_column='PREGUNTA_28', max_length=100)  # Field name made lowercase.
+    pregunta_29 = models.CharField(db_column='PREGUNTA_29', max_length=100)  # Field name made lowercase.
+    pregunta_30 = models.CharField(db_column='PREGUNTA_30', max_length=100)  # Field name made lowercase.
+    pregunta_31 = models.CharField(db_column='PREGUNTA_31', max_length=100)  # Field name made lowercase.
+    pregunta_32 = models.CharField(db_column='PREGUNTA_32', max_length=100)  # Field name made lowercase.
+    pregunta_33 = models.CharField(db_column='PREGUNTA_33', max_length=100)  # Field name made lowercase.
+    pregunta_34 = models.CharField(db_column='PREGUNTA_34', max_length=100)  # Field name made lowercase.
+    pregunta_35 = models.CharField(db_column='PREGUNTA_35', max_length=100)  # Field name made lowercase.
+    pregunta_36 = models.CharField(db_column='PREGUNTA_36', max_length=100)  # Field name made lowercase.
+    pregunta_37 = models.CharField(db_column='PREGUNTA_37', max_length=100)  # Field name made lowercase.
+    pregunta_38 = models.CharField(db_column='PREGUNTA_38', max_length=100)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'CUESTIONARIO_TRANSVERSAL'
+
+
 class Edad(models.Model):
     id_edad = models.AutoField(db_column='ID_EDAD', primary_key=True)  # Field name made lowercase.
     rango = models.CharField(db_column='RANGO', max_length=200)  # Field name made lowercase.

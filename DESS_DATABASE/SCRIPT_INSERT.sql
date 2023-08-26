@@ -356,16 +356,6 @@ VALUES
 ('Zambia'),
 ('Zimbabue');
 
-INSERT INTO CUESTIONARIO(NOMBRE, DESCRIPCION, IMAGEN, ID_NA)
-VALUES
-('Cuestionario 1 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 'Encuesta_Transversal.png', 1),
-('Cuestionario 2 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 'Encuesta_Transversal.png', 1),
-('Cuestionario 3 nivel medio superior', 'Cuestionario prueba de nivel medio superior', 'Encuesta_Transversal.png', 1),
-('Cuestionario 1 nivel superior', 'Cuestionario prueba de nivel superior', 'Encuesta_Transversal.png', 2),
-('Cuestionario 2 nivel superior', 'Cuestionario prueba de nivel superior', 'Trayectoria_Escolar_MS.png', 2),
-('Cuestionario 3 nivel superior', 'Cuestionario prueba de nivel superior', 'Trayectoria_Escolar_S.png', 2);
-
-
 INSERT INTO CIUDAD(CIUDAD) VALUES
 ('Aguascalientes'),
 ('Baja California'),
@@ -400,9 +390,18 @@ INSERT INTO CIUDAD(CIUDAD) VALUES
 ('Yucatán'),
 ('Zacatecas');
 
+INSERT INTO CUESTIONARIO(NOMBRE, DESCRIPCION, IMAGEN, ID_NA)
+VALUES
+('CUESTIONARIO PARA EL ESTUDIO TRANSVERSAL MODALIDAD ESCOLARIZADA EGRESADOS EN 2020', 'Esta encuesta tiene como objetivo conocer tu trayectoria laboral y profesional, información que nos permitirá medir el impacto en el medio productivo como egresado politécnico, a los dos años de tu egreso.', 'Encuesta_Transversal.png', 1);
+
+
+
+
 //models.py
 id_pais_nacimiento = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_NACIMIENTO', related_name='usuarios_nacimiento')
 id_pais_residencia = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_RESIDENCIA', related_name='usuarios_residencia')
+
+
 
 
 

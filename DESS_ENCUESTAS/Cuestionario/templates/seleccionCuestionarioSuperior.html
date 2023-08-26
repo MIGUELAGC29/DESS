@@ -12,14 +12,13 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ cuestionario.nombre }}</h5>
                         <p class="card-text">{{ cuestionario.descripcion }}</p>
-                        <a href="{% url 'Seleccion_Cuestionario' cuestionario.nombre %}" class="btn btn-primary">Responder</a>
+                        <a href="{% url 'Seleccion_Cuestionario_S' cuestionario.id_cuestionario id_usuario%}" class="btn btn-primary">Responder</a>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
 </div>
-
 
 
 

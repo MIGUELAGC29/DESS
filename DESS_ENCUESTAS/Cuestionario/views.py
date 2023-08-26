@@ -1,14 +1,23 @@
 from django.shortcuts import render
+from Login.models import CuestionarioTransversal, Usuario
 
-# Create your views here.
-def seleccionCuestionario(request, cuestionario):
-            
-    return render(request, 'Cuestionario_1.html')
+#Seleccion de cuestionario por nivel
+def seleccionCuestionarioS(request, id_cuestionario, id_usuario):
+    
+    if(int(id_cuestionario) == 1):
+        return render(request, 'Cuestionario_Transversal.html', {
+            'id_usuario' : id_usuario,
+        })
+    #agregar los demas cuestionarios
+    
+    return render(request, 'Error.html')
 
 
-
-def finalizado(request):
+#Tabla por cuestionario
+def finalizadoCuestionarioTransversal(request, id_usuario):
     if request.method == "POST" or request.method == "GET":
+        print(id_usuario)
+        
         pregunta_1 = request.POST['pregunta_1']
         
         if(request.POST.get('pregunta_2', None) == "Otro"):
@@ -69,14 +78,14 @@ def finalizado(request):
         
         pregunta_21 = request.POST['pregunta_21']
         
-        pregunta_22 = request.POST['pregunta_22']
+        pregunta_22 = request.POST.get('pregunta_22', None)
             
-        if(request.POST['pregunta_23'] == "Otro"):
+        if(request.POST.get('pregunta_23', None) == "Otro"):
             pregunta_23 = request.POST['pregunta_23'] + ": " + request.POST['pregunta_23_otro']
         else:
-            pregunta_23 = request.POST['pregunta_23']
+            pregunta_23 = request.POST.get('pregunta_23', None)
 
-        pregunta_24 = request.POST['pregunta_24']
+        pregunta_24 = request.POST.get('pregunta_24', None)
         
         pregunta_25 = request.POST['pregunta_25']
         
@@ -146,5 +155,47 @@ def finalizado(request):
         print(pregunta_36)
         print(pregunta_37)
         print(pregunta_38)
+        
+        cuestionario = CuestionarioTransversal(id_usuario = Usuario.objects.get(id_usuario = int(id_usuario)),
+                                               pregunta_1 = pregunta_1,
+                                               pregunta_2 = pregunta_2,
+                                               pregunta_3 = pregunta_3,
+                                               pregunta_4 = pregunta_4,
+                                               pregunta_5 = pregunta_5,
+                                               pregunta_6 = pregunta_6,
+                                               pregunta_7 = pregunta_7,
+                                               pregunta_8 = pregunta_8,
+                                               pregunta_9 = pregunta_9,
+                                               pregunta_10 = pregunta_10,
+                                               pregunta_11 = pregunta_11,
+                                               pregunta_12 = pregunta_12,
+                                               pregunta_13 = pregunta_13,
+                                               pregunta_14 = pregunta_14,
+                                               pregunta_15 = pregunta_15,
+                                               pregunta_16 = pregunta_16,
+                                               pregunta_17 = pregunta_17,
+                                               pregunta_18 = pregunta_18,
+                                               pregunta_19 = pregunta_19,
+                                               pregunta_20 = pregunta_20,
+                                               pregunta_21 = pregunta_21,
+                                               pregunta_22 = pregunta_22,
+                                               pregunta_23 = pregunta_23,
+                                               pregunta_24 = pregunta_24,
+                                               pregunta_25 = pregunta_25,
+                                               pregunta_26 = pregunta_26,
+                                               pregunta_27 = pregunta_27,
+                                               pregunta_28 = pregunta_28,
+                                               pregunta_29 = pregunta_29,
+                                               pregunta_30 = pregunta_30,
+                                               pregunta_31 = pregunta_31,
+                                               pregunta_32 = pregunta_32,
+                                               pregunta_33 = pregunta_33,
+                                               pregunta_34 = pregunta_34,
+                                               pregunta_35 = pregunta_35,
+                                               pregunta_36 = pregunta_36,
+                                               pregunta_37 = pregunta_37,
+                                               pregunta_38 = pregunta_38)
+        
+        cuestionario.save()
         
     return render(request, 'Finaliza.html')
