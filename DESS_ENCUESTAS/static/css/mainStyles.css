@@ -1,0 +1,22 @@
+#principal {
+    background-image: url('../imagenes/Wallpaper.png');
+    background-size: cover; /* Para ajustar la imagen al tamaño de la ventana del navegador */
+    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+
+    height: 850px;
+}
+
+
+#div-boton {
+    max-width: 700px;
+
+    position: relative; /* O puedes usar "absolute" si prefieres posicionarlo en relación con un elemento padre */
+    left: 1130px; /* Mover el div 50 píxeles hacia la derecha */
+    top: 450px; 
+}
+
+#botoncito{
+    width: 600px;
+    height: 80px;
+    font-size: 35px;
+}

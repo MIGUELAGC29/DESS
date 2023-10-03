@@ -161,6 +161,7 @@ VALUES
 
 INSERT INTO PAIS(PAIS)
 VALUES
+('México'),
 ('Afganistán'),
 ('Albania'),
 ('Alemania'),
@@ -279,7 +280,6 @@ VALUES
 ('Marruecos'),
 ('Mauricio'),
 ('Mauritania'),
-('México'),
 ('Micronesia'),
 ('Moldavia'),
 ('Mónaco'),
@@ -392,14 +392,13 @@ INSERT INTO CIUDAD(CIUDAD) VALUES
 
 INSERT INTO CUESTIONARIO(NOMBRE, DESCRIPCION, IMAGEN, ID_NA)
 VALUES
-('CUESTIONARIO PARA EL ESTUDIO TRANSVERSAL MODALIDAD ESCOLARIZADA EGRESADOS EN 2020', 'Esta encuesta tiene como objetivo conocer tu trayectoria laboral y profesional, información que nos permitirá medir el impacto en el medio productivo como egresado politécnico, a los dos años de tu egreso.', 'Encuesta_Transversal.png', 1);
+('CUESTIONARIO PARA EL ESTUDIO TRANSVERSAL MODALIDAD ESCOLARIZADA EGRESADOS EN 2020', 'Esta encuesta tiene como objetivo conocer tu trayectoria laboral y profesional, información que nos permitirá medir el impacto en el medio productivo como egresado politécnico, a los dos años de tu egreso.', 'Encuesta_Transversal.png', 2);
 
 
 
-
-//models.py
+/* Para el models.py
 id_pais_nacimiento = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_NACIMIENTO', related_name='usuarios_nacimiento')
-id_pais_residencia = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_RESIDENCIA', related_name='usuarios_residencia')
+id_pais_residencia = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_RESIDENCIA', related_name='usuarios_residencia') */
 
 
 
