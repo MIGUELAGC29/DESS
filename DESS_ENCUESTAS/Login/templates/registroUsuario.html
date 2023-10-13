@@ -197,7 +197,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     paisResidencia.addEventListener('change', function() {
       var pais = parseInt(paisResidencia.value);
-      if (pais == 119) {
+      if (pais == 1) {
         var ciudadesJs = [];
         {% for ciudad in ciudades %}
           ciudadesJs.push("{{ ciudad.ciudad }}");
@@ -265,8 +265,18 @@
 </script>
 
 <!-- ... Tu código HTML posterior ... -->
+    <div class="col-md-3">
+      <label for="validationCustom14-5" class="form-label">Boleta</label>
+      <input type="tel" class="form-control" id="validationCustom14-5" name="boleta" pattern="^[0-9]{10}$" inputmode="numeric" required>
+      <div class="valid-feedback">
+        ¡Bien!.
+      </div>
+      <div class="invalid-feedback">
+        !Ej: 2014123456!.
+      </div>
+    </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label for="validationCustom15" class="form-label">Nivel Académico</label>
       <select class="form-select" id="validationCustom15" name="nivel_academico" required>
         <option selected disabled value="">Elige...</option>
@@ -282,7 +292,7 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label for="validationCustom16" class="form-label">Unidad Academica</label>
       <select class="form-select" id="validationCustom16" name="unidad_academica" required>
         <option selected disabled>Elige...</option>
@@ -298,7 +308,7 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label for="validationCustom17" class="form-label">Programa Academico</label>
       <select class="form-select" id="validationCustom17" name="programa_academico" required>
         <option  value="">Elige...</option>

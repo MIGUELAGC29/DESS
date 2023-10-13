@@ -147,12 +147,15 @@ class Usuario(models.Model):
     codigo_postal = models.CharField(db_column='CODIGO_POSTAL', max_length=10, blank=True, null=True)  # Field name made lowercase.
     ciudad = models.CharField(db_column='CIUDAD', max_length=200, blank=True, null=True)  # Field name made lowercase.
     alcaldia_municipio = models.CharField(db_column='ALCALDIA_MUNICIPIO', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    boleta = models.CharField(db_column='BOLETA', max_length=50)  # Field name made lowercase.
     id_na = models.ForeignKey(NivelAcademico, models.DO_NOTHING, db_column='ID_NA')  # Field name made lowercase.
     id_ua = models.ForeignKey(UnidadAcademica, models.DO_NOTHING, db_column='ID_UA')  # Field name made lowercase.
     id_pa = models.ForeignKey(ProgramaAcademico, models.DO_NOTHING, db_column='ID_PA')  # Field name made lowercase.
     id_edad = models.ForeignKey(Edad, models.DO_NOTHING, db_column='ID_EDAD')  # Field name made lowercase.
     id_pais_nacimiento = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_NACIMIENTO', related_name='usuarios_nacimiento')
     id_pais_residencia = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_RESIDENCIA', related_name='usuarios_residencia')
+
+
     class Meta:
         managed = False
         db_table = 'USUARIO'

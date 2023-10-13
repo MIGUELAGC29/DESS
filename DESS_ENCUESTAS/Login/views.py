@@ -15,10 +15,11 @@ def registroUsuario(request):
     user = "deyssuser"
     password = "p5HHNbdq7JUt5Hnqwv2erWva6hPbKtk8"
     
-    if request.method == "POST" or request.method == "GET":
+    if request.method == "POST":
         curp = request.POST['curp']
         json = "{" + "\"data\":{" + "\"curp\":" + "\"" + curp + "\"" + "} }"
-        request_renapo = requests.post(url, auth = HTTPBasicAuth(user,password), data=json)
+        request_renapo = requests.post(url, auth = HTTPBasicAuth(user, password), data=json)
+        print(request_renapo)
         if(request_renapo != None):
             try:
                 jsonData = request_renapo.json()
@@ -29,31 +30,40 @@ def registroUsuario(request):
                     'value':curp,
                     })
                 elif(jsonData.get('@statusOper') == "EXITOSO"):
-                    nombres = jsonData.get('nombres')
-                    ap_paterno = jsonData.get('apellido1')
-                    ap_materno = jsonData.get('apellido2')
-                    
-                    unidades_academicas = UnidadAcademica.objects.all()
-                    programas_academicos = ProgramaAcademico.objects.all()
-                    niveles_academicos = NivelAcademico.objects.all()
-                    edades = Edad.objects.all()
-                    paises = Pais.objects.all()
-                    ciudades = Ciudad.objects.all()
-                    alcaldias_municipios = Ciudad.objects.all()
+                    #Verificar curp existente o no
+                    validaCurp = Usuario.objects.filter(curp = curp).exists()
+                    if validaCurp:
+                        error = "Usuario ya registrado"
+                        return render(request, 'pedirCurp.html', {
+                            'error':error,
+                            'value':curp,
+                            })
+                    else:
+                        nombres = jsonData.get('nombres')
+                        ap_paterno = jsonData.get('apellido1')
+                        ap_materno = jsonData.get('apellido2')
+                        
+                        unidades_academicas = UnidadAcademica.objects.all()
+                        programas_academicos = ProgramaAcademico.objects.all()
+                        niveles_academicos = NivelAcademico.objects.all()
+                        edades = Edad.objects.all()
+                        paises = Pais.objects.all()
+                        ciudades = Ciudad.objects.all()
+                        alcaldias_municipios = Ciudad.objects.all()
 
-                    return render(request, 'registroUsuario.html', {
-                        'curp': curp,
-                        'nombres': nombres,
-                        'ap_paterno': ap_paterno,
-                        'ap_materno': ap_materno,
-                        'unidades_academicas': unidades_academicas,
-                        'programas_academicos': programas_academicos,
-                        'niveles_academicos': niveles_academicos,
-                        'edades': edades,
-                        'paises': paises,
-                        'ciudades': ciudades,
-                        'alcaldias_municipios':alcaldias_municipios,
-                        })
+                        return render(request, 'registroUsuario.html', {
+                            'curp': curp,
+                            'nombres': nombres,
+                            'ap_paterno': ap_paterno,
+                            'ap_materno': ap_materno,
+                            'unidades_academicas': unidades_academicas,
+                            'programas_academicos': programas_academicos,
+                            'niveles_academicos': niveles_academicos,
+                            'edades': edades,
+                            'paises': paises,
+                            'ciudades': ciudades,
+                            'alcaldias_municipios':alcaldias_municipios,
+                            })
             except:
                 error = "SOLICITUD NO REALIZADA, INTENTELO MÁS TARDE"
                 return render(request, 'pedirCurp.html', {
@@ -83,6 +93,7 @@ def guardarUsuario(request):
                           codigo_postal = request.POST.get('codigo_postal', None),
                           ciudad = request.POST['entidad_federativa'],
                           alcaldia_municipio = request.POST.get('alcaldia_municipio', None),
+                          boleta = request.POST['boleta'],
                           id_na = NivelAcademico.objects.get(id_na = int(request.POST.get('nivel_academico'))),                          
                           id_ua = UnidadAcademica.objects.get(id_ua = request.POST['unidad_academica']),
                           id_pa = ProgramaAcademico.objects.get(id_pa = request.POST['programa_academico']),

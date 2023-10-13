@@ -25,10 +25,10 @@
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">CURP:</label>
                                     {% if messages %}
+                                    <input type="text" class="form-control" id="recipient-name" name="curp" value="">
+                                    {% else %}
                                     <input type="text" class="form-control" id="recipient-name" name="curp" value="{{ value }}">
                                     <p class="text-danger">{{ error }}</p>
-                                    {% else %}
-                                    <input type="text" class="form-control" id="recipient-name" name="curp" value="">
                                     {% endif %}
                                 </div>
                         </div>
@@ -52,7 +52,6 @@
         myModal.show();
     };
 </script>
-
 
 
 
