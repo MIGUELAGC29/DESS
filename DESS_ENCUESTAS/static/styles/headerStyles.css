@@ -1,0 +1,57 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+a:link, a:visited {
+    text-decoration:none
+}
+
+.navbarOriginal {
+    height: 80px;
+    background-color: lightgrey;
+    width: 100%;
+}
+
+.navbarElements {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.izquierda {
+    width: 50%;
+    display: flex; 
+    align-items: center;
+}
+
+.derecha {
+    width: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.elementoDerecha {
+    margin-right: 30px;
+    color: black;
+}
+
+.plecaGob {
+    width: 300px;
+    height: 60px;
+}
+
+.plecaIpn {
+    width: 40px;
+    height: 60px;
+}
+
+.tituloPleca {
+    font-size: 12px;
+    color: #424141;
+    position: relative;
+    top: 10px;
+}

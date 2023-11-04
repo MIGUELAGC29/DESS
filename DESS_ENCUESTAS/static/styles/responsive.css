@@ -1,0 +1,142 @@
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbarOriginal {
+        height: 20px;
+    }
+
+    .derecha {
+        display: none;
+    }
+
+    .izquierda {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .plecaGob {
+        width: 94px;
+        height: 20px;
+    }
+    
+    .plecaIpn {
+        width: 14px;
+        height: 20px;
+    }
+
+    .tituloPleca {
+        display: none;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 575.98px) and (max-width: 767.98px) { 
+
+    .navbarOriginal {
+        height: 40px;
+    }
+
+    .derecha {
+        display: none;
+    }
+
+    .izquierda {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .plecaGob {
+        width: 162px;
+        height: 29px;
+    }
+    
+    .plecaIpn {
+        width: 22px;
+        height: 35px;
+    }
+
+    .tituloPleca {
+        font-size: 7px;
+        color: #424141;
+        position: relative;
+        top: 10px;
+    }
+
+
+    .elementoDerecha {
+        margin-right: 30px;
+    }
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 767.98px) and (max-width: 991.98px) { 
+
+    .navbarOriginal {
+        height: 50px;
+    }
+
+    .plecaGob {
+        width: 169px;
+        height: 30px;
+    }
+    
+    .plecaIpn {
+        width: 22px;
+        height: 35px;
+    }
+
+    .tituloPleca {
+        font-size: 7px;
+        color: #424141;
+        position: relative;
+        top: 10px;
+    }
+
+    .elementoDerecha {
+        font-size: 10px;
+        margin-right: 30px;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 991.98px) and (max-width: 1399.98px) { 
+
+    .navbarOriginal {
+        height: 70px;
+    }
+
+    .plecaGob {
+        width: 234px;
+        height: 52px;
+    }
+    
+    .plecaIpn {
+        width: 33px;
+        height: 49px;
+    }
+
+    .tituloPleca {
+        font-size: 9px;
+        color: #424141;
+        position: relative;
+        top: 10px;
+    }
+
+    .elementoDerecha {
+        font-size: 12px;
+        margin-right: 30px;
+    }
+ }
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1199.98px) and (max-width: 1399.98px) { 
+    .elementoDerecha {
+        margin-right: 30px;
+    }
+ }
+
+/* XX-Large devices (larger desktops) */
+/* No media query since the xxl breakpoint has no upper bound on its width */

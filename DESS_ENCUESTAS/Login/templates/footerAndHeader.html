@@ -3,9 +3,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name = "viewport" content="width=device-width, user-scalable=no" />
     <title></title>
     <link rel="stylesheet" href = "{% static './bootstrap_5.1.3/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href = "{% static './estilos/headerStyles.css' %}">
+    <link rel="stylesheet" href = "{% static './styles/headerStyles.css' %}">
+    <link rel="stylesheet" href = "{% static './styles/responsive.css' %}">
     <link rel="stylesheet" href = "{% static './estilos/footerStyles.css' %}">
     <link rel="stylesheet" href = "{% static './estilos/registroUsuarioStyles.css' %}">
     <link rel="stylesheet" href = "{% static './estilos/mainStyles.css' %}"> 
@@ -13,11 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/47075525b8.js" crossorigin="anonymous"></script>
-
   </head>
   <body>
     
-    <header>
+    <!-- <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid ">
         
@@ -55,14 +56,48 @@
             </ul>
           </div>
         </div>
+      </nav> 
+    </header> -->
+    <header>
+      <nav class="navbarOriginal">
+        <!-- IZAQUIERDA -->
+        <div class="navbarElements">
+
+          <div class="izquierda">
+            <img src="{% static './imagenes/pleca-gob.png' %}" alt=" Pleca de Gobierno " class="plecaGob" />
+            <img src="{% static './imagenes/pleca-ipn.png' %}" alt=" Logo IPN " class="plecaIpn" />
+            <a href="https://www.ipn.mx">
+              <p class="tituloPleca">
+                Instituto Politécnico Nacional
+                <br />
+                <span>"La Técnica al Servicio de la Patria"</span>
+              </p>
+            </a>
+          </div>
+          
+          <!-- DERECHA -->
+          <div class="derecha">
+            <a href="https://www.ipn.mx/directorio.html" class="elementoDerecha">DIRECTORIO</a>
+            <a href="https://www.ipn.mx/correo-electronico.html" class="elementoDerecha">CORREO ELECTRÓNICO</a>
+            <a href="https://www.ipn.mx/calendario-academico.html" class="elementoDerecha">CALENDARIO</a>
+            <a href="https://www.ipn.mx/buzon.html" class="elementoDerecha">BUZÓN</a>
+           
+          </div>
+          
+
+        </div>
+
+        
       </nav>
     </header>
+
+    
     <section>
       {% block body %}
 
       {% endblock %}
     </section>
-    <footer>
+    <!-- <footer>
       <div class="col-12 text-justify text-light back-color py-3">
         <h3 class="footerTitulo text-center mt-4"> INSTITUTO POLITÉCNICO NACIONAL </h3>
         <p class="margen-x">
@@ -149,7 +184,7 @@
       <div class="col-12 ">
         <img class="img-gob-footer" src="https://framework-gb.cdn.gob.mx/assets/images/gobmxlogo-2.svg" alt="Página de inicio, Gobierno de México" width="126" height="39" />
       </div>
-    </footer> 
+    </footer>  -->
     <script type="text/javascript" src="{% static './jquery/jquery-3.6.0.min.js' %}"></script>
     <script type="text/javascript" src="{% static './bootstrap_5.1.3/js/bootstrap.min.js' %}"></script>
   </body>
