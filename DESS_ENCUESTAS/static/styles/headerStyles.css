@@ -1,10 +1,30 @@
 html, body {
     font-family: 'Montserrat', sans-serif;
-}
 
+}
 
 a:link, a:visited {
     text-decoration:none
+}
+
+body {
+    background-color: #682444;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.contenedorPrincipal {
+    width: 100vw;
+    max-width: 2800px;
+    height: 1800px;
+    background-color: greenyellow;
+    margin: 0;
+}
+
+header {
+
 }
 
 .navbarOriginal {
@@ -55,3 +75,4 @@ a:link, a:visited {
     position: relative;
     top: 10px;
 }
+

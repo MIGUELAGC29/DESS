@@ -1,0 +1,10 @@
+
+.pedirCurp {
+    width: 100%; /* Establece el ancho al 100% del contenedor padre */
+    height: 750px; /* Establece la altura inicial a 0 para mantener la relación de aspecto */
+    background-image: url('../imagenes/Wallpaper.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* La imagen de fondo se ajusta para cubrir todo el contenedor */
+    background-position: center;
+}
+
+
