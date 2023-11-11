@@ -1,10 +1,75 @@
 
-.pedirCurp {
-    width: 100%; /* Establece el ancho al 100% del contenedor padre */
-    height: 750px; /* Establece la altura inicial a 0 para mantener la relación de aspecto */
-    background-image: url('../imagenes/Wallpaper.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* La imagen de fondo se ajusta para cubrir todo el contenedor */
+.pedirCurp2 {
+    height: 880px;
+    /*background-color: rgb(30, 70, 25);*/
+    width: 100%;
+    background-image: url('../imagenes/Wallpaper.png');
+    background-size: cover;
     background-position: center;
+
+}
+
+@media (max-width: 575.98px) {
+    .contenedorPrincipal {
+        height: 940px;
+    }
+
+    .pedirCurp2 {
+        height: 250px;
+    }
+}
+
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+
+    .contenedorPrincipal {
+        height: 1030px;
+    }
+
+    .pedirCurp2 {
+        height: 320px;
+    }
+}
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .contenedorPrincipal {
+        height: 1180px;
+    }
+
+    .pedirCurp2 {
+        height: 400px;
+    }
 }
 
 
+@media (min-width: 991.98px) and (max-width: 1199.98px) { 
+    .contenedorPrincipal {
+        height: 1300px;
+    }
+
+    .pedirCurp2 {
+        height: 550px;
+    }
+}
+
+
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
+
+    .contenedorPrincipal {
+        height: 1200px;
+    }
+
+    .pedirCurp2 {
+        height: 600px;
+    }
+}
+
+@media (min-width: 1399.98px) and (max-width: 1599.98px) {
+
+    .contenedorPrincipal {
+        height: 1000px;
+    }
+
+    .pedirCurp2 {
+        height: 800px;
+    }
+}

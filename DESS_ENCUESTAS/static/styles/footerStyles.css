@@ -5,6 +5,7 @@ footer {
     left: 0;
     right: 0;
     top: 0;
+
 }
 
 .footer1 {
@@ -18,6 +19,7 @@ footer {
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
+
 }
 
 .footer1 p, .footer1 h3 {
@@ -36,6 +38,7 @@ footer {
     width: 100%;
     height: 40px;
     background-color: white;
+
 }
 
 .footer3 {
@@ -43,6 +46,7 @@ footer {
     display: flex;
     justify-content: center; /* Centra horizontalmente los elementos */
     height: 400px; /* Ajusta la altura según tus necesidades */
+ 
 }
 
 table {

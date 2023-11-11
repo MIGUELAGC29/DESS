@@ -34,6 +34,10 @@
 
     /* FOOTER */
 
+    footer {
+        height: 670px;
+    }
+
     .footer1 {
         height: 250px;
     }
@@ -108,6 +112,10 @@
 
     /* FOOTER */
 
+    footer {
+        height: 670px;
+    }
+
     .footer1 {
         height: 250px;
     }
@@ -171,6 +179,10 @@
 
     /* FOOTER */
 
+    footer {
+        height: 730px;
+    }
+
     .footer1 {
         height: 300px;
     }
@@ -230,6 +242,9 @@
 
 
     /* FOOTER */
+    footer {
+        height: 790px;
+    }
 
     .footer1 {
         height: 350px;
@@ -260,6 +275,7 @@
         margin-right: 30px;
     }
 
+    
     /* FOOTER */
 
     .footer1 p {
