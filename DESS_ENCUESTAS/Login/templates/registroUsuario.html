@@ -2,190 +2,408 @@
 
 
 {% block body %}
-<form action="{% url 'Guardar_Usuario' %}" method="POST" class="row g-3 needs-validation" novalidate>
-  {% csrf_token %}
-    <div class="col-md-4">
-      <label for="validationCustom01" class="form-label">Nombre</label>
-      <input type="text" class="form-control is-valid" id="validationCustom01" value="{{ nombres }}" name="nombres" required readonly>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        !Mal!.
-      </div>
-    </div>
+<div class="registroUsuario">
 
-    <div class="col-md-4">
-      <label for="validationCustom02" class="form-label">Apellido Paterno</label>
-      <input type="text" class="form-control is-valid" id="validationCustom02" value="{{ ap_paterno }}" name="apellido1" required readonly>
-      <div class="valid-feedback">
-        ¡Se ve bien!
-      </div>
-      <div class="invalid-feedback">
-        !Mal!.      
-      </div>
-    </div>
+  <form action="{% url 'Guardar_Usuario' %}" method="POST" class="needs-validation" novalidate>
+    {% csrf_token %}
+    <div class="contenedorValidos">
 
-    <div class="col-md-4">
-        <label for="validationCustom03" class="form-label">Apellido Materno</label>
-        <input type="text" class="form-control is-valid" id="validationCustom03" value="{{ ap_materno }}" name="apellido2" required readonly>
+      <div class="validos">
+        <label for="validationCustom01" class="form-label">Nombre</label>
+        <input type="text" class="form-control is-valid" id="validationCustom01" value="{{ nombres }}" name="nombres" required readonly>
         <div class="valid-feedback">
-          ¡Se ve bien!
+          ¡Bien!.
         </div>
         <div class="invalid-feedback">
           !Mal!.
         </div>
-    </div>
-
-    <div class="col-md-4">
-      <label for="validationCustom04" class="form-label">CURP</label>
-      <input type="text" class="form-control is-valid" id="validationCustom04" value="{{ curp }}" name="curp" required readonly>
-      <div class="valid-feedback">
-        ¡Bien!.
       </div>
-      <div class="invalid-feedback">
-        !Mal!.
+  
+      <div class="validos">
+        <label for="validationCustom02" class="form-label">Apellido Paterno</label>
+        <input type="text" class="form-control is-valid" id="validationCustom02" value="{{ ap_paterno }}" name="apellido1" required readonly>
+        <div class="valid-feedback">
+          ¡Se ve bien!
+        </div>
+        <div class="invalid-feedback">
+          !Mal!.      
+        </div>
       </div>
-    </div>
-
-    <div class="col-md-4">
-      <label for="validationCustom05" class="form-label">Edad</label>
-      <select class="form-select" id="validationCustom05" name="edad" required>
-        <option selected disabled value="">Elige...</option>
-        {% for rango in edades %}
-          <option value="{{ rango.id_edad }}">{{ rango.rango }}</option>
-        {% endfor %}
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
+  
+      <div class="validos">
+          <label for="validationCustom03" class="form-label">Apellido Materno</label>
+          <input type="text" class="form-control is-valid" id="validationCustom03" value="{{ ap_materno }}" name="apellido2" required readonly>
+          <div class="valid-feedback">
+            ¡Se ve bien!
+          </div>
+          <div class="invalid-feedback">
+            !Mal!.
+          </div>
       </div>
-      <div class="invalid-feedback">
-        Selecciona un estado válido.
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <label for="validationCustom06" class="form-label">Genero</label>
-      <select class="form-select" id="validationCustom06" name="genero" required>
-        <option selected disabled value="">Elige...</option>
-        <option value="Masculino">Masculino</option>
-        <option value="Femenino">Femenino</option>
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        Selecciona un estado válido.
+  
+      <div class="validos">
+        <label for="validationCustom04" class="form-label">CURP</label>
+        <input type="text" class="form-control is-valid" id="validationCustom04" value="{{ curp }}" name="curp" required readonly>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          !Mal!.
+        </div>
       </div>
     </div>
 
-    <div class="col-md-4">
-      <label for="validationCustom07" class="form-label">Estado Civil</label>
-      <select class="form-select" id="validationCustom07" name="estado_civil" required>
-        <option selected disabled value="">Elige...</option>
-        <option value="Soltero">Soltero</option>
-        <option value="Casado">Casado</option>
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        Selecciona un estado válido.
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <label for="validationCustom08" class="form-label">Email</label>
-      <input type="email" class="form-control" id="validationCustom08" name="email" required>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        !Ej: nombre@correo.com!.
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <label for="validationCustom09" class="form-label">Teléfono</label>
-      <input type="tel" class="form-control" id="validationCustom09" name="telefono" pattern="^[0-9]{10}$" inputmode="numeric" required>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        !Ej: 5512345678!.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <label for="validationCustom10" class="form-label">País de Nacimiento</label>
-      <select class="form-select" id="validationCustom10" name="pais_nacimiento" required>
-        <option selected disabled value="">Elige...</option>
-        {% for pais in paises %}
-          <option value="{{ pais.id_pais }}">{{ pais.pais }}</option>
-        {% endfor %}
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        Selecciona un país válido.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <label for="validationCustom11" class="form-label">País de Residencia</label>
-      <select class="form-select" id="validationCustom11" name="pais_residencia" required>
-        <option selected disabled value="">Elige...</option>
-        {% for pais in paises %}
-          <option value="{{ pais.id_pais }}">{{ pais.pais }}</option>
-        {% endfor %}
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        Selecciona un país válido.
-      </div>
-    </div>
-    
-    <div id="contenedorEntidadFederativa" class="col-md-4">
-      <label for="validationCustom12" class="form-label">Entidad federativa, Ciudad o Provincia</label>
-      <div id="entidadFederativaContainer">
-        <select class="form-select" id="validationCustom12" name="entidad_federativa" required>
+    <div class="contenedorPersonales">
+      <div class="personales">
+        <label for="validationCustom05" class="form-label">Edad</label>
+        <select class="form-select" id="validationCustom05" name="edad" required>
           <option selected disabled value="">Elige...</option>
+          {% for rango in edades %}
+            <option value="{{ rango.id_edad }}">{{ rango.rango }}</option>
+          {% endfor %}
         </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona un estado válido.
+        </div>
       </div>
-      <div class="valid-feedback">
-        ¡Bien!.
+  
+      <div class="personales">
+        <label for="validationCustom06" class="form-label">Genero</label>
+        <select class="form-select" id="validationCustom06" name="genero" required>
+          <option selected disabled value="">Elige...</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona un estado válido.
+        </div>
       </div>
-      <div class="invalid-feedback">
-        Selecciona una Entidad Federativa válida.
+  
+      <div class="personales">
+        <label for="validationCustom07" class="form-label">Estado Civil</label>
+        <select class="form-select" id="validationCustom07" name="estado_civil" required>
+          <option selected disabled value="">Elige...</option>
+          <option value="Soltero">Soltero</option>
+          <option value="Casado">Casado</option>
+        </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona un estado válido.
+        </div>
+      </div>
+  
+      <div class="personales">
+        <label for="validationCustom08" class="form-label">Email</label>
+        <input type="email" class="form-control" id="validationCustom08" name="email" required>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          !Ej: nombre@correo.com!.
+        </div>
+      </div>
+  
+      <div class="personales">
+        <label for="validationCustom09" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" id="validationCustom09" name="telefono" pattern="^[0-9]{10}$" inputmode="numeric" required>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          !Ej: 5512345678!.
+        </div>
       </div>
     </div>
-    
-    <div class="col-md-4">
-      <label for="validationCustom13" class="form-label">Alcaldía o Municipio</label>
-      <input type="tel" class="form-control" id="validationCustom13" name="alcaldia_municipio" required>
-      <div class="valid-feedback">
-        ¡Bien!.
+
+    <div class="contenedorLocalizacion">
+      <div class="localizacion">
+        <label for="validationCustom10" class="form-label">País de Nacimiento</label>
+        <select class="form-select" id="validationCustom10" name="pais_nacimiento" required>
+          <option selected disabled value="">Elige...</option>
+          {% for pais in paises %}
+            <option value="{{ pais.id_pais }}">{{ pais.pais }}</option>
+          {% endfor %}
+        </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona un país válido.
+        </div>
       </div>
-      <div class="invalid-feedback">
-        Selecciona una Alcaldía o Municipio válida.
+  
+      <div class="localizacion">
+        <label for="validationCustom11" class="form-label">País de Residencia</label>
+        <select class="form-select" id="validationCustom11" name="pais_residencia" required>
+          <option selected disabled value="">Elige...</option>
+          {% for pais in paises %}
+            <option value="{{ pais.id_pais }}">{{ pais.pais }}</option>
+          {% endfor %}
+        </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona un país válido.
+        </div>
+      </div>
+      
+      <div id="contenedorEntidadFederativa" class="localizacion">
+        <label for="validationCustom12" class="form-label">Entidad federativa, Ciudad o Provincia</label>
+        <div id="entidadFederativaContainer">
+          <select class="form-select" id="validationCustom12" name="entidad_federativa" required>
+            <option selected disabled value="">Elige...</option>
+          </select>
+        </div>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona una Entidad Federativa válida.
+        </div>
+      </div>
+      
+      <div class="localizacion">
+        <label for="validationCustom13" class="form-label">Alcaldía o Municipio</label>
+        <input type="tel" class="form-control" id="validationCustom13" name="alcaldia_municipio" required>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona una Alcaldía o Municipio válida.
+        </div>
+      </div>
+      
+      <div class="localizacion">
+        <label for="validationCustom14" class="form-label">Código Postal</label>
+        <input type="tel" class="form-control" id="validationCustom14" name="codigo_postal" pattern="[0-9]*" inputmode="numeric" required>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          ¡Ej: 01234!.
+        </div>
       </div>
     </div>
-    
-    <div class="col-md-4">
-      <label for="validationCustom14" class="form-label">Código Postal</label>
-      <input type="tel" class="form-control" id="validationCustom14" name="codigo_postal" pattern="[0-9]*" inputmode="numeric" required>
-      <div class="valid-feedback">
-        ¡Bien!.
+
+    <div class="contenedorEscolar">
+      <div class="escolar">
+        <label for="validationCustom14-5" class="form-label">Boleta</label>
+        <input type="tel" class="form-control" id="validationCustom14-5" name="boleta" pattern="^[0-9]{10}$" inputmode="numeric" required>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          !Ej: 2014123456!.
+        </div>
       </div>
-      <div class="invalid-feedback">
-        ¡Ej: 01234!.
+  
+      <div class="escolar">
+        <label for="validationCustom15" class="form-label">Nivel Académico</label>
+        <select class="form-select" id="validationCustom15" name="nivel_academico" required>
+          <option selected disabled value="">Elige...</option>
+          {% for na in niveles_academicos %}
+            <option value="{{ na.id_na }}">{{ na.nivel }}</option>
+          {% endfor %}
+        </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona una Entidad Federativa válida.
+        </div>
       </div>
-    </div>     
+  
+      <div class="escolar">
+        <label for="validationCustom16" class="form-label">Unidad Academica</label>
+        <select class="form-select" id="validationCustom16" name="unidad_academica" required>
+          <option selected disabled>Elige...</option>
+          {% for ua in unidades_academicas %}
+            <option value="{{ ua.id_ua }}">{{ ua.nombre }}</option>
+          {% endfor %}
+        </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona una Unidad Académica válida.
+        </div>
+      </div>
+  
+      <div class="escolar">
+        <label for="validationCustom17" class="form-label">Programa Academico</label>
+        <select class="form-select" id="validationCustom17" name="programa_academico" required>
+          <option  value="">Elige...</option>
+        </select>
+        <div class="valid-feedback">
+          ¡Bien!.
+        </div>
+        <div class="invalid-feedback">
+          Selecciona un Programa Academico válido.
+        </div>
+      </div>
+    </div>
+    <div class="contenedorFinal">
+      <div class="final">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Acepta los términos y condiciones
+          </label>
+          <div class="invalid-feedback">
+            Debe estar de acuerdo antes de enviar.
+          </div>
+        </div>
+      </div>
+
+      <div class="final">
+        <button class="btn btn-primary" type="submit">Enviar formulario</button>
+      </div>
+    </div>
+  <!-- 
     
-    <!-- ... Tu código HTML anterior ... -->
+     -->
+
+  </form>
+</div>
+
+<script>
+  var selectElement = document.getElementById('validationCustom15');
+  var selectElement2 = document.getElementById('validationCustom16');
+  
+  selectElement.addEventListener('change', function() {
+    var nivelAcademico = parseInt(selectElement.value);
+    //console.log(nivelAcademico);
+
+    var unidadesAcademicas = {};
+    {% for ua in unidades_academicas %}
+    unidadesAcademicas["{{ ua.id_ua }}"] = ["{{ ua.nombre }}", "{{ ua.id_na }}"];
+    {% endfor %}
+    
+    var unidadesAcademicasLimpias = {};
+    for (var clave in unidadesAcademicas) {
+      if (unidadesAcademicas.hasOwnProperty(clave)) {
+        var valor = unidadesAcademicas[clave][1];
+        var ua = unidadesAcademicas[clave][0]
+        var numero = parseInt(valor.match(/\((\d+)\)/)[1]);
+        unidadesAcademicasLimpias[clave] = [ua , numero];
+      }
+    }
+    //console.log(unidadesAcademicasLimpias);
+    var unidadesAcademicasFiltradas = {};
+    for (var clave in unidadesAcademicasLimpias) {
+      if (unidadesAcademicasLimpias.hasOwnProperty(clave)) {
+        var valor = unidadesAcademicasLimpias[clave];
+        if (valor[1] === nivelAcademico) {
+          unidadesAcademicasFiltradas[clave] = valor;
+        }
+      }
+    }
+    //console.log(unidadesAcademicasFiltradas); 
+    
+    // Eliminar las opciones existentes en el segundo select
+    selectElement2.innerHTML = '';
+
+    // Agregar la opción "Elige..." al segundo select
+    var optionElige = document.createElement('option');
+    optionElige.value = '';
+    optionElige.textContent = 'Elige...';
+    selectElement2.appendChild(optionElige);
+    
+    // Recorrer el diccionario y crear los options
+    Object.keys(unidadesAcademicasFiltradas).forEach(function(key) {
+        var value = key;
+        var text = unidadesAcademicasFiltradas[key][0];
+
+        // Crear el elemento option
+        var optionElement = document.createElement('option');
+        optionElement.value = value;
+        optionElement.textContent = text;
+
+        // Agregar el option al select
+        selectElement2.appendChild(optionElement);
+    });
+
+
+    unidadesAcademicasFiltradas = {};
+    unidadesAcademicasLimpias = {};
+    unidadesAcademicas = {};
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var selectElement = document.getElementById('validationCustom16');
+  var selectElement2 = document.getElementById('validationCustom17');
+  
+  selectElement.addEventListener('change', function() {
+    var unidadAcademica = parseInt(selectElement.value);
+
+    //console.log(unidadAcademica);
+    var programasAcademicos = {};
+    {% for pa in programas_academicos %}
+    programasAcademicos["{{ pa.id_pa }}"] = ["{{ pa.nombre }}", "{{ pa.id_ua }}"];
+    {% endfor %}
+
+    var programasAcademicosLimpias = {};
+    for (var clave in programasAcademicos) {
+      if (programasAcademicos.hasOwnProperty(clave)) {
+        var valor = programasAcademicos[clave][1];
+        var pa = programasAcademicos[clave][0]
+        var numero = parseInt(valor.match(/\((\d+)\)/)[1]);
+        programasAcademicosLimpias[clave] = [pa , numero];
+      }
+    }
+
+    var resultado = {};
+    var programasAcademicosFiltrados = {};
+    for (var clave in programasAcademicosLimpias) {
+      if (programasAcademicosLimpias.hasOwnProperty(clave)) {
+        var valor = programasAcademicosLimpias[clave];
+        if (valor[1] === unidadAcademica) {
+          programasAcademicosFiltrados[clave] = valor;
+        }
+      }
+    }
+
+    //console.log(programasAcademicosFiltrados); 
+    // Eliminar las opciones existentes en el segundo select
+    selectElement2.innerHTML = '';
+
+    // Agregar la opción "Elige..." al segundo select
+    var optionElige = document.createElement('option');
+    optionElige.value = '';
+    optionElige.textContent = 'Elige...';
+    selectElement2.appendChild(optionElige);
+    
+    // Recorrer el diccionario y crear los options
+    Object.keys(programasAcademicosFiltrados).forEach(function(key) {
+        var value = key;
+        var text = programasAcademicosFiltrados[key][0];
+
+        // Crear el elemento option
+        var optionElement = document.createElement('option');
+        optionElement.value = value;
+        optionElement.textContent = text;
+
+        // Agregar el option al select
+        selectElement2.appendChild(optionElement);
+    });
+
+    programasAcademicos = {};
+    programasAcademicosFiltrados = {};
+    programasAcademicosLimpias = {};
+  });
+});
+</script>
 
 <script>
   var paisResidencia = document.getElementById('validationCustom11');
@@ -264,215 +482,7 @@
   });
 </script>
 
-<!-- ... Tu código HTML posterior ... -->
-    <div class="col-md-3">
-      <label for="validationCustom14-5" class="form-label">Boleta</label>
-      <input type="tel" class="form-control" id="validationCustom14-5" name="boleta" pattern="^[0-9]{10}$" inputmode="numeric" required>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        !Ej: 2014123456!.
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <label for="validationCustom15" class="form-label">Nivel Académico</label>
-      <select class="form-select" id="validationCustom15" name="nivel_academico" required>
-        <option selected disabled value="">Elige...</option>
-        {% for na in niveles_academicos %}
-          <option value="{{ na.id_na }}">{{ na.nivel }}</option>
-        {% endfor %}
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        Selecciona una Entidad Federativa válida.
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <label for="validationCustom16" class="form-label">Unidad Academica</label>
-      <select class="form-select" id="validationCustom16" name="unidad_academica" required>
-        <option selected disabled>Elige...</option>
-        {% for ua in unidades_academicas %}
-          <option value="{{ ua.id_ua }}">{{ ua.nombre }}</option>
-        {% endfor %}
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        Selecciona una Unidad Académica válida.
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <label for="validationCustom17" class="form-label">Programa Academico</label>
-      <select class="form-select" id="validationCustom17" name="programa_academico" required>
-        <option  value="">Elige...</option>
-      </select>
-      <div class="valid-feedback">
-        ¡Bien!.
-      </div>
-      <div class="invalid-feedback">
-        Selecciona un Programa Academico válido.
-      </div>
-    </div>
-
-    <script>
-        var selectElement = document.getElementById('validationCustom15');
-        var selectElement2 = document.getElementById('validationCustom16');
-        
-        selectElement.addEventListener('change', function() {
-          var nivelAcademico = parseInt(selectElement.value);
-          //console.log(nivelAcademico);
-      
-          var unidadesAcademicas = {};
-          {% for ua in unidades_academicas %}
-          unidadesAcademicas["{{ ua.id_ua }}"] = ["{{ ua.nombre }}", "{{ ua.id_na }}"];
-          {% endfor %}
-          
-          var unidadesAcademicasLimpias = {};
-          for (var clave in unidadesAcademicas) {
-            if (unidadesAcademicas.hasOwnProperty(clave)) {
-              var valor = unidadesAcademicas[clave][1];
-              var ua = unidadesAcademicas[clave][0]
-              var numero = parseInt(valor.match(/\((\d+)\)/)[1]);
-              unidadesAcademicasLimpias[clave] = [ua , numero];
-            }
-          }
-          //console.log(unidadesAcademicasLimpias);
-          var unidadesAcademicasFiltradas = {};
-          for (var clave in unidadesAcademicasLimpias) {
-            if (unidadesAcademicasLimpias.hasOwnProperty(clave)) {
-              var valor = unidadesAcademicasLimpias[clave];
-              if (valor[1] === nivelAcademico) {
-                unidadesAcademicasFiltradas[clave] = valor;
-              }
-            }
-          }
-          //console.log(unidadesAcademicasFiltradas); 
-          
-          // Eliminar las opciones existentes en el segundo select
-          selectElement2.innerHTML = '';
-      
-          // Agregar la opción "Elige..." al segundo select
-          var optionElige = document.createElement('option');
-          optionElige.value = '';
-          optionElige.textContent = 'Elige...';
-          selectElement2.appendChild(optionElige);
-          
-          // Recorrer el diccionario y crear los options
-          Object.keys(unidadesAcademicasFiltradas).forEach(function(key) {
-              var value = key;
-              var text = unidadesAcademicasFiltradas[key][0];
-      
-              // Crear el elemento option
-              var optionElement = document.createElement('option');
-              optionElement.value = value;
-              optionElement.textContent = text;
-      
-              // Agregar el option al select
-              selectElement2.appendChild(optionElement);
-          });
-      
-      
-          unidadesAcademicasFiltradas = {};
-          unidadesAcademicasLimpias = {};
-          unidadesAcademicas = {};
-        });
-    </script>
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var selectElement = document.getElementById('validationCustom16');
-        var selectElement2 = document.getElementById('validationCustom17');
-        
-        selectElement.addEventListener('change', function() {
-          var unidadAcademica = parseInt(selectElement.value);
-
-          //console.log(unidadAcademica);
-          var programasAcademicos = {};
-          {% for pa in programas_academicos %}
-          programasAcademicos["{{ pa.id_pa }}"] = ["{{ pa.nombre }}", "{{ pa.id_ua }}"];
-          {% endfor %}
-      
-          var programasAcademicosLimpias = {};
-          for (var clave in programasAcademicos) {
-            if (programasAcademicos.hasOwnProperty(clave)) {
-              var valor = programasAcademicos[clave][1];
-              var pa = programasAcademicos[clave][0]
-              var numero = parseInt(valor.match(/\((\d+)\)/)[1]);
-              programasAcademicosLimpias[clave] = [pa , numero];
-            }
-          }
-      
-          var resultado = {};
-          var programasAcademicosFiltrados = {};
-          for (var clave in programasAcademicosLimpias) {
-            if (programasAcademicosLimpias.hasOwnProperty(clave)) {
-              var valor = programasAcademicosLimpias[clave];
-              if (valor[1] === unidadAcademica) {
-                programasAcademicosFiltrados[clave] = valor;
-              }
-            }
-          }
-
-          //console.log(programasAcademicosFiltrados); 
-          // Eliminar las opciones existentes en el segundo select
-          selectElement2.innerHTML = '';
-      
-          // Agregar la opción "Elige..." al segundo select
-          var optionElige = document.createElement('option');
-          optionElige.value = '';
-          optionElige.textContent = 'Elige...';
-          selectElement2.appendChild(optionElige);
-          
-          // Recorrer el diccionario y crear los options
-          Object.keys(programasAcademicosFiltrados).forEach(function(key) {
-              var value = key;
-              var text = programasAcademicosFiltrados[key][0];
-      
-              // Crear el elemento option
-              var optionElement = document.createElement('option');
-              optionElement.value = value;
-              optionElement.textContent = text;
-      
-              // Agregar el option al select
-              selectElement2.appendChild(optionElement);
-          });
-      
-          programasAcademicos = {};
-          programasAcademicosFiltrados = {};
-          programasAcademicosLimpias = {};
-        });
-      });
-    </script>
-    
-    
-      
-  
-
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-          Acepta los términos y condiciones
-        </label>
-        <div class="invalid-feedback">
-          Debe estar de acuerdo antes de enviar.
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Enviar formulario</button>
-    </div>
-  </form>
-
-
-  <script>
+<script>
     // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
     (function () {
       'use strict'
@@ -491,7 +501,7 @@
         }, false)
       })
   })()
-  </script>
+ </script>
 {% endblock body %}
     
 

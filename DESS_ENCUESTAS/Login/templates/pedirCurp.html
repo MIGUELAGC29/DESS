@@ -4,99 +4,45 @@
 
 {% block body %}
 
-
-<!-- 
-<body>
-    <div id="principal">
-        <div id="div-boton">
-            <button type="button" class="btn btn-primary" id="botoncito" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Contestar Encuesta</button>
-        </div>
-        <div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresa tu CURP</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="{% url 'Registro_Usuario' %}" method="POST">
-                                {% csrf_token %}
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">CURP:</label>
-                                    {% if messages %}
-                                    <input type="text" class="form-control" id="recipient-name" name="curp" value="">
-                                    {% else %}
-                                    <input type="text" class="form-control" id="recipient-name" name="curp" value="{{ value }}">
-                                    <p class="text-danger">{{ error }}</p>
-                                    {% endif %}
-                                </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                        </form>
-                    </div>
+<div class="pedirCurp">
+    <div class="div-boton">
+        <button type="button" class="btn btn-primary" id="botonPedirCurp" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" data-bs-whatever="@mdo">Contestar Encuesta</button>
     </div>
-</body> 
-
-
-
-
-
-
-<script type="module">
-    var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
-    document.onreadystatechange = function () {
-        myModal.show();
-    };
-</script>
-
-
-
--->
-
-
-      
-    <div class="pedirCurp2">
-        <div class="div-boton">
-            <button type="button" class="btn btn-primary" id="botonPedirCurp" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Contestar Encuesta</button>
-        </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-            <div class="modal-dialog modal-dialog-centered div-modal" >
-                <div class="modal-content" id="contenidoModal">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ingresa tu CURP</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="{% url 'Registro_Usuario' %}" method="POST">
-                            {% csrf_token %}
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label" id="curpLetra">CURP:</label>
-                                {% if messages %}
-                                <input type="text" class="form-control" id="inputLetra" name="curp" value="" >
-                                {% else %}
-                                <input type="text" class="form-control" id="recipient-name2" name="curp" value="{{ value }}">
-                                <p class="text-danger" id="errorLetra">{{ error }}</p>
-                                {% endif %}
-                    </div>
-                            </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cerrarLetra">Cerrar</button>
-                        <button type="submit" class="btn btn-primary" id="enviarLetra">Enviar</button>
-                    </div>
-                        </form>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered div-modal">
+            <div class="modal-content" id="contenidoModal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ingresa tu CURP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body">
+                    <form action="{% url 'Registro_Usuario' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label" id="curpLetra">CURP:</label>
+                            {% if messages %}
+                            <input type="text" class="form-control" id="inputLetra" name="curp" value="">
+                            {% else %}
+                            <input type="text" class="form-control" id="recipient-name2" name="curp"
+                                value="{{ value }}">
+                            <p class="text-danger" id="errorLetra">{{ error }}</p>
+                            {% endif %}
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        id="cerrarLetra">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" id="enviarLetra">Enviar</button>
+                </div>
+                </form>
             </div>
         </div>
-        
-        
-    
     </div>
-      
 
+
+
+</div>
 
 <script type="module">
     var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});

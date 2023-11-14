@@ -9,3 +9,76 @@ input[name=nombres] {
  input[name=ap_materno] {
     pointer-events: none;
  }
+
+ .registroUsuario {
+   height: 880px;
+   background-color: white;
+   width: 100%;
+ }
+
+form {
+}
+
+.contenedorValidos {
+   width: 100%;
+   height: 176px;
+   display: flex;
+   justify-content: center; /* Centra horizontalmente */
+   align-items: center; /* Centra verticalmente */
+}
+ .validos {
+   width: 25%;
+   margin: 20px;
+ }
+
+ .contenedorPersonales {
+   width: 100%;
+   height: 176px;
+   display: flex;
+   justify-content: center; /* Centra horizontalmente */
+   align-items: center; /* Centra verticalmente */
+ }
+
+ .personales {
+   width: 20%;
+   margin: 20px;
+ }
+
+ .contenedorLocalizacion {
+   width: 100%;
+   height: 176px;
+   display: flex;
+   justify-content: center; /* Centra horizontalmente */
+   align-items: center; /* Centra verticalmente */
+ }
+
+ .localizacion {
+   width: 20%;
+   margin: 20px;
+ }
+
+ .contenedorEscolar {
+   width: 100%;
+   height: 176px;
+   display: flex;
+   justify-content: center; /* Centra horizontalmente */
+   align-items: center; /* Centra verticalmente */
+ }
+
+ .escolar {
+   width: 25%;
+   margin: 20px;
+ }
+
+ .contenedorFinal {
+   width: 100%;
+   height: 176px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .final{
+   
+ }

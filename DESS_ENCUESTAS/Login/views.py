@@ -19,7 +19,6 @@ def registroUsuario(request):
         curp = request.POST['curp']
         json = "{" + "\"data\":{" + "\"curp\":" + "\"" + curp + "\"" + "} }"
         request_renapo = requests.post(url, auth = HTTPBasicAuth(user, password), data=json)
-        print(request_renapo)
         if(request_renapo != None):
             try:
                 jsonData = request_renapo.json()
@@ -103,7 +102,6 @@ def guardarUsuario(request):
         
         usuario.save()
         #print(usuario.id_usuario)
-        
         if int(request.POST.get('nivel_academico')) == 1:
             cuestionarios = Cuestionario.objects.filter(id_na = int(request.POST.get('nivel_academico')))
             return render(request, 'Cuestionario/seleccionCuestionarioMedioSuperior.html', {
