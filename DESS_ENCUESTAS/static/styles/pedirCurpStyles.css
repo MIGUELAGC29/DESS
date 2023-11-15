@@ -27,10 +27,6 @@
     margin-top: 100px;
 }
 
-.prueba {
-    border: 10px solid yellow;
-    width: 300px;
-}
 
 /* RESPONSIVE */
 @media (max-width: 575.98px) {
@@ -72,7 +68,7 @@
         height: 940px;
     }
 
-    .pedirCurp2 {
+    .pedirCurp {
         height: 250px;
     }
 }
@@ -117,7 +113,7 @@
         height: 1030px;
     }
 
-    .pedirCurp2 {
+    .pedirCurp {
         height: 320px;
     }
 }
@@ -161,7 +157,7 @@
         height: 1180px;
     }
 
-    .pedirCurp2 {
+    .pedirCurp {
         height: 400px;
     }
 }
@@ -207,7 +203,7 @@
         height: 1300px;
     }
 
-    .pedirCurp2 {
+    .pedirCurp {
         height: 550px;
     }
 }
@@ -252,7 +248,7 @@
         height: 1200px;
     }
 
-    .pedirCurp2 {
+    .pedirCurp {
         height: 600px;
     }
 }
@@ -263,7 +259,7 @@
         height: 1000px;
     }
 
-    .pedirCurp2 {
+    .pedirCurp {
         height: 800px;
     }
 }

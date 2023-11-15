@@ -2,16 +2,18 @@
 
 
 {% block body %}
+
 <div class="registroUsuario">
 
   <form action="{% url 'Guardar_Usuario' %}" method="POST" class="needs-validation" novalidate>
+
     {% csrf_token %}
     <div class="contenedorValidos">
 
       <div class="validos">
         <label for="validationCustom01" class="form-label">Nombre</label>
         <input type="text" class="form-control is-valid" id="validationCustom01" value="{{ nombres }}" name="nombres" required readonly>
-        <div class="valid-feedback">
+        <div class="valid-feedback ">
           ¡Bien!.
         </div>
         <div class="invalid-feedback">
@@ -57,7 +59,7 @@
       <div class="personales">
         <label for="validationCustom05" class="form-label">Edad</label>
         <select class="form-select" id="validationCustom05" name="edad" required>
-          <option selected disabled value="">Elige...</option>
+          <option selected disabled value="" >Elige...</option>
           {% for rango in edades %}
             <option value="{{ rango.id_edad }}">{{ rango.rango }}</option>
           {% endfor %}
@@ -251,6 +253,7 @@
         </div>
       </div>
     </div>
+    
     <div class="contenedorFinal">
       <div class="final">
         <div class="form-check">
@@ -268,11 +271,8 @@
         <button class="btn btn-primary" type="submit">Enviar formulario</button>
       </div>
     </div>
-  <!-- 
-    
-     -->
-
   </form>
+
 </div>
 
 <script>
@@ -502,6 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
   })()
  </script>
+
 {% endblock body %}
     
 

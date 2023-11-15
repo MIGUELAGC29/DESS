@@ -82,3 +82,202 @@ form {
  .final{
    
  }
+
+
+
+ /* RESPONSIVE */
+@media (max-width: 575.98px) {
+
+  .validos label, .personales label, .localizacion label, .escolar label,  .final label, .final button,
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select, .final input,
+  .valid-feedback, .invalid-feedback{
+    font-size: 8px;
+  }
+
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select {
+    height: 25px;
+  }
+
+  .contenedorValidos, .contenedorPersonales, .contenedorLocalizacion, .contenedorEscolar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+  }
+
+  .validos, .personales, .localizacion, .escolar {
+    width: 30%;
+    margin: 5px;
+  }
+
+  .contenedorFinal {
+    height: 100px;
+  }
+
+  .registroUsuario {
+    height: 1500px;
+  }
+
+}
+
+
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+
+  .validos label, .personales label, .localizacion label, .escolar label,  .final label, .final button,
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select, .final input,
+  .valid-feedback, .invalid-feedback{
+    font-size: 8px;
+  }
+
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select {
+    height: 25px;
+  }
+
+  .contenedorValidos, .contenedorPersonales, .contenedorLocalizacion, .contenedorEscolar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+  }
+
+  .validos, .personales, .localizacion, .escolar {
+    width: 30%;
+    margin: 5px;
+  }
+
+  .contenedorFinal {
+    height: 100px;
+  }
+
+  .registroUsuario {
+    height: 1500px;
+  }
+
+}
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+
+  .validos label, .personales label, .localizacion label, .escolar label,  .final label, .final button,
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select, .final input,
+  .valid-feedback, .invalid-feedback{
+    font-size: 8px;
+  }
+
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select {
+    height: 25px;
+  }
+
+  .validos {
+    width: 18%;
+    margin: 10px;
+  }
+
+  .personales {
+    width: 14%;
+    margin: 17px;
+  }
+  
+  .localizacion {
+    width: 14%;
+    margin: 17px;
+  }
+  
+  .escolar {
+    width: 18%;
+    margin: 10px;
+  }
+
+  .contenedorValidos, .contenedorPersonales, .contenedorLocalizacion, .contenedorEscolar, .contenedorFinal {
+    height: 120px;
+  }
+
+  .registroUsuario {
+    height: 600px;
+  }
+
+}
+
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+
+  .validos label, .personales label, .localizacion label, .escolar label,  .final label, .final button,
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select, .final input,
+  .valid-feedback, .invalid-feedback{
+    font-size: 12px;
+  }
+
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select {
+    height: 33px;
+  }
+
+  .validos {
+    width: 18%;
+    margin: 15px;
+  }
+
+  .personales {
+    width: 14%;
+    margin: 15px;
+  }
+  
+  .localizacion {
+    width: 14%;
+    margin: 15px;
+  }
+  
+  .escolar {
+    width: 18%;
+    margin: 15px;
+  }
+
+}
+
+
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
+
+  .validos label, .personales label, .localizacion label, .escolar label,  .final label, .final button,
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select, .final input,
+  .valid-feedback, .invalid-feedback{
+    font-size: 14px;
+  }
+
+  .validos input, .personales select, .personales input, .localizacion select, .localizacion input, 
+  .escolar input, .escolar select {
+    height: 35px;
+  }
+
+
+  .validos {
+    width: 20%;
+    margin: 18px;
+  }
+
+  .personales {
+    width: 16%;
+    margin: 18px;
+  }
+  
+  .localizacion {
+    width: 16%;
+    margin: 18px;
+  }
+  
+  .escolar {
+    width: 20%;
+    margin: 18px;
+  }
+}
+
+
+@media (min-width: 1399.98px) and (max-width: 1599.98px) {}
