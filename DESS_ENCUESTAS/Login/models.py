@@ -153,8 +153,7 @@ class Usuario(models.Model):
     id_pa = models.ForeignKey(ProgramaAcademico, models.DO_NOTHING, db_column='ID_PA')  # Field name made lowercase.
     id_edad = models.ForeignKey(Edad, models.DO_NOTHING, db_column='ID_EDAD')  # Field name made lowercase.
     id_pais_nacimiento = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_NACIMIENTO', related_name='usuarios_nacimiento')
-    id_pais_residencia = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_RESIDENCIA', related_name='usuarios_residencia')
-
+    id_pais_residencia = models.ForeignKey(Pais, models.DO_NOTHING, db_column='ID_PAIS_RESIDENCIA', related_name='usuarios_residencia') 
 
     class Meta:
         managed = False

@@ -102,7 +102,7 @@ def guardarUsuario(request):
         
         usuario.save()
         #print(usuario.id_usuario)
-        if int(request.POST.get('nivel_academico')) == 1:
+        """if int(request.POST.get('nivel_academico')) == 1:
             cuestionarios = Cuestionario.objects.filter(id_na = int(request.POST.get('nivel_academico')))
             return render(request, 'Cuestionario/seleccionCuestionarioMedioSuperior.html', {
                 'cuestionarios': cuestionarios,
@@ -111,6 +111,10 @@ def guardarUsuario(request):
             cuestionarios = Cuestionario.objects.filter(id_na = int(request.POST.get('nivel_academico')))
             return render(request, 'seleccionCuestionarioSuperior.html', {
                 'cuestionarios': cuestionarios,
+                'id_usuario' : usuario.id_usuario,
+            })"""
+            
+        return render(request, 'Cuestionario_Transversal.html', {
                 'id_usuario' : usuario.id_usuario,
             })
             

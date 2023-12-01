@@ -1,7 +1,235 @@
 {% extends 'footerAndHeader.html' %}
 
 {% block body %}
-<!DOCTYPE html>
+<div class="cuestionarioTransversal">
+  <form action="{% url 'Finalizado_Cuestionario_Transversal' id_usuario%}" method="POST" class="needs-validation" id="CuestionarioTransversal" novalidate>
+    {% csrf_token %}
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_1" class="">¿Actualmente te encuentras laborando?</label>
+      </div>
+      <div id="pregunta_1" class="form-check-inline preguntaRespuestas">
+        <input type="radio" class="form-check-input" id="pregunta_1_si" name="pregunta_1" value="Si" required>
+        <label class="form-check-label me-5" for="pregunta_1_si">Si</label>
+        <input type="radio" class="form-check-input ms-5" id="pregunta_1_no" name="pregunta_1" value="No" required>
+        <label class="form-check-label" for="pregunta_1_no">No</label>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción</div>
+      </div>
+    </div>
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_2" class="">¿Cuál es la razón principal por la que no te encuentras laborando?</label>
+      </div>
+      <div class="preguntaRespuestasv2">
+        <select class="form-select" id="pregunta_2" required onchange="showInputBox('pregunta_2', 'pregunta_2_container', 'pregunta_2_otro')" name="pregunta_2">
+            <option selected disabled value="" class="">Elije una opción...</option>
+            <option value="El mercado laboral está saturado">El mercado laboral está saturado</option>
+            <option value="Falta de oferta laboral en mi área de estudio">Falta de oferta laboral en mi área de estudio</option>
+            <option value="No estar titulado(a) / falta de cedula profesional">No estar titulado(a) / falta de cedula profesional</option>
+            <option value="Cuestiones de salud">Cuestiones de salud</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+        <div class="anexo" id="pregunta_2_container" style="display: none;">
+          <label for="pregunta_2_otro" class="">Por favor, especifica:</label>
+          <input type="text" class="form-control" id="pregunta_2_otro" name="pregunta_2_otro">
+        </div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_3" class="form-label mb-0">¿En qué porcentaje coincide tu trabajo con tus estudios de licenciatura?</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_3" required name="pregunta_3">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="0%">0%</option>
+          <option value="25%">25%</option>
+          <option value="50%">50%</option>
+          <option value="75%">75%</option>
+          <option value="100%">100%</option>
+        </select>
+        <div class="valid-feedback">
+          ¡Se ve bien!
+        </div>
+        <div class="invalid-feedback">
+          Selecciona una opción.
+        </div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_4" class="">¿Ha sido o fue tu único empleo? </label>
+      </div>
+      <div class="preguntaRespuestas">
+        <input type="radio" class="form-check-input" id="pregunta_4_si" name="pregunta_4" value="Si" required>
+        <label class="form-check-label me-5" for="pregunta_4_si">Si</label>
+        <input type="radio" class="form-check-input ms-5" id="pregunta_4_no" name="pregunta_4" value="No" required>
+        <label class="form-check-label" for="pregunta_4_no">No</label>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_5" class="form-label">Señala el número de veces que has cambiado de trabajo, después del primer empleo que conseguiste al egresar:</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_5" required name="pregunta_5">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5 o más">5 o más</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div> 
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_6" class="form-label">En cuanto a tu desarrollo profesional, al comparar tu puesto actual con el primero, consideras que:</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_6" required name="pregunta_6">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Mejoró">Mejoró</option>
+          <option value="Empeoró">Empeoró</option>
+          <option value="Permaneció igual">Permaneció igual</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_7" class="form-label">En cuanto a tu nivel económico actual con respecto al primer empleo, consideras que:</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_7" required name="pregunta_7">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Mejoró">Mejoró</option>
+          <option value="Empeoró">Empeoró</option>
+          <option value="Permaneció igual">Permaneció igual</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_8" class="form-label">¿Cuánto tiempo te llevó conseguir tu empleo o tu primer empleo?</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_8" required name="pregunta_8">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Empleado antes de egresar">Empleado antes de egresar</option>
+          <option value="Menos de 6 meses de egresar">Menos de 6 meses de egresar</option>
+          <option value="De 6 meses a 1 año de egreso">De 6 meses a 1 año de egreso</option>
+          <option value="Más de 1 año de egreso">Más de 1 año de egreso</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+    
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_9" class="form-label">¿Principal dificultad para encontrar empleo o el primer empleo?</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_9" required name="pregunta_9">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Falta de vacantes en mi área de estudio">Falta de vacantes en mi área de estudio</option>
+          <option value="Salario bajo/nulas o bajas prestaciones">Salario bajo/nulas o bajas prestaciones</option>
+          <option value="Horario">Horario</option>
+          <option value="No tenía experiencia">No tenía experiencia</option>
+          <option value="No conozco quien me recomiende">No conozco quien me recomiende</option>
+          <option value="Tener cédula ">Tener cédula </option>
+          <option value="Ninguna">Ninguna</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_10" class="">¿Cuál fue el principal requisito para conseguir tu empleo?</label>
+      </div>
+      <div class="preguntaRespuestasv2">
+        <select class="form-select" id="pregunta_10" required onchange="showInputBox('pregunta_10', 'pregunta_10_container', 'pregunta_10_otro')" name="pregunta_10">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Ser titulado">Ser titulado</option>
+          <option value="Aprobar los exámenes de selección">Aprobar los exámenes de selección</option>
+          <option value="Dominio de otro idioma">Dominio de otro idioma</option>
+          <option value="Manejo de tecnologías de la información y comunicación">Manejo de tecnologías de la información y comunicación</option>
+          <option value="Experiencia">Experiencia</option>
+          <option value="Pasar una entrevista formal">Pasar una entrevista formal</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+        <div class="anexo" id="pregunta_10_container" style="display: none;">
+          <label for="pregunta_10_container" class="form-label">Por favor, especifica:</label>
+          <input type="text" class="form-control" id="pregunta_10_container" name="pregunta_10_otro">
+        </div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_11" class="">Señala el principal medio a través del cual encontraste tu empleo actual:</label>
+      </div>
+      <div class="preguntaRespuestasv2">
+        <select class="form-select" id="pregunta_11" required onchange="showInputBox('pregunta_11', 'pregunta_11_container', 'pregunta_11_otro')" name="pregunta_11">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Bolsa de trabajo institucional SISAE-SIBOLTRA">Bolsa de trabajo institucional SISAE-SIBOLTRA</option>
+          <option value="Bolsa de trabajo de tu Unidad Académica">Bolsa de trabajo de tu Unidad Académica</option>
+          <option value="Bolsa de trabajo externa">Bolsa de trabajo externa</option>
+          <option value="Recomendación de compañeros de licenciatura">Recomendación de compañeros de licenciatura</option>
+          <option value="Recomendación de un profesor">Recomendación de un profesor</option>
+          <option value="Recomendación de un amigo o familiar">Recomendación de un amigo o familiar</option>
+          <option value="Relaciones hechas en empleos anteriores">Relaciones hechas en empleos anteriores</option>
+          <option value="Creación de un negocio, despacho, empresa propios">Creación de un negocio, despacho, empresa propios</option>
+          <option value="Integración a un negocio familiar">Integración a un negocio familiar</option>
+          <option value="Servicio social">Servicio social</option>
+          <option value="Prácticas o estancias profesionales">Prácticas o estancias profesionales</option>
+          <option value="Agencia de colocación (head – hunters y outsourcing)">Agencia de colocación (head – hunters y outsourcing)</option>
+          <option value="Internet y/o app">Internet y/o app</option>
+          <option value="Por redes sociales">Por redes sociales</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+        <div class="col-md-4" id="pregunta_11_container" style="display: none;">
+          <label for="pregunta_11_otro" class="form-label mb-0">Por favor, especifica:</label>
+          <input type="text" class="form-control" id="pregunta_11_otro" name="pregunta_11_otro">
+        </div>
+      </div>
+    </div>
+
+<!--
+    
+  -->
+
+     
+
+
+  </form>
+</div>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -988,7 +1216,7 @@
 </body>
 
 </html>
-
+-->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const pregunta1Si = document.getElementById('pregunta_1_si');
@@ -1095,5 +1323,5 @@
         }, false)
       })
   })()
-</script>
+</script> 
 {% endblock body %}
