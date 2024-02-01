@@ -8,7 +8,7 @@
       <div class="preguntaLabel">
         <label for="pregunta_1" class="">¿Actualmente te encuentras laborando?</label>
       </div>
-      <div id="pregunta_1" class="form-check-inline preguntaRespuestas">
+      <div id="pregunta_1" class="form-check-inline ">
         <input type="radio" class="form-check-input" id="pregunta_1_si" name="pregunta_1" value="Si" required>
         <label class="form-check-label me-5" for="pregunta_1_si">Si</label>
         <input type="radio" class="form-check-input ms-5" id="pregunta_1_no" name="pregunta_1" value="No" required>
@@ -65,7 +65,7 @@
       <div class="preguntaLabel">
         <label for="pregunta_4" class="">¿Ha sido o fue tu único empleo? </label>
       </div>
-      <div class="preguntaRespuestas">
+      <div class="">
         <input type="radio" class="form-check-input" id="pregunta_4_si" name="pregunta_4" value="Si" required>
         <label class="form-check-label me-5" for="pregunta_4_si">Si</label>
         <input type="radio" class="form-check-input ms-5" id="pregunta_4_no" name="pregunta_4" value="No" required>
@@ -211,15 +211,692 @@
         </select>
         <div class="valid-feedback">¡Se ve bien!</div>
         <div class="invalid-feedback">Selecciona una opción.</div>
-        <div class="col-md-4" id="pregunta_11_container" style="display: none;">
+        <div class="" id="pregunta_11_container" style="display: none;">
           <label for="pregunta_11_otro" class="form-label mb-0">Por favor, especifica:</label>
           <input type="text" class="form-control" id="pregunta_11_otro" name="pregunta_11_otro">
         </div>
       </div>
     </div>
 
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_12" class="">El puesto que ocupas actualmente es:</label>
+      </div>
+      <div class="preguntaRespuestasv2">
+        <select class="form-select" id="pregunta_12" requiredonchange="showInputBox('pregunta_12', 'pregunta_12_container', 'pregunta_12_otro')" name="pregunta_12">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Director general">Director general</option>
+          <option value="Dueño o socio de una empresa/ despacho/ rancho">Dueño o socio de una empresa/ despacho/ rancho</option>
+          <option value="Profesional independiente">Profesional independiente</option>
+          <option value="Gerente/ Director de área">Gerente/ Director de área</option>
+          <option value="Coordinador">Coordinador</option>
+          <option value="Subgerente / Subdirector de área">Subgerente / Subdirector de área</option>
+          <option value="Jefe de departamento">Jefe de departamento</option>
+          <option value="Ejecutivo de cuenta">Ejecutivo de cuenta</option>
+          <option value="Jefe de oficina / sección / área">Jefe de oficina / sección / área</option>
+          <option value="Médico">Médico</option>
+          <option value="Empleado profesional">Empleado profesional</option>
+          <option value="Supervisor">Supervisor</option>
+          <option value="Analista especializado">Analista especializado</option>
+          <option value="Vendedor en establecimiento">Vendedor en establecimiento</option>
+          <option value="Asistente">Asistente</option>
+          <option value="Ayudante">Ayudante</option>
+          <option value="Por cuenta propia no profesional">Por cuenta propia no profesional</option>
+          <option value="Empleado no profesional">Empleado no profesional</option>
+          <option value="Auxiliar">Auxiliar</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+        <div class="" id="pregunta_12_container" style="display: none;">
+          <label for="pregunta_12_otro" class="form-label mb-0">Por favor, especifica:</label>
+          <input type="text" class="form-control" id="pregunta_12_otro" name="pregunta_12_otro">
+        </div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_13" class="">Nombre de la empresa:</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <input type="text" class="form-control" id="pregunta_13" name="pregunta_13" required>
+        <div class="valid-feedback">¡Bien!.</div>
+        <div class="invalid-feedback">!Ingresa Texto!.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_14" class="">Nombre del jefe inmediato: </label>
+      </div>
+      <div class="preguntaRespuestas">
+        <input type="text" class="form-control" id="pregunta_14" name="pregunta_14" required>
+        <div class="valid-feedback">¡Bien!.</div>
+        <div class="invalid-feedback">!Ingresa Texto!.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_15" class="">El tamaño de la empresa es:</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_15" required name="pregunta_15">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Hasta 10 empleados (Micro)">Hasta 10 empleados (Micro)</option>
+          <option value="Entre 11 y 50 empleados (Pequeña)">Entre 11 y 50 empleados (Pequeña)</option>
+          <option value="Entre 51 y 250 empleados (Mediana)">Entre 51 y 250 empleados (Mediana)</option>
+          <option value="Más de 250 empleados (Grande)">Más de 250 empleados (Grande)</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_16" class="form-label mb-0">El régimen jurídico de la empresa/institución en que trabajas es:</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_16" required name="pregunta_16">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Pública">Pública</option>
+          <option value="Privada">Privada</option>
+          <option value="Social">Social</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_17" class="">Actividad económica de la empresa:</label>
+      </div>
+      <div class="preguntaRespuestasv2">
+        <select class="form-select" id="pregunta_17" required onchange="showInputBox('pregunta_17', 'pregunta_17_container', 'pregunta_17_otro')" name="pregunta_17">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Agrícola-ganadero/ silvícola/ etc.">Agrícola-ganadero/ silvícola/ etc.</option>
+          <option value="Industria extractiva">Industria extractiva</option>
+          <option value="Industria de la transformación">Industria de la transformación</option>
+          <option value="Industria de la construcción">Industria de la construcción</option>
+          <option value="Comercio">Comercio</option>
+          <option value="Servicios bancarios/ financieros y seguros">Servicios bancarios/ financieros y seguros
+          </option>
+          <option value="Transporte / comunicaciones">Transporte / comunicaciones</option>
+          <option value="Turismo">Turismo</option>
+          <option value="Educación">Educación</option>
+          <option value="Servicios profesionales y técnicos">Servicios profesionales y técnicos</option>
+          <option value="Servicios de salud">Servicios de salud</option>
+          <option value="Servicios de gobierno">Servicios de gobierno</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+        <div class="anexo" id="pregunta_17_container" style="display: none;">
+          <label for="pregunta_17_otro" class="form-label mb-0">Por favor, especifica:</label>
+          <input type="text" class="form-control" id="pregunta_17_otro" name="pregunta_17_otro">
+        </div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_18" class="">¿Qué tipo de contratación tienes?</label>
+      </div>
+      <div class="preguntaRespuestasv2">
+        <select class="form-select" id="pregunta_18" required onchange="showInputBox('pregunta_18', 'pregunta_18_container', 'pregunta_18_otro')" name="pregunta_18">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Contrato por obra o tiempo determinado.">Contrato por obra o tiempo determinado.</option>
+          <option value="Base">Base</option>
+          <option value="Confianza">Confianza</option>
+          <option value="Honorarios">Honorarios</option>
+          <option value="Comisión">Comisión</option>
+          <option value="Independiente">Independiente</option>
+          <option value="Otro">Otro</option>
+      </select>
+      <div class="valid-feedback">¡Se ve bien!</div>
+      <div class="invalid-feedback">Selecciona una opción.</div>
+      <div class="anexo" id="pregunta_18_container" style="display: none;">
+        <label for="pregunta_18_otro" class="form-label mb-0">Por favor, especifica:</label>
+        <input type="text" class="form-control" id="pregunta_18_otro" name="pregunta_18_otro">
+      </div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_19" class="">¿Cuántas horas al día trabaja?</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_19" required name="pregunta_19">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Menos de 5 horas">Menos de 5 horas</option>
+          <option value="De 6 a 7 horas">De 6 a 7 horas</option>
+          <option value="Más de 8 horas">Más de 8 horas</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_20" class="form-label mb-0">¿Cuál es su ingreso mensual neto?</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_20" required name="pregunta_20">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Menos de $ 5,000.00">Menos de $ 5,000.00</option>
+          <option value="De $ 5,001.00 a $ 9,000.00">De $ 5,001.00 a $ 9,000.00</option>
+          <option value="De $ 9,001.00 a $ 12,000.00">De $ 9,001.00 a $ 12,000.00</option>
+          <option value="De $ 12,001.00 a 15,000">De $ 12,001.00 a 15,000</option>
+          <option value="De $ 15,001 a $20,000.00">De $ 15,001 a $20,000.00</option>
+          <option value="De 20,001.00 a 25,000.00">De $ 20,001.00 a 25,000.00</option>
+          <option value="Más de 25,001.00">Más de 25,001.00</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_21" class="">¿Situación académica?</label>
+      </div>
+      <div class="">
+        <input type="radio" class="form-check-input" id="pregunta_21_titulado" name="pregunta_21" value="Titulado" required>
+        <label class="form-check-label me-3" for="pregunta_21_titulado">Titulado</label>
+        <input type="radio" class="form-check-input" id="pregunta_21_no_titulado" name="pregunta_21" value="No titulado" required>
+        <label class="form-check-label" for="pregunta_21_no_titulado">No titulado</label>
+        <div class="invalid-feedback">Selecciona una opción</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_22" class="">Motivos por los cuales no te has titulado</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_22" required name="pregunta_22">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Estoy en proceso de titulación">Estoy en proceso de titulación</option>
+          <option value="Me faltan requisitos (servicio social, idioma, prácticas profesionales, etc.)">Me faltan requisitos (servicio social, idioma, prácticas profesionales, etc.)</option>
+          <option value="Costos de titulación">Costos de titulación</option>
+          <option value="No he empezado/ni concluido la tesis">No he empezado/ni concluido la tesis</option>
+          <option value="Razones personales">Razones personales</option>
+          <option value="Por mi trabajo">Por mi trabajo</option>
+          <option value="Falta de tiempo">Falta de tiempo</option>
+          <option value="Dificultad de trámites">Dificultad de trámites</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_23" class="">Forma de titulación</label>
+      </div>
+      <div class="preguntaRespuestasv2">
+        <select class="form-select" id="pregunta_23" required onchange="showInputBox('pregunta_23', 'pregunta_23_container', 'pregunta_23_otro')" name="pregunta_23">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Proyecto de Investigación">Proyecto de Investigación</option>
+          <option value="Tesis">Tesis</option>
+          <option value="Memoria de experiencia profesional">Memoria de experiencia profesional</option>
+          <option value="Examen de conocimiento por áreas">Examen de conocimiento por áreas</option>
+          <option value="Créditos de Posgrado">Créditos de Posgrado</option>
+          <option value="Estudios de Licenciatura">Estudios de Licenciatura</option>
+          <option value="Seminario de titulación">Seminario de titulación</option>
+          <option value="Escolaridad">Escolaridad</option>
+          <option value="Curricular">Curricular</option>
+          <option value="Práctica profesional">Práctica profesional</option>
+          <option value="Programa especial">Programa especial</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+        <div class="anexo" id="pregunta_23_container" style="display: none;">
+          <label for="pregunta_23_otro" class="form-label mb-0">Por favor, especifica:</label>
+          <input type="text" class="form-control" id="pregunta_23_otro" name="pregunta_23_otro">
+        </div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <div class="preguntaLabel">
+        <label for="pregunta_24" class="">¿Cuánto tiempo te llevó titularte?</label>
+      </div>
+      <div class="preguntaRespuestas">
+        <select class="form-select" id="pregunta_24" required name="pregunta_24">
+          <option selected disabled value="">Elije una opción...</option>
+          <option value="Menos de 12 meses">Menos de 12 meses</option>
+          <option value="De 13 a 18 meses">De 13 a 18 meses</option>
+          <option value="De 19 a 24 meses">De 19 a 24 meses</option>
+          <option value="Más de 24 meses">Más de 24 meses</option>
+        </select>
+        <div class="valid-feedback">¡Se ve bien!</div>
+        <div class="invalid-feedback">Selecciona una opción.</div>
+      </div>
+    </div>
+
+    <div class="preguntaDiv">
+      <p class="mt-5">A continuación te pedimos que nos indiques para cada una de las siguientes habilidades si las desarrollaste o fortaleciste durante tu formación profesional.</p>
+    </div>
+
+    <div class="preguntaDiv">
+      <table class="tablaCompetencias">
+        <thead>
+          <tr>
+            <th class="Competencias">Competencias</th>
+            <th class="Valores">Nada</th>
+            <th class="Valores">Poco</th>
+            <th class="Valores">Regular</th>
+            <th class="Valores">Mucho</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label>Expresar verbalmente opiniones o ideas en forma clara y precisa</label>
+            </td>
+            <div id="pregunta_25" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_25_nada" name="pregunta_25" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_25_poco" name="pregunta_25" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_25_regular" name="pregunta_25"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_25_mucho" name="pregunta_25"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Expresar por escrito opiniones o ideas en forma clara y precisa</label>
+            </td>
+            <div id="pregunta_26" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_26_nada" name="pregunta_26" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_26_poco" name="pregunta_26" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_26_regular" name="pregunta_26"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_26_mucho" name="pregunta_26"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Analizar ideas críticamente</label>
+            </td>
+            <div id="pregunta_27" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_27_nada" name="pregunta_27" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_27_poco" name="pregunta_27" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_27_regular" name="pregunta_27"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_27_mucho" name="pregunta_27"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Aprender en forma independiente</label>
+            </td>
+            <div id="pregunta_28" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_28_nada" name="pregunta_28" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_28_poco" name="pregunta_28" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_28_regular" name="pregunta_28"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_28_mucho" name="pregunta_28"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Actuar en el ámbito laboral conforme a una ética profesional</label>
+            </td>
+            <div id="pregunta_29" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_29_nada" name="pregunta_29" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_29_poco" name="pregunta_29" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_29_regular" name="pregunta_29"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_29_mucho" name="pregunta_29"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Resolver problemas</label>
+            </td>
+            <div id="pregunta_30" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_30_nada" name="pregunta_30" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_30_poco" name="pregunta_30" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_30_regular" name="pregunta_30"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_30_mucho" name="pregunta_30"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Actitud de liderazgo</label>
+            </td>
+            <div id="pregunta_31" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_31_nada" name="pregunta_31" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_31_poco" name="pregunta_31" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_31_regular" name="pregunta_31"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_31_mucho" name="pregunta_31"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>A usar modelos y/o métodos matemáticos para analizar datos</label>
+            </td>
+            <div id="pregunta_32" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_32_nada" name="pregunta_32" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_32_poco" name="pregunta_32" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_32_regular" name="pregunta_32"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_32_mucho" name="pregunta_32"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Formular argumentos lógicos</label>
+            </td>
+            <div id="pregunta_33" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_33_nada" name="pregunta_33" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_33_poco" name="pregunta_33" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_33_regular" name="pregunta_33"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_33_mucho" name="pregunta_33"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Trabajar en colaboración con otras personas</label>
+            </td>
+            <div id="pregunta_34" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_34_nada" name="pregunta_34" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_34_poco" name="pregunta_34" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_34_regular" name="pregunta_34"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_34_mucho" name="pregunta_34"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Formular ideas o pensamientos originales e innovadores</label>
+            </td>
+            <div id="pregunta_35" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_35_nada" name="pregunta_35" value="Nada"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_35_poco" name="pregunta_35" value="Poco"
+                  required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_35_regular" name="pregunta_35"
+                  value="Regular" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_35_mucho" name="pregunta_35"
+                  value="Mucho" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="preguntaDiv">
+      <p class="mt-5">De los siguientes contenidos del plan de estudios de tu carrera. ¿Cuál ampliarías, mantendrías, o reducirías?</p>
+    </div>
+
+    <div class="preguntaDiv">
+      <table class="tablaEstudios">
+        <thead>
+          <tr>
+            <th class="Estudios">Contenido</th>
+            <th class="Valores2">Ampliar</th>
+            <th class="Valores2">Mantener</th>
+            <th class="Valores2">Redicir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label>Enseñanza teórica</label>
+            </td>
+            <div id="pregunta_36" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_36_ampliar" name="pregunta_36"
+                  value="Ampliar" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_36_mantener" name="pregunta_36"
+                  value="Mantener" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_36_reducir" name="pregunta_36"
+                  value="Reducir" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Enseñanza metodológica</label>
+            </td>
+            <div id="pregunta_36" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_37_ampliar" name="pregunta_37"
+                  value="Ampliar" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_37_mantener" name="pregunta_37"
+                  value="Mantener" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_37_reducir" name="pregunta_37"
+                  value="Reducir" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td>
+              <label>Prácticas: en empresa, laboratorio, campo, taller, clínica, etc.</label>
+            </td>
+            <div id="pregunta_36" class="form-check-inline">
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_38_ampliar" name="pregunta_38"
+                  value="Ampliar" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_38_mantener" name="pregunta_38"
+                  value="Mantener" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+              <td>
+                <input class="form-check-input" type="radio" id="pregunta_38_reducir" name="pregunta_38"
+                  value="Reducir" required>
+                <div class="invalid-feedback">Selecciona una opción</div>
+              </td>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="preguntaDivButton">
+      <button class="btn btn-primary" type="submit">Terminar Custionario</button>
+    </div>
 <!--
-    
+        
+          <div class="col-12 mb-5">
+            <button class="btn btn-primary" type="submit">Terminar</button>
+          </div>
   -->
 
      
@@ -228,995 +905,6 @@
   </form>
 </div>
 
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instrumento Transversal 2022 Nivel Superior</title>
-</head>
-
-<body>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-12">
-        <form action="{% url 'Finalizado_Cuestionario_Transversal' id_usuario%}" method="POST"
-          class="row g-3 needs-validation" novalidate>
-          {% csrf_token %}
-
-          <div class="col-md-12 mb-5">
-            <label for="pregunta_1" class="form-label mb-0 mt-5">¿Actualmente te encuentras laborando?</label>
-            <br>
-            <div id="pregunta_1" class="form-check-inline">
-              <input type="radio" class="form-check-input" id="pregunta_1_si" name="pregunta_1" value="Si" required>
-              <label class="form-check-label me-3" for="pregunta_1_si">Si</label>
-              <input type="radio" class="form-check-input" id="pregunta_1_no" name="pregunta_1" value="No" required>
-              <label class="form-check-label" for="pregunta_1_no">No</label>
-              <div class="valid-feedback">¡Se ve bien!</div>
-              <div class="invalid-feedback">Selecciona una opción</div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_2" class="form-label mb-0">¿Cuál es la razón principal por la que no te encuentras
-                laborando?</label>
-              <select class="form-select" id="pregunta_2" required
-                onchange="showInputBox('pregunta_2', 'pregunta_2_container', 'pregunta_2_otro')" name="pregunta_2">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="El mercado laboral está saturado">El mercado laboral está saturado</option>
-                <option value="Falta de oferta laboral en mi área de estudio">Falta de oferta laboral en mi área de
-                  estudio
-                </option>
-                <option value="No estar titulado(a) / falta de cedula profesional">No estar titulado(a) / falta de
-                  cedula
-                  profesional</option>
-                <option value="Cuestiones de salud">Cuestiones de salud</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-            <div class="col-md-6" id="pregunta_2_container" style="display: none;">
-              <label for="pregunta_2_otro" class="form-label mb-0">Por favor, especifica:</label>
-              <input type="text" class="form-control" id="pregunta_2_otro" name="pregunta_2_otro">
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_3" class="form-label mb-0">¿En qué porcentaje coincide tu trabajo con tus estudios de
-                licenciatura?</label>
-              <select class="form-select" id="pregunta_3" required name="pregunta_3">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="0%">0%</option>
-                <option value="25%">25%</option>
-                <option value="50%">50%</option>
-                <option value="75%">75%</option>
-                <option value="100%">100%</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-12">
-              <label for="pregunta_4" class="form-label mb-0">¿Ha sido o fue tu único empleo? </label>
-              <br>
-              <div id="pregunta_4" class="form-check-inline">
-                <input type="radio" class="form-check-input" id="pregunta_4_si" name="pregunta_4" value="Si" required>
-                <label class="form-check-label me-3" for="pregunta_4_si">Si</label>
-                <input type="radio" class="form-check-input" id="pregunta_4_no" name="pregunta_4" value="No" required>
-                <label class="form-check-label" for="pregunta_4_no">No</label>
-                <div class="valid-feedback">¡Se ve bien!</div>
-                <div class="invalid-feedback">Selecciona una opción</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_5" class="form-label mb-0">Señala el número de veces que has cambiado de trabajo, después
-                del
-                primer empleo que conseguiste al egresar:</label>
-              <select class="form-select" id="pregunta_5" required name="pregunta_5">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5 o más">5 o más</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_6" class="form-label mb-0">En cuanto a tu desarrollo profesional, al comparar tu puesto
-                actual
-                con el primero, consideras que:</label>
-              <select class="form-select" id="pregunta_6" required name="pregunta_6">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Mejoró">Mejoró</option>
-                <option value="Empeoró">Empeoró</option>
-                <option value="Permaneció igual">Permaneció igual</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_7" class="form-label mb-0 ">En cuanto a tu nivel económico actual con respecto al primer
-                empleo,
-                consideras que:</label>
-              <select class="form-select" id="pregunta_7" required name="pregunta_7">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Mejoró">Mejoró</option>
-                <option value="Empeoró">Empeoró</option>
-                <option value="Permaneció igual">Permaneció igual</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_8" class="form-label mb-0">¿Cuánto tiempo te llevó conseguir tu empleo o tu primer empleo?
-              </label>
-              <select class="form-select" id="pregunta_8" required name="pregunta_8">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Empleado antes de egresar">Empleado antes de egresar</option>
-                <option value="Menos de 6 meses de egresar">Menos de 6 meses de egresar</option>
-                <option value="De 6 meses a 1 año de egreso">De 6 meses a 1 año de egreso</option>
-                <option value="Más de 1 año de egreso">Más de 1 año de egreso</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_9" class="form-label mb-0">¿Principal dificultad para encontrar empleo o el primer
-                empleo?</label>
-              <select class="form-select" id="pregunta_9" required name="pregunta_9">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Falta de vacantes en mi área de estudio">Falta de vacantes en mi área de estudio</option>
-                <option value="Salario bajo/nulas o bajas prestaciones">Salario bajo/nulas o bajas prestaciones</option>
-                <option value="Horario">Horario</option>
-                <option value="No tenía experiencia">No tenía experiencia</option>
-                <option value="No conozco quien me recomiende">No conozco quien me recomiende</option>
-                <option value="Tener cédula ">Tener cédula </option>
-                <option value="Ninguna">Ninguna</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_10" class="form-label mb-0">¿Cuál fue el principal requisito para conseguir tu
-                empleo?</label>
-              <select class="form-select" id="pregunta_10" required
-                onchange="showInputBox('pregunta_10', 'pregunta_10_container', 'pregunta_10_otro')" name="pregunta_10">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Ser titulado">Ser titulado</option>
-                <option value="Aprobar los exámenes de selección">Aprobar los exámenes de selección</option>
-                <option value="Dominio de otro idioma">Dominio de otro idioma</option>
-                <option value="Manejo de tecnologías de la información y comunicación">Manejo de tecnologías de la
-                  información
-                  y comunicación</option>
-                <option value="Experiencia">Experiencia</option>
-                <option value="Pasar una entrevista formal">Pasar una entrevista formal</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-            <div class="col-md-4" id="pregunta_10_container" style="display: none;">
-              <label for="pregunta_10_container" class="form-label mb-0">Por favor, especifica:</label>
-              <input type="text" class="form-control" id="pregunta_10_container" name="pregunta_10_otro">
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_11" class="form-label mb-0">Señala el principal medio a través del cual encontraste tu
-                empleo
-                actual:</label>
-              <select class="form-select" id="pregunta_11" required
-                onchange="showInputBox('pregunta_11', 'pregunta_11_container', 'pregunta_11_otro')" name="pregunta_11">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Bolsa de trabajo institucional SISAE-SIBOLTRA">Bolsa de trabajo institucional
-                  SISAE-SIBOLTRA
-                </option>
-                <option value="Bolsa de trabajo de tu Unidad Académica">Bolsa de trabajo de tu Unidad Académica</option>
-                <option value="Bolsa de trabajo externa">Bolsa de trabajo externa</option>
-                <option value="Recomendación de compañeros de licenciatura">Recomendación de compañeros de licenciatura
-                </option>
-                <option value="Recomendación de un profesor">Recomendación de un profesor</option>
-                <option value="Recomendación de un amigo o familiar">Recomendación de un amigo o familiar</option>
-                <option value="Relaciones hechas en empleos anteriores">Relaciones hechas en empleos anteriores</option>
-                <option value="Creación de un negocio, despacho, empresa propios">Creación de un negocio, despacho,
-                  empresa
-                  propios</option>
-                <option value="Integración a un negocio familiar">Integración a un negocio familiar</option>
-                <option value="Servicio social">Servicio social</option>
-                <option value="Prácticas o estancias profesionales">Prácticas o estancias profesionales</option>
-                <option value="Agencia de colocación (head – hunters y outsourcing)">Agencia de colocación (head –
-                  hunters
-                  y
-                  outsourcing)</option>
-                <option value="Internet y/o app">Internet y/o app</option>
-                <option value="Por redes sociales">Por redes sociales</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-            <div class="col-md-4" id="pregunta_11_container" style="display: none;">
-              <label for="pregunta_11_otro" class="form-label mb-0">Por favor, especifica:</label>
-              <input type="text" class="form-control" id="pregunta_11_otro" name="pregunta_11_otro">
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_12" class="form-label mb-0">El puesto que ocupas actualmente es:</label>
-              <select class="form-select" id="pregunta_12" required
-                onchange="showInputBox('pregunta_12', 'pregunta_12_container', 'pregunta_12_otro')" name="pregunta_12">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Director general">Director general</option>
-                <option value="Dueño o socio de una empresa/ despacho/ rancho">Dueño o socio de una empresa/ despacho/
-                  rancho
-                </option>
-                <option value="Profesional independiente">Profesional independiente</option>
-                <option value="Gerente/ Director de área">Gerente/ Director de área</option>
-                <option value="Coordinador">Coordinador</option>
-                <option value="Subgerente / Subdirector de área">Subgerente / Subdirector de área</option>
-                <option value="Jefe de departamento">Jefe de departamento</option>
-                <option value="Ejecutivo de cuenta">Ejecutivo de cuenta</option>
-                <option value="Jefe de oficina / sección / área">Jefe de oficina / sección / área</option>
-                <option value="Médico">Médico</option>
-                <option value="Empleado profesional">Empleado profesional</option>
-                <option value="Supervisor">Supervisor</option>
-                <option value="Analista especializado">Analista especializado</option>
-                <option value="Vendedor en establecimiento">Vendedor en establecimiento</option>
-                <option value="Asistente">Asistente</option>
-                <option value="Ayudante">Ayudante</option>
-                <option value="Por cuenta propia no profesional">Por cuenta propia no profesional</option>
-                <option value="Empleado no profesional">Empleado no profesional</option>
-                <option value="Auxiliar">Auxiliar</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-            <div class="col-md-4" id="pregunta_12_container" style="display: none;">
-              <label for="pregunta_12_otro" class="form-label mb-0">Por favor, especifica:</label>
-              <input type="text" class="form-control" id="pregunta_12_otro" name="pregunta_12_otro">
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_13" class="form-label mb-0">Nombre de la empresa:</label>
-              <input type="text" class="form-control" id="pregunta_13" name="pregunta_13" required>
-              <div class="valid-feedback">
-                ¡Bien!.
-              </div>
-              <div class="invalid-feedback">
-                !Ingresa Texto!.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_14" class="form-label mb-0">Nombre del jefe inmediato: </label>
-              <input type="text" class="form-control" id="pregunta_14" name="pregunta_14" required>
-              <div class="valid-feedback">
-                ¡Bien!.
-              </div>
-              <div class="invalid-feedback">
-                !Ingresa Texto!.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_15" class="form-label mb-0">El tamaño de la empresa es:</label>
-              <select class="form-select" id="pregunta_15" required name="pregunta_15">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Hasta 10 empleados (Micro)">Hasta 10 empleados (Micro)</option>
-                <option value="Entre 11 y 50 empleados (Pequeña)">Entre 11 y 50 empleados (Pequeña)</option>
-                <option value="Entre 51 y 250 empleados (Mediana)">Entre 51 y 250 empleados (Mediana)</option>
-                <option value="Más de 250 empleados (Grande)">Más de 250 empleados (Grande)</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_16" class="form-label mb-0">El régimen jurídico de la empresa/institución en que trabajas
-                es:</label>
-              <select class="form-select" id="pregunta_16" required name="pregunta_16">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Pública">Pública</option>
-                <option value="Privada">Privada</option>
-                <option value="Social">Social</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_17" class="form-label mb-0">Actividad económica de la empresa:</label>
-              <select class="form-select" id="pregunta_17" required
-                onchange="showInputBox('pregunta_17', 'pregunta_17_container', 'pregunta_17_otro')" name="pregunta_17">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Agrícola-ganadero/ silvícola/ etc.">Agrícola-ganadero/ silvícola/ etc.</option>
-                <option value="Industria extractiva">Industria extractiva</option>
-                <option value="Industria de la transformación">Industria de la transformación</option>
-                <option value="Industria de la construcción">Industria de la construcción</option>
-                <option value="Comercio">Comercio</option>
-                <option value="Servicios bancarios/ financieros y seguros">Servicios bancarios/ financieros y seguros
-                </option>
-                <option value="Transporte / comunicaciones">Transporte / comunicaciones</option>
-                <option value="Turismo">Turismo</option>
-                <option value="Educación">Educación</option>
-                <option value="Servicios profesionales y técnicos">Servicios profesionales y técnicos</option>
-                <option value="Servicios de salud">Servicios de salud</option>
-                <option value="Servicios de gobierno">Servicios de gobierno</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-            <div class="col-md-4" id="pregunta_17_container" style="display: none;">
-              <label for="pregunta_17_otro" class="form-label mb-0">Por favor, especifica:</label>
-              <input type="text" class="form-control" id="pregunta_17_otro" name="pregunta_17_otro">
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_18" class="form-label mb-0">¿Qué tipo de contratación tienes?</label>
-              <select class="form-select" id="pregunta_18" required
-                onchange="showInputBox('pregunta_18', 'pregunta_18_container', 'pregunta_18_otro')" name="pregunta_18">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Contrato por obra o tiempo determinado.">Contrato por obra o tiempo determinado.</option>
-                <option value="Base">Base</option>
-                <option value="Confianza">Confianza</option>
-                <option value="Honorarios">Honorarios</option>
-                <option value="Comisión">Comisión</option>
-                <option value="Independiente">Independiente</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-            <div class="col-md-4" id="pregunta_18_container" style="display: none;">
-              <label for="pregunta_18_otro" class="form-label mb-0">Por favor, especifica:</label>
-              <input type="text" class="form-control" id="pregunta_18_otro" name="pregunta_18_otro">
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_19" class="form-label mb-0">¿Cuántas horas al día trabaja?</label>
-              <select class="form-select" id="pregunta_19" required name="pregunta_19">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Menos de 5 horas">Menos de 5 horas</option>
-                <option value="De 6 a 7 horas">De 6 a 7 horas</option>
-                <option value="Más de 8 horas">Más de 8 horas</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_20" class="form-label mb-0">¿Cuál es su ingreso mensual neto?</label>
-              <select class="form-select" id="pregunta_20" required name="pregunta_20">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Menos de $ 5,000.00">Menos de $ 5,000.00</option>
-                <option value="De $ 5,001.00 a $ 9,000.00">De $ 5,001.00 a $ 9,000.00</option>
-                <option value="De $ 9,001.00 a $ 12,000.00">De $ 9,001.00 a $ 12,000.00</option>
-                <option value="De $ 12,001.00 a 15,000">De $ 12,001.00 a 15,000</option>
-                <option value="De $ 15,001 a $20,000.00">De $ 15,001 a $20,000.00</option>
-                <option value="De 20,001.00 a 25,000.00">De $ 20,001.00 a 25,000.00</option>
-                <option value="Más de 25,001.00">Más de 25,001.00</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12 mb-5">
-            <label for="pregunta_21" class="form-label mb-0">¿Situación académica?</label>
-            <br>
-            <div id="pregunta_21" class="form-check-inline">
-              <input type="radio" class="form-check-input" id="pregunta_21_titulado" name="pregunta_21" value="Titulado"
-                required>
-              <label class="form-check-label me-3" for="pregunta_21_titulado">Titulado</label>
-              <input type="radio" class="form-check-input" id="pregunta_21_no_titulado" name="pregunta_21"
-                value="No titulado" required>
-              <label class="form-check-label" for="pregunta_21_no_titulado">No titulado</label>
-              <div class="invalid-feedback">Selecciona una opción</div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_22" class="form-label mb-0">Motivos por los cuales no te has titulado</label>
-              <select class="form-select" id="pregunta_22" required name="pregunta_22">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Estoy en proceso de titulación">Estoy en proceso de titulación</option>
-                <option value="Me faltan requisitos (servicio social, idioma, prácticas profesionales, etc.)">Me faltan
-                  requisitos (servicio social, idioma, prácticas profesionales, etc.)</option>
-                <option value="Costos de titulación">Costos de titulación</option>
-                <option value="No he empezado/ni concluido la tesis">No he empezado/ni concluido la tesis</option>
-                <option value="Razones personales">Razones personales</option>
-                <option value="Por mi trabajo">Por mi trabajo</option>
-                <option value="Falta de tiempo">Falta de tiempo</option>
-                <option value="Dificultad de trámites">Dificultad de trámites</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_23" class="form-label mb-0">Forma de titulación</label>
-              <select class="form-select" id="pregunta_23" required
-                onchange="showInputBox('pregunta_23', 'pregunta_23_container', 'pregunta_23_otro')" name="pregunta_23">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Proyecto de Investigación">Proyecto de Investigación</option>
-                <option value="Tesis">Tesis</option>
-                <option value="Memoria de experiencia profesional">Memoria de experiencia profesional</option>
-                <option value="Examen de conocimiento por áreas">Examen de conocimiento por áreas</option>
-                <option value="Créditos de Posgrado">Créditos de Posgrado</option>
-                <option value="Estudios de Licenciatura">Estudios de Licenciatura</option>
-                <option value="Seminario de titulación">Seminario de titulación</option>
-                <option value="Escolaridad">Escolaridad</option>
-                <option value="Curricular">Curricular</option>
-                <option value="Práctica profesional">Práctica profesional</option>
-                <option value="Programa especial">Programa especial</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-            <div class="col-md-4" id="pregunta_23_container" style="display: none;">
-              <label for="pregunta_23_otro" class="form-label mb-0">Por favor, especifica:</label>
-              <input type="text" class="form-control" id="pregunta_23_otro" name="pregunta_23_otro">
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-6">
-              <label for="pregunta_24" class="form-label mb-0">¿Cuánto tiempo te llevó titularte?</label>
-              <select class="form-select" id="pregunta_24" required name="pregunta_24">
-                <option selected disabled value="">Elije una opción...</option>
-                <option value="Menos de 12 meses">Menos de 12 meses</option>
-                <option value="De 13 a 18 meses">De 13 a 18 meses</option>
-                <option value="De 19 a 24 meses">De 19 a 24 meses</option>
-                <option value="Más de 24 meses">Más de 24 meses</option>
-              </select>
-              <div class="valid-feedback">
-                ¡Se ve bien!
-              </div>
-              <div class="invalid-feedback">
-                Selecciona una opción.
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <p>A continuación te pedimos que nos indiques para cada una de las siguientes habilidades si las
-              desarrollaste
-              o fortaleciste durante tu formación profesional.</p>
-            <table class="table table-borderless mb-5">
-              <thead>
-                <tr>
-                  <th>Competencias</th>
-                  <th>Nada</th>
-                  <th>Poco</th>
-                  <th>Regular</th>
-                  <th>Mucho</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <label>Expresar verbalmente opiniones o ideas en forma clara y precisa</label>
-                  </td>
-                  <div id="pregunta_25" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_25_nada" name="pregunta_25" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_25_poco" name="pregunta_25" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_25_regular" name="pregunta_25"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_25_mucho" name="pregunta_25"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Expresar por escrito opiniones o ideas en forma clara y precisa</label>
-                  </td>
-                  <div id="pregunta_26" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_26_nada" name="pregunta_26" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_26_poco" name="pregunta_26" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_26_regular" name="pregunta_26"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_26_mucho" name="pregunta_26"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Analizar ideas críticamente</label>
-                  </td>
-                  <div id="pregunta_27" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_27_nada" name="pregunta_27" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_27_poco" name="pregunta_27" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_27_regular" name="pregunta_27"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_27_mucho" name="pregunta_27"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Aprender en forma independiente</label>
-                  </td>
-                  <div id="pregunta_28" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_28_nada" name="pregunta_28" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_28_poco" name="pregunta_28" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_28_regular" name="pregunta_28"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_28_mucho" name="pregunta_28"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Actuar en el ámbito laboral conforme a una ética profesional</label>
-                  </td>
-                  <div id="pregunta_29" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_29_nada" name="pregunta_29" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_29_poco" name="pregunta_29" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_29_regular" name="pregunta_29"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_29_mucho" name="pregunta_29"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Resolver problemas</label>
-                  </td>
-                  <div id="pregunta_30" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_30_nada" name="pregunta_30" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_30_poco" name="pregunta_30" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_30_regular" name="pregunta_30"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_30_mucho" name="pregunta_30"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Actitud de liderazgo</label>
-                  </td>
-                  <div id="pregunta_31" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_31_nada" name="pregunta_31" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_31_poco" name="pregunta_31" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_31_regular" name="pregunta_31"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_31_mucho" name="pregunta_31"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>A usar modelos y/o métodos matemáticos para analizar datos</label>
-                  </td>
-                  <div id="pregunta_32" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_32_nada" name="pregunta_32" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_32_poco" name="pregunta_32" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_32_regular" name="pregunta_32"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_32_mucho" name="pregunta_32"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Formular argumentos lógicos</label>
-                  </td>
-                  <div id="pregunta_33" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_33_nada" name="pregunta_33" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_33_poco" name="pregunta_33" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_33_regular" name="pregunta_33"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_33_mucho" name="pregunta_33"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Trabajar en colaboración con otras personas</label>
-                  </td>
-                  <div id="pregunta_34" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_34_nada" name="pregunta_34" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_34_poco" name="pregunta_34" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_34_regular" name="pregunta_34"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_34_mucho" name="pregunta_34"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Formular ideas o pensamientos originales e innovadores</label>
-                  </td>
-                  <div id="pregunta_35" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_35_nada" name="pregunta_35" value="Nada"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_35_poco" name="pregunta_35" value="Poco"
-                        required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_35_regular" name="pregunta_35"
-                        value="Regular" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_35_mucho" name="pregunta_35"
-                        value="Mucho" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="row">
-            <p>De los siguientes contenidos del plan de estudios de tu carrera. ¿Cuál ampliarías, mantendrías, o
-              reducirías?
-            </p>
-            <table class="table table-borderless">
-              <thead>
-                <tr>
-                  <th>Contenido</th>
-                  <th>Ampliar</th>
-                  <th>Mantener</th>
-                  <th>Redicir</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <label>Enseñanza teórica</label>
-                  </td>
-                  <div id="pregunta_36" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_36_ampliar" name="pregunta_36"
-                        value="Ampliar" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_36_mantener" name="pregunta_36"
-                        value="Mantener" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_36_reducir" name="pregunta_36"
-                        value="Reducir" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Enseñanza metodológica</label>
-                  </td>
-                  <div id="pregunta_36" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_37_ampliar" name="pregunta_37"
-                        value="Ampliar" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_37_mantener" name="pregunta_37"
-                        value="Mantener" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_37_reducir" name="pregunta_37"
-                        value="Reducir" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Prácticas: en empresa, laboratorio, campo, taller, clínica, etc.</label>
-                  </td>
-                  <div id="pregunta_36" class="form-check-inline">
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_38_ampliar" name="pregunta_38"
-                        value="Ampliar" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_38_mantener" name="pregunta_38"
-                        value="Mantener" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" id="pregunta_38_reducir" name="pregunta_38"
-                        value="Reducir" required>
-                      <div class="invalid-feedback">Selecciona una opción</div>
-                    </td>
-                  </div>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="col-12 mb-5">
-            <button class="btn btn-primary" type="submit">Terminar</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</body>
-
-</html>
--->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const pregunta1Si = document.getElementById('pregunta_1_si');

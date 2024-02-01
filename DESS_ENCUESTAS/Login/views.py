@@ -10,7 +10,6 @@ def peticionCurp(request):
 
 
 def registroUsuario(request):
-    
     url = "https://api.plataforma.ipn.mx/publico/general/secure/renapo/curp/consultar"
     user = "deyssuser"
     password = "p5HHNbdq7JUt5Hnqwv2erWva6hPbKtk8"

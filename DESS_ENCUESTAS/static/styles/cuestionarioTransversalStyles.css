@@ -2,12 +2,10 @@
 
 }
 
-.contenedorPrincipal {
-    height: 2800px;
-}
+
 
 .cuestionarioTransversal {
-    height: 1880px;
+    height: 3200px;
     background-color: white;
     width: 100%;
     display: flex;
@@ -15,9 +13,8 @@
   }
 
 #CuestionarioTransversal {
-    background-color: gray;
     width: 80%;
-    height: 1000px;
+    height: 3200px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centrar horizontalmente */
@@ -25,10 +22,16 @@
 
 
 .preguntaDiv {
-    border: 1px solid red;
     width: 90%;
     text-align: center;
     display: block;
+}
+
+.preguntaDivButton {
+    width: 90%;
+    text-align: center;
+    display: block;
+    padding-top: 80px;
 }
 
 .preguntaLabel {
@@ -53,15 +56,43 @@
     margin-top: 10px;
 }
 
-.preguntaLabel label, .preguntaRespuestas label, .preguntaRespuestasv2 label, .anexo label {
+.preguntaLabel label, .preguntaRespuestas label, .preguntaRespuestasv2 label, .anexo label, .preguntaDiv p, .tablaCompetencias thead, .tablaCompetencias tbody, .tablaEstudios thead, .tablaEstudios tbody{
     font-size: 18px;
 }
 
-.preguntaRespuestas select, .preguntaRespuestasv2 select, .anexo input {
+.preguntaRespuestas select, .preguntaRespuestasv2 select, .anexo input, .preguntaRespuestas input {
     font-size: 16px;
 }
 
-.preguntaRespuestas select, .preguntaRespuestasv2 select, .anexo input{
+.preguntaRespuestas select, .preguntaRespuestasv2 select, .anexo input, .preguntaRespuestas input, .preguntaRespuestas p{
     width: 700px;
 }
 
+.parrafo {
+    border: 1px solid blue;
+}
+
+/* Estilos de la tabla de competencias */
+
+.tablaCompetencias, .tablaEstudios{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 1300px;
+}
+
+.tablaCompetencias th, .tablaCompetencias td, .tablaEstudios th, .tablaEstudios td {
+    padding: 8px; /* Añade un poco de espacio entre el contenido y el borde */
+
+}
+
+.Competencias, .Estudios{
+    width: 500px;
+}
+
+.Valores{
+    width: 100px;
+}
+
+.Valores2{
+    width: 100px;
+}
